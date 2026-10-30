@@ -1,0 +1,58 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import LiveInvoice from '../../components/react/LiveInvoice';
+
+export const prerender = false; // SSR
+
+const { id } = Astro.params;
+
+let order = null;
+try {
+  const res = await fetch(`http://127.0.0.1:8080/api/v1/orders/${id}`);
+  const json = await res.json();
+  if (json.success && json.data) {
+    order = json.data;
+  }
+} catch (e) {
+  // Static mock fallback if backend offline
+}
+
+if (!order) {
+  order = {
+    invoice_id: id || 'NZL-20261030-DEMO',
+    game_slug: 'mobile-legends',
+    sku_code: 'ML-PASS-WEEKLY',
+    sku_name: 'Weekly Diamond Pass',
+    target_user_id: '12345678',
+    target_zone_id: '2024',
+    target_nickname: 'NazilahPro_99',
+    whatsapp_number: '081234567890',
+    payment_code: 'QRIS',
+    payment_reference: null,
+    qr_string: '00020101021226590014ID.LINKAJA.WWW0118936009110020215ID10200215882153033605802ID5913NAZILAH STORE6007JAKARTA61051011062070703A01630488F2',
+    amount_item: 24500,
+    amount_discount: 0,
+    amount_fee: 172,
+    amount_total: 24672,
+    status: 'PENDING',
+    sn_number: null,
+    created_at: new Date().toISOString(),
+    expires_at: new Date(Date.now() + 7200000).toISOString(),
+  };
+}
+---
+
+<Layout title={`Invoice ${order.invoice_id} — NAZILAH STORE`}>
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <div class="flex items-center gap-2 text-xs text-[#94a3b8] mb-6">
+      <a href="/" class="hover:text-white transition">Katalog</a>
+      <span>/</span>
+      <span class="text-white font-semibold">Invoice Pembayaran</span>
+      <span>/</span>
+      <span class="text-[#4edea3] font-mono">{order.invoice_id}</span>
+    </div>
+
+    <LiveInvoice client:load initialOrder={order} />
+  </div>
+</Layout>
+

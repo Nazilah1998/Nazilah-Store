@@ -1,0 +1,20 @@
+{
+  "name": "nazilah-store-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n \"backend,frontend\" -c \"cyan.bold,green.bold\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "PATH=\"$HOME/.cargo/bin:$PATH\" cargo run --manifest-path backend/Cargo.toml",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "PATH=\"$HOME/.cargo/bin:$PATH\" cargo build --release --manifest-path backend/Cargo.toml",
+    "build:frontend": "npm run build --workspace=frontend",
+    "check": "npm run check --workspace=frontend && PATH=\"$HOME/.cargo/bin:$PATH\" cargo check --manifest-path backend/Cargo.toml"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

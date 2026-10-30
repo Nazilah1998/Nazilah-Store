@@ -1,0 +1,95 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CheckoutFlow from '../../components/react/CheckoutFlow';
+
+export const prerender = false; // SSR for dynamic slug & URL params
+
+const { slug } = Astro.params;
+const searchParams = Astro.url.searchParams;
+const initialSku = searchParams.get('sku') || undefined;
+
+let game = null;
+let skus = [];
+let paymentChannels = [];
+
+try {
+  const res = await fetch(`http://127.0.0.1:8080/api/v1/games/${slug}`);
+  const json = await res.json();
+  if (json.success && json.data) {
+    game = json.data.game;
+    skus = json.data.skus;
+    paymentChannels = json.data.payment_channels;
+  }
+} catch (e) {
+  // Static fallback if backend is offline
+}
+
+if (!game) {
+  // Fallback for Mobile Legends if backend is starting
+  if (slug === 'mobile-legends') {
+    game = {
+      slug: 'mobile-legends',
+      name: 'Mobile Legends: Bang Bang',
+      publisher: 'Moonton',
+      category: 'populer',
+      cover_url: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80',
+      banner_url: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1400&q=80',
+      currency_name: 'Diamonds',
+      currency_icon: '💎',
+      requires_zone: true,
+      zone_label: 'Zone ID (4 Digit)',
+      id_hint: 'Contoh: User ID 12345678, Zone ID (2024)',
+      is_active: true,
+    };
+    skus = [
+      { sku_code: 'ML-PASS-WEEKLY', game_slug: 'mobile-legends', name: 'Weekly Diamond Pass', category: 'pass', base_cost: 24000, selling_price: 26500, discount_price: 24500, stock_quota: 50, is_available: true },
+      { sku_code: 'ML-PASS-TWILIGHT', game_slug: 'mobile-legends', name: 'Twilight Pass', category: 'pass', base_cost: 135000, selling_price: 145000, is_available: true },
+      { sku_code: 'ML-DM-86', game_slug: 'mobile-legends', name: '86 Diamonds (78 + 8 Bonus)', category: 'instant', base_cost: 18500, selling_price: 21500, discount_price: 19500, stock_quota: 100, is_available: true },
+      { sku_code: 'ML-DM-172', game_slug: 'mobile-legends', name: '172 Diamonds (156 + 16 Bonus)', category: 'instant', base_cost: 37000, selling_price: 43000, is_available: true },
+      { sku_code: 'ML-DM-257', game_slug: 'mobile-legends', name: '257 Diamonds (234 + 23 Bonus)', category: 'instant', base_cost: 55500, selling_price: 65000, is_available: true },
+      { sku_code: 'ML-DM-344', game_slug: 'mobile-legends', name: '344 Diamonds (312 + 32 Bonus)', category: 'instant', base_cost: 74000, selling_price: 86000, is_available: true },
+      { sku_code: 'ML-DM-706', game_slug: 'mobile-legends', name: '706 Diamonds (625 + 81 Bonus)', category: 'instant', base_cost: 152000, selling_price: 175000, is_available: true },
+    ];
+    paymentChannels = [
+      { code: 'QRIS', name: 'QRIS (BCA, Mandiri, GoPay, OVO, ShopeePay)', group_type: 'qris', fee_flat: 0, fee_percent: 0.007, logo_url: '/assets/icons/qris.svg', is_active: true },
+      { code: 'BCA_VA', name: 'BCA Virtual Account', group_type: 'va', fee_flat: 2500, fee_percent: 0.0, logo_url: '/assets/icons/bca.svg', is_active: true },
+      { code: 'BRI_VA', name: 'BRI Virtual Account', group_type: 'va', fee_flat: 2000, fee_percent: 0.0, logo_url: '/assets/icons/bri.svg', is_active: true },
+      { code: 'DANA', name: 'DANA Dompet Digital', group_type: 'ewallet', fee_flat: 1000, fee_percent: 0.015, logo_url: '/assets/icons/dana.svg', is_active: true },
+      { code: 'GOPAY', name: 'GoPay Instant', group_type: 'ewallet', fee_flat: 1000, fee_percent: 0.015, logo_url: '/assets/icons/gopay.svg', is_active: true },
+      { code: 'ALFAMART', name: 'Alfamart / Alfamidi Retail', group_type: 'retail', fee_flat: 3500, fee_percent: 0.0, logo_url: '/assets/icons/alfamart.svg', is_active: true },
+    ];
+  }
+}
+---
+
+<Layout title={`Top Up ${game?.name || 'Game'} Instan — NAZILAH STORE`}>
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <!-- Breadcrumb -->
+    <div class="flex items-center gap-2 text-xs text-[#94a3b8] mb-6">
+      <a href="/" class="hover:text-white transition">Katalog</a>
+      <span>/</span>
+      <span class="text-white font-semibold">{game?.name || slug}</span>
+      <span>/</span>
+      <span class="text-[#4edea3]">Checkout Instan</span>
+    </div>
+
+    {game ? (
+      <CheckoutFlow
+        client:load
+        game={game}
+        skus={skus}
+        paymentChannels={paymentChannels}
+        initialSku={initialSku}
+      />
+    ) : (
+      <div class="text-center py-20 bg-[#181b25] border border-[#262a34] rounded-2xl">
+        <h2 class="text-lg font-bold text-white mb-2">Game Tidak Ditemukan</h2>
+        <p class="text-xs text-[#94a3b8] mb-6">Game dengan slug "{slug}" belum tersedia di katalog kami.</p>
+        <a href="/" class="px-5 py-2.5 rounded-xl bg-[#10b981] text-white text-xs font-bold">
+          Kembali ke Katalog
+        </a>
+      </div>
+    )}
+  </div>
+</Layout>
+

@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ResetPasswordForm from '../components/react/ResetPasswordForm';
+---
+
+<Layout title="Verifikasi OTP & Reset Sandi — NAZILAH STORE">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="flex items-center gap-2 text-xs text-[#94a3b8] mb-8">
+      <a href="/" class="hover:text-white transition">Katalog</a>
+      <span>/</span>
+      <a href="/masuk" class="hover:text-white transition">Masuk Akun</a>
+      <span>/</span>
+      <span class="text-[#4edea3]">Reset Kata Sandi</span>
+    </div>
+
+    <ResetPasswordForm client:load />
+  </div>
+</Layout>
+

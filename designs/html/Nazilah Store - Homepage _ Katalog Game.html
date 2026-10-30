@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NAZILAH STORE — Tactical High-Speed Gaming Gateway Indonesia</title>
+<!-- Typography: Plus Jakarta Sans & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 via CDN with Theme Injection -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "error-container": "#93000a",
+            "on-surface-variant": "#bbcabf",
+            "on-primary-fixed-variant": "#005236",
+            "on-primary-container": "#00422b",
+            "surface-container-high": "#262a34",
+            "surface-container": "#1c1f29",
+            "on-secondary-container": "#5b3800",
+            "on-tertiary": "#650911",
+            "primary-container": "#10b981",
+            "tertiary-fixed-dim": "#ffb3af",
+            "inverse-surface": "#dfe2ef",
+            "tertiary-fixed": "#ffdad7",
+            "tertiary-container": "#fc7c78",
+            "secondary-container": "#ee9800",
+            "on-secondary-fixed-variant": "#653e00",
+            "on-tertiary-container": "#711419",
+            "on-tertiary-fixed-variant": "#842225",
+            "secondary": "#ffb95f",
+            "on-error": "#690005",
+            "outline": "#86948a",
+            "surface-container-low": "#181b25",
+            "on-primary": "#003824",
+            "background": "#0f131c",
+            "primary": "#4edea3",
+            "on-background": "#dfe2ef",
+            "inverse-primary": "#006c49",
+            "primary-fixed-dim": "#4edea3",
+            "inverse-on-surface": "#2c303a",
+            "surface-variant": "#31353f",
+            "surface-container-lowest": "#0a0e17",
+            "on-primary-fixed": "#002113",
+            "secondary-fixed-dim": "#ffb95f",
+            "surface-tint": "#4edea3",
+            "surface-bright": "#353943",
+            "error": "#ffb4ab",
+            "primary-fixed": "#6ffbbe",
+            "on-secondary": "#472a00",
+            "on-tertiary-fixed": "#410005",
+            "on-error-container": "#ffdad6",
+            "on-secondary-fixed": "#2a1700",
+            "surface-container-highest": "#31353f",
+            "outline-variant": "#3c4a42",
+            "secondary-fixed": "#ffddb8",
+            "on-surface": "#dfe2ef",
+            "surface-dim": "#0f131c",
+            "tertiary": "#ffb3af",
+            "surface": "#0f131c"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.25rem",
+            "margin": "1rem",
+            "gutter-desktop": "1.5rem",
+            "space-xl": "2rem",
+            "gutter": "1rem",
+            "space-md": "0.75rem",
+            "margin-desktop": "2rem"
+          },
+          "fontFamily": {
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "mono-metric-lg": ["JetBrains Mono"],
+            "mono-metric-md": ["JetBrains Mono"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "mono-data-sm": ["JetBrains Mono"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "title-sm": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-caps": ["JetBrains Mono"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "mono-metric-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "mono-metric-md": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "mono-data-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "title-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Tactical HUD micro-scanlines and tabular figures */
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+    .hud-border {
+      box-shadow: inset 0 0 0 1px rgba(78, 222, 163, 0.15);
+    }
+    .hud-active-border {
+      box-shadow: 0 0 0 1px #4edea3;
+    }
+    @keyframes pulseSlow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.92); }
+    }
+    .animate-radar {
+      animation: pulseSlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+  </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface antialiased min-h-screen selection:bg-primary selection:text-on-primary">
+<!-- ========================================================================= -->
+<!-- 1. STICKY TOP NAVBAR (Shared Component: TopNavBar)                         -->
+<!-- ========================================================================= -->
+<header class="bg-surface-container-lowest dark:bg-surface-container-lowest border-b border-outline-variant dark:border-outline-variant docked full-width top sticky z-50">
+<div class="w-full max-w-[1360px] mx-auto px-4 lg:px-8 flex items-center justify-between h-16 gap-4">
+<!-- Brand & Status Beacon -->
+<div class="flex items-center gap-3 shrink-0">
+<a class="flex items-center gap-2 group" href="#">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high border border-outline-variant flex items-center justify-center text-primary group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="terminal" data-weight="fill">terminal</span>
+</div>
+<span class="text-headline-md font-headline-md font-extrabold tracking-tight text-primary dark:text-primary uppercase">
+            NAZILAH STORE
+          </span>
+</a>
+<div class="hidden xl:flex items-center gap-2 pl-3 border-l border-outline-variant text-label-caps font-label-caps text-primary bg-surface-container-low px-2.5 py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-primary animate-radar"></span>
+<span>● Layanan Otomatis 24/7 (1-3 Detik)</span>
+</div>
+</div>
+<!-- Centered Command Search Bar -->
+<div class="hidden md:flex flex-1 max-w-md mx-2">
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[18px]" data-icon="search">search</span>
+</div>
+<input class="w-full pl-9 pr-14 py-2 bg-surface-container-low border border-outline-variant rounded text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary transition-colors" placeholder="Cari Mobile Legends, Free Fire, PUBG, Valorant... (Ctrl+K)" type="text"/>
+<div class="absolute inset-y-0 right-0 pr-2.5 flex items-center pointer-events-none">
+<kbd class="px-1.5 py-0.5 text-label-caps font-label-caps bg-surface-container-high border border-outline-variant text-outline rounded">⌘K</kbd>
+</div>
+</div>
+</div>
+<!-- Navigation Links from Shared Components JSON -->
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-primary dark:text-primary border-b-2 border-primary pb-1 font-title-sm text-title-sm" href="#katalog">
+          Katalog Game
+        </a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface font-title-sm text-title-sm transition-colors" href="#lacak">
+          Lacak Pesanan
+        </a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface font-title-sm text-title-sm transition-colors" href="#kalkulator">
+          Kalkulator WR
+        </a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface font-title-sm text-title-sm transition-colors" href="#promo">
+          Promo VIP
+        </a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface font-title-sm text-title-sm transition-colors" href="#cs">
+          Hubungi CS
+        </a>
+</nav>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-2 shrink-0">
+<!-- Notification / Audio status buttons from JSON icons -->
+<button class="w-9 h-9 flex items-center justify-center rounded bg-surface-container-low border border-outline-variant text-on-surface-variant hover:border-outline hover:text-primary transition-all duration-150 active:scale-[0.99]" title="Notifikasi Sistem">
+<span class="material-symbols-outlined text-[18px]" data-icon="notifications">notifications</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded bg-surface-container-low border border-outline-variant text-on-surface-variant hover:border-outline hover:text-primary transition-all duration-150 active:scale-[0.99]" title="CS Gateway 24/7">
+<span class="material-symbols-outlined text-[18px]" data-icon="headset_mic">headset_mic</span>
+</button>
+<!-- Primary CTA: Masuk / Daftar -->
+<button class="px-4 py-2 bg-primary-container text-on-primary-container font-headline-md text-body-md font-bold rounded-lg hover:bg-primary transition-colors flex items-center gap-1.5 active:scale-[0.99]">
+<span class="material-symbols-outlined text-[18px]" data-icon="login">login</span>
+<span>Masuk / Daftar</span>
+</button>
+</div>
+</div>
+</header>
+<!-- ========================================================================= -->
+<!-- LIVE RECENT TRANSACTIONS TICKER (High-Density Hardware Strip)             -->
+<!-- ========================================================================= -->
+<section class="border-b border-outline-variant bg-surface-container-low overflow-hidden">
+<div class="max-w-[1360px] mx-auto px-4 lg:px-8 py-2 flex items-center gap-4 text-mono-data-sm font-mono-data-sm">
+<div class="flex items-center gap-2 shrink-0 text-primary uppercase font-bold tracking-wide">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span>H2H TELEMETRI:</span>
+</div>
+<div class="overflow-x-auto whitespace-nowrap no-scrollbar flex items-center gap-6 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="text-primary font-bold">✓</span>
+<span class="text-on-surface">0812****8912</span>
+<span>membeli Weekly Diamond Pass (MLBB)</span>
+<span class="text-outline">• 2 detik lalu</span>
+</div>
+<span class="text-outline-variant">|</span>
+<div class="flex items-center gap-2">
+<span class="text-primary font-bold">✓</span>
+<span class="text-on-surface">0857****3310</span>
+<span>membeli 355 Diamonds (Free Fire)</span>
+<span class="text-outline">• 5 detik lalu</span>
+</div>
+<span class="text-outline-variant">|</span>
+<div class="flex items-center gap-2">
+<span class="text-primary font-bold">✓</span>
+<span class="text-on-surface">0813****7741</span>
+<span>membeli 325 UC (PUBG Mobile)</span>
+<span class="text-outline">• 9 detik lalu</span>
+</div>
+<span class="text-outline-variant">|</span>
+<div class="flex items-center gap-2">
+<span class="text-primary font-bold">✓</span>
+<span class="text-on-surface">0821****9044</span>
+<span>membeli Blessing Welkin Moon (Genshin)</span>
+<span class="text-outline">• 14 detik lalu</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- MAIN WORKBENCH CONTENT                                                    -->
+<!-- ========================================================================= -->
+<main class="max-w-[1360px] mx-auto px-4 lg:px-8 py-8 space-y-10">
+<!-- 2. TACTICAL HERO BANNER (16:5 Proportion) -->
+<section class="relative rounded-lg border border-outline-variant bg-surface-container overflow-hidden group">
+<!-- Background Graphic Layer with High Contrast Gaming Prompt -->
+<div class="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-luminosity scale-[1.01] group-hover:scale-105 transition-transform duration-700" data-alt="A dark cinematic esports gaming telemetry arena background featuring tactical cyan, deep slate, and emerald green HUD monitors. Matte dark composite metal surfaces, glowing technical wireframes, and sharp angular gaming hardware design without glowing neon bloom. Cold tactical lighting, professional esports aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXTHuWzqHVPT1OtDlfIXoOaIunZoyYpaUT3fU4xYgjDyBfwo2BOHVrnRlAdTDmTVmlcyHEC3WCZXlAmYsiHplxPw5o77LdhhN0y241ody2dFM_42LKznxcKbaz7Bn0qs3QXfDj7kADRFUhs0YT-vnSNZr8GvVNBnQPHB8P539dJekxtMNc8XKUkJNkYFhcQCjVV1xBJ-QtpNFPYxtU30udm57yh15K1tYu-jRQETw')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container via-surface-container/95 to-transparent"></div>
+<!-- Banner Content -->
+<div class="relative z-10 p-6 md:p-10 lg:p-12 max-w-3xl flex flex-col justify-between min-h-[220px]">
+<div class="space-y-3">
+<div class="flex flex-wrap items-center gap-2.5">
+<span class="px-2.5 py-1 bg-surface-container-high border border-primary/40 rounded text-label-caps font-label-caps text-primary uppercase flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]" data-icon="bolt" data-weight="fill">bolt</span>
+              INSTANT DIRECT H2H
+            </span>
+<span class="px-2.5 py-1 bg-secondary-container/20 border border-secondary text-secondary rounded text-label-caps font-label-caps uppercase">
+              WEEKEND SPECIAL FLASH
+            </span>
+</div>
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-on-surface tracking-tight uppercase">
+            PROMO AKHIR PEKAN: Weekly Diamond Pass MLBB &amp; UC PUBG Mobile Termurah
+          </h1>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-2xl">
+            Proses otomatis 1-3 detik langsung masuk ke akun game. Tanpa login password, resmi Moonton &amp; Tencent Games, bebas antri 24 jam non-stop.
+          </p>
+</div>
+<div class="pt-6 flex flex-wrap items-center gap-4">
+<a class="px-5 py-2.5 bg-primary-container text-on-primary-container font-headline-md text-body-md font-bold rounded-lg hover:bg-primary transition-all flex items-center gap-2 active:scale-[0.99]" href="#flash-sale">
+<span class="material-symbols-outlined text-[18px]" data-icon="shopping_cart">shopping_cart</span>
+<span>Beli Promo Sekarang</span>
+</a>
+<div class="flex items-center gap-2 text-mono-data-sm font-mono-data-sm text-outline">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="verified_user">verified_user</span>
+<span>Garansi Saldo &amp; Legal 100% Anti Banned</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. FLASH SALE HARI INI -->
+<section class="space-y-4" id="flash-sale">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-outline-variant">
+<div class="flex items-center gap-3">
+<span class="text-headline-md font-headline-md font-extrabold tracking-tight text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="electric_bolt" data-weight="fill">electric_bolt</span>
+            FLASH SALE HARI INI
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant text-label-caps font-label-caps text-secondary">
+            BATCH #084
+          </span>
+</div>
+<!-- Monospace Countdown Timer Pill -->
+<div class="flex items-center gap-2 self-start sm:self-auto bg-surface-container border border-outline-variant px-3 py-1.5 rounded">
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase">BERAKHIR DALAM:</span>
+<div class="text-mono-metric-md font-mono-metric-md text-secondary font-bold tabular-nums">
+            [ 02 : 14 : 38 ]
+          </div>
+</div>
+</div>
+<!-- 4 Compact Deal Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Flash Deal 1 -->
+<div class="bg-surface-container border border-outline-variant rounded p-4 relative flex flex-col justify-between hover:border-primary transition-colors group">
+<div class="absolute top-3 right-3">
+<span class="px-2 py-0.5 bg-secondary-container/20 border border-secondary text-secondary rounded text-label-caps font-label-caps uppercase">
+              TERLARIS
+            </span>
+</div>
+<div>
+<div class="flex items-center gap-3 mb-3">
+<div class="w-12 h-12 rounded bg-surface-container-high border border-outline-variant flex items-center justify-center overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Square app thumbnail game badge featuring tactical blue fantasy gem crystal with gold rim Mobile Legends style top up artwork on a dark slate textured background with sharp studio contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-eExcmOxDDsG-9Mlx4pSYnXNJK_FZVItUphjVrTIBCHGlsUF2XmIlPHhrCn-aMveUR274k0f2oAVqUbTRonfStRAzo5oA_40oKu10qsBK-__AHe9sr9ms4Wo_mu0sV9FIgtlE-m2z4MPU8PaJA0pVh3KHRn6RBE52SZWfhMKUzA9D2nCmi4MbhsKBmjKK6mwMaPll9FVSu_vJJWi-LzDIyeWq25JjA1srgpBE3Zg"/>
+</div>
+<div>
+<span class="text-label-caps font-label-caps text-outline uppercase block">Mobile Legends</span>
+<h2 class="text-title-sm font-title-sm font-bold text-on-surface leading-tight">Weekly Diamond Pass</h2>
+</div>
+</div>
+<div class="my-3 space-y-1">
+<div class="flex items-baseline gap-2">
+<span class="text-mono-metric-lg font-mono-metric-lg text-primary tabular-nums">Rp 26.900</span>
+<span class="text-mono-data-sm font-mono-data-sm text-outline line-through tabular-nums">Rp 31.000</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Klaim 210 Diamonds + 70 Starlight Points</p>
+</div>
+</div>
+<!-- Stock Progress -->
+<div class="pt-3 border-t border-outline-variant/60 space-y-1.5">
+<div class="flex justify-between text-label-caps font-label-caps">
+<span class="text-outline">Sisa Kuota</span>
+<span class="text-secondary font-bold tabular-nums">12/50 Tersisa</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 76%"></div>
+</div>
+<button class="w-full mt-2 py-2 bg-surface-container-high border border-outline-variant rounded text-label-caps font-label-caps uppercase text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container group-hover:border-primary transition-all">
+              Top Up Kilat
+            </button>
+</div>
+</div>
+<!-- Flash Deal 2 -->
+<div class="bg-surface-container border border-outline-variant rounded p-4 relative flex flex-col justify-between hover:border-primary transition-colors group">
+<div class="absolute top-3 right-3">
+<span class="px-2 py-0.5 bg-secondary-container/20 border border-secondary text-secondary rounded text-label-caps font-label-caps uppercase">
+              -18%
+            </span>
+</div>
+<div>
+<div class="flex items-center gap-3 mb-3">
+<div class="w-12 h-12 rounded bg-surface-container-high border border-outline-variant flex items-center justify-center overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Digital square game badge icon representing radiant red fire diamonds and flame elements on dark slate carbon fiber surface, Free Fire styled currency voucher artwork." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf7g11LQrxHrEla-NWOeb6ldlyiV_A9FCwTW2jw7_NhftjeaoVelc9GrGvaGdKjJrCMf8aHH7M5rSUPzx--p2GQ9AwW3hah9gQ0wxHp_n0VRMTLbfjrcvm6WYlFyr9HSYi5MLgsWiK73khKIL1zHka7myyhHiY85QZHPWisLSKdiPgDpAAa48lN30BZLC9suLz_QhT8gYzQbARetM_rDjC9uV_mv0gkYnthb3w0b8"/>
+</div>
+<div>
+<span class="text-label-caps font-label-caps text-outline uppercase block">Free Fire</span>
+<h2 class="text-title-sm font-title-sm font-bold text-on-surface leading-tight">140 Diamonds Free Fire</h2>
+</div>
+</div>
+<div class="my-3 space-y-1">
+<div class="flex items-baseline gap-2">
+<span class="text-mono-metric-lg font-mono-metric-lg text-primary tabular-nums">Rp 18.200</span>
+<span class="text-mono-data-sm font-mono-data-sm text-outline line-through tabular-nums">Rp 22.000</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Langsung Masuk ke Player ID</p>
+</div>
+</div>
+<div class="pt-3 border-t border-outline-variant/60 space-y-1.5">
+<div class="flex justify-between text-label-caps font-label-caps">
+<span class="text-outline">Sisa Kuota</span>
+<span class="text-secondary font-bold tabular-nums">25/60 Tersisa</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 58%"></div>
+</div>
+<button class="w-full mt-2 py-2 bg-surface-container-high border border-outline-variant rounded text-label-caps font-label-caps uppercase text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container group-hover:border-primary transition-all">
+              Top Up Kilat
+            </button>
+</div>
+</div>
+<!-- Flash Deal 3 -->
+<div class="bg-surface-container border border-outline-variant rounded p-4 relative flex flex-col justify-between hover:border-primary transition-colors group">
+<div class="absolute top-3 right-3">
+<span class="px-2 py-0.5 bg-secondary-container/20 border border-secondary text-secondary rounded text-label-caps font-label-caps uppercase">
+              HOT
+            </span>
+</div>
+<div>
+<div class="flex items-center gap-3 mb-3">
+<div class="w-12 h-12 rounded bg-surface-container-high border border-outline-variant flex items-center justify-center overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Digital square game badge showing golden military UC coins with realistic metal textures for tactical shooter game PUBG Mobile, positioned on dark titanium background with emerald highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABPIybC_aYqWBxximWu-aeFX6Im5xpkGpdCAP-D0ySNRI9etRYVwknb3uEST6fPvYFaeBfwM_G5YyULwfeXOF5x1ftHtbicsVzYo_DEl8EV7vmj2GDAFmtVEUrFPOYcd16M8wUMB4Bo5eneGTEnVA9t_jDb0G_6wZGqQdgkQEsFePUR056i5BKYjOQ7q4eimSxm-eYpHnqLUUbk_4au5_RI1WtiVI0PnSXFsQbCKs"/>
+</div>
+<div>
+<span class="text-label-caps font-label-caps text-outline uppercase block">PUBG Mobile</span>
+<h2 class="text-title-sm font-title-sm font-bold text-on-surface leading-tight">60 Unknown Cash (UC)</h2>
+</div>
+</div>
+<div class="my-3 space-y-1">
+<div class="flex items-baseline gap-2">
+<span class="text-mono-metric-lg font-mono-metric-lg text-primary tabular-nums">Rp 13.800</span>
+<span class="text-mono-data-sm font-mono-data-sm text-outline line-through tabular-nums">Rp 16.500</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Global Server Instant Direct</p>
+</div>
+</div>
+<div class="pt-3 border-t border-outline-variant/60 space-y-1.5">
+<div class="flex justify-between text-label-caps font-label-caps">
+<span class="text-outline">Sisa Kuota</span>
+<span class="text-secondary font-bold tabular-nums">8/40 Tersisa</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 80%"></div>
+</div>
+<button class="w-full mt-2 py-2 bg-surface-container-high border border-outline-variant rounded text-label-caps font-label-caps uppercase text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container group-hover:border-primary transition-all">
+              Top Up Kilat
+            </button>
+</div>
+</div>
+<!-- Flash Deal 4 -->
+<div class="bg-surface-container border border-outline-variant rounded p-4 relative flex flex-col justify-between hover:border-primary transition-colors group">
+<div class="absolute top-3 right-3">
+<span class="px-2 py-0.5 bg-secondary-container/20 border border-secondary text-secondary rounded text-label-caps font-label-caps uppercase">
+              HEMAT
+            </span>
+</div>
+<div>
+<div class="flex items-center gap-3 mb-3">
+<div class="w-12 h-12 rounded bg-surface-container-high border border-outline-variant flex items-center justify-center overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Digital square game badge illustrating an ethereal celestial crescent moon symbol with starry purple and gold luminescence Genshin Impact Welkin Moon card style on deep obsidian background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcEMJzFeytUIz1oqFk5O4hIYJocmL6JN703Obm5tLfJ50PMFs-btX4M2e4y6NvO1T5328ddyKpM6tJHAONJrzxH5Arf_dPMSiw_UOOC_d_q_s8dxIHiAV6rH8-JfoKEgzwwQvJ7lqu-nvO_jYZXFNfnUvZe7DF2Knd4Am3cjl10USbBQ5wo774FxULHzNTrSudiLfcluyg2oguyW_upWZGvHVafrZCk4I_seeyDwM"/>
+</div>
+<div>
+<span class="text-label-caps font-label-caps text-outline uppercase block">Genshin Impact</span>
+<h2 class="text-title-sm font-title-sm font-bold text-on-surface leading-tight">Blessing of the Welkin</h2>
+</div>
+</div>
+<div class="my-3 space-y-1">
+<div class="flex items-baseline gap-2">
+<span class="text-mono-metric-lg font-mono-metric-lg text-primary tabular-nums">Rp 57.500</span>
+<span class="text-mono-data-sm font-mono-data-sm text-outline line-through tabular-nums">Rp 65.000</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">300 Genesis Crystals + 2700 Primo</p>
+</div>
+</div>
+<div class="pt-3 border-t border-outline-variant/60 space-y-1.5">
+<div class="flex justify-between text-label-caps font-label-caps">
+<span class="text-outline">Sisa Kuota</span>
+<span class="text-secondary font-bold tabular-nums">5/20 Tersisa</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 75%"></div>
+</div>
+<button class="w-full mt-2 py-2 bg-surface-container-high border border-outline-variant rounded text-label-caps font-label-caps uppercase text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container group-hover:border-primary transition-all">
+              Top Up Kilat
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. GAME CATALOG SECTION -->
+<section class="space-y-6" id="katalog">
+<!-- Section Header & Category Pills -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-2 border-b border-outline-variant">
+<div>
+<h2 class="text-headline-md font-headline-md font-extrabold tracking-tight text-on-surface uppercase">
+            KATALOG TOP UP GAME &amp; VOUCHER
+          </h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            Pilih game favorit Anda untuk mulai transaksi kilat tanpa registrasi.
+          </p>
+</div>
+<!-- Filter Tabs -->
+<div class="flex flex-wrap gap-2">
+<button class="px-3.5 py-1.5 rounded bg-surface-container-high border border-primary text-primary font-title-sm text-body-sm font-bold flex items-center gap-1.5">
+<span>🔥 Populer</span>
+</button>
+<button class="px-3.5 py-1.5 rounded bg-surface-container border border-outline-variant text-on-surface-variant hover:text-on-surface font-title-sm text-body-sm transition-colors">
+            Top Up Langsung
+          </button>
+<button class="px-3.5 py-1.5 rounded bg-surface-container border border-outline-variant text-on-surface-variant hover:text-on-surface font-title-sm text-body-sm transition-colors">
+            Voucher Game
+          </button>
+<button class="px-3.5 py-1.5 rounded bg-surface-container border border-outline-variant text-on-surface-variant hover:text-on-surface font-title-sm text-body-sm transition-colors">
+            Pulsa &amp; Kuota
+          </button>
+</div>
+</div>
+<!-- 6-Column Responsive Grid (12 Items) -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5">
+<!-- Game 1: MLBB -->
+<a class="bg-surface-container border border-outline-variant rounded p-3 flex flex-col justify-between hover:border-primary transition-all group" href="#">
+<div class="space-y-2.5">
+<div class="aspect-[3/4] w-full rounded bg-surface-container-low overflow-hidden relative border border-outline-variant/50">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Tactical esports portrait vertical poster art of fantasy armored warrior hero with blazing blue sword for Mobile Legends gaming top up card, high contrast studio lighting with deep slate background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnCC4WWaMizQGOB72IwTJEc1Kb2xXfBX2je_yEhV1nAEHRu37KO5kFGeysPMARoKBm4z8V8Up72vZ-aF-vvGHR8qf4rIaTMEEoYK-yDQaxuVL3yYbY2NY49k2t-KDWkt0I-Q_pmKzxncDN061qmLpZ_QaDIBRO2pXrJluvuf61ZWA_e-4sYaOfCRoQb77s5vbUiVCOXf1JI1_Ic-dIlTao8r-S94hybUmMauHlfaM"/>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/90 border border-secondary text-secondary text-label-caps font-label-caps">
+                Terlaris
+              </span>
+</div>
+<div>
+<h3 class="text-body-md font-body-md font-bold text-on-surface leading-snug line-clamp-1 group-hover:text-primary transition-colors">
+                Mobile Legends
+              </h3>
+<p class="text-body-sm font-body-sm text-outline">Moonton</p>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-outline-variant/60 flex items-center justify-between text-mono-data-sm font-mono-data-sm">
+<span class="text-primary font-bold">Mulai Rp 1.500</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary" title="Server Aktif"></span>
+</div>
+</a>
+<!-- Game 2: Free Fire -->
+<a class="bg-surface-container border border-outline-variant rounded p-3 flex flex-col justify-between hover:border-primary transition-all group" href="#">
+<div class="space-y-2.5">
+<div class="aspect-[3/4] w-full rounded bg-surface-container-low overflow-hidden relative border border-outline-variant/50">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Dynamic portrait illustration of tactical street survival operative in futuristic jacket Free Fire style artwork on dark titanium metallic background with subtle amber sparks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0a8gweb9WRZiO7eDLviOh1-49k56XNaS_J5UNAioS_1J8WePSYWCnbKVH_JxNVFUdP97qdUgtdzx5EEOzHGIKztl4sUaHY0uT-xFC2rEwaxMpk2yZt92GtPV2cmMU7Xp3FmtMrxrKHmUGe73Jtl5q8Q7RY0dbWPWArtOzI_EpSvpI4HKScT_Rm44F0XyAHAFk0ri0eMEgz74rOtoZewcqoDI4oWXFrzsaT0ahkr4"/>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/90 border border-primary text-primary text-label-caps font-label-caps">
+                Instan
+              </span>
+</div>
+<div>
+<h3 class="text-body-md font-body-md font-bold text-on-surface leading-snug line-clamp-1 group-hover:text-primary transition-colors">
+                Free Fire
+              </h3>
+<p class="text-body-sm font-body-sm text-outline">Garena</p>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-outline-variant/60 flex items-center justify-between text-mono-data-sm font-mono-data-sm">
+<span class="text-primary font-bold">Mulai Rp 1.000</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</div>
+</a>
+<!-- Game 3: PUBG Mobile -->
+<a class="bg-surface-container border border-outline-variant rounded p-3 flex flex-col justify-between hover:border-primary transition-all group" href="#">
+<div class="space-y-2.5">
+<div class="aspect-[3/4] w-full rounded bg-surface-container-low overflow-hidden relative border border-outline-variant/50">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Iconic tier 3 military helmet tactical operative in smoke battleground setting for PUBG Mobile vertical card on dark moody slate backdrop with cinematic rim light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR3mGmEryiQ6ZhDFFBIIYrUYYiZfd6w-toxFcq3QQ5q8AVRq_nTXNpcgJ_90SiYyAXFjsx41b-v-DmwrxCgSYH7dkb27KAoFYntG9PwvnFPB3Yz6RPOnaPKAZ4Z4N_jzvKgKRZ2iIWZFWYj6_L7whSAI6MCc87fbWrmV4-WkNdlQC-RJnbMZ0ewpjz05uETJ0Bec9WW9CM3EEjEX76ijGGUFgDXcK8wrN-QCaXiRY"/>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/90 border border-secondary text-secondary text-label-caps font-label-caps">
+                Promo UC
+              </span>
+</div>
+<div>
+<h3 class="text-body-md font-body-md font-bold text-on-surface leading-snug line-clamp-1 group-hover:text-primary transition-colors">
+                PUBG Mobile
+              </h3>
+<p class="text-body-sm font-body-sm text-outline">Tencent Games</p>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-outline-variant/60 flex items-center justify-between text-mono-data-sm font-mono-data-sm">
+<span class="text-primary font-bold">Mulai Rp 13.800</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</div>
+</a>
+<!-- Game 4: Genshin Impact -->
+<a class="bg-surface-container border border-outline-variant rounded p-3 flex flex-col justify-between hover:border-primary transition-all group" href="#">
+<div class="space-y-2.5">
+<div class="aspect-[3/4] w-full rounded bg-surface-container-low overflow-hidden relative border border-outline-variant/50">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Fantasy anime traveler adventurer character standing against celestial astral sky Genshin Impact card illustration with deep dark navy tones and high-fidelity rendering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb3DmwtwWpFZW7BSEQv2wEqFDHu2Teocxkqyfx1BQ0hcXokrFKODGyAW5ATaXS_FadIPlpEdMJs6eeCwDRwdkFd2_wrKWXWFkKzBpQUXhd-UsZYF83xslYSzS0eg7-wIENP0jMaeYszWggbvwjwqy19iMxKz4C7smh1QKwKo94qVbdbhqpTOxaFem-R7fUqpti8KAJn6NgN4jBAq7jMJ_whWh0unNO3sqFutSpq-c"/>
+</div>
+<div>
+<h3 class="text-body-md font-body-md font-bold text-on-surface leading-snug line-clamp-1 group-hover:text-primary transition-colors">
+                Genshin Impact
+              </h3>
+<p class="text-body-sm font-body-sm text-outline">HoYoverse</p>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-outline-variant/60 flex items-center justify-between text-mono-data-sm font-mono-data-sm">
+<span class="text-primary font-bold">Mulai Rp 16.000</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</div>
+</a>
+<!-- Game 5: Honor of Kings -->
+<a class="bg-surface-container border border-outline-variant rounded p-3 flex flex-col justify-between hover:border-primary transition-all group" href="#">
+<div class="space-y-2.5">
+<div class="aspect-[3/4] w-full rounded bg-surface-container-low overflow-hidden relative border border-outline-variant/50">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Heroic eastern fantasy warrior with glowing dragon spear Honor of Kings character portrait vertical poster on dark textured slate background with green and gold aura." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ_0L_XJB_PLT8epVux2XCj9siTvG_oWq7ca2yZOiizGkTc6MumT8APXxJF3u-MSlMKG4p3VaxJugb_HaTBU-GSHnPVqkEYXsfPLEN7E7LYDDFdTYXpXcM54LuWv4lT3Kc0uNtMhn6c69W-FjWFkRhdNLrh0KrLq9xFqOEDfbEDoZrGviLPNQ83OjaAvcQsuXQzWx2wFlXmGbQiCHAJMksu2cNz1XrnIRTymPIiAw"/>
+<span class="absolute top-2 right-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/90 border border-primary text-primary text-label-caps font-label-caps">
+                Baru
+              </span>
+</div>
+<div>
+<h3 class="text-body-md font-body-md font-bold text-on-surface leading-snug line-clamp-1 group-hover:text-primary transition-colors">
+                Honor of Kings
+              </h3>
+<p class="text-body-sm font-body-sm text-outline">Level Infinite</p>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-outline-variant/60 flex items-center justify-between text-mono-data-sm font-mono-data-sm">
+<span class="text-primary font-bold">Mulai Rp 1.200</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</div>
+</a>
+<!-- Game 6: Valorant Indonesia -->
+<a class="bg-surface-container border border-outline-variant rounded p-3 flex flex-col justify-between hover:border-primary transition-all group" href="#">
+<div class="space-y-2.5">
+<div class="aspect-[3/4] w-full rounded bg-surface-container-low overflow-hidden relative border border-outline-variant/50">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Futuristic wind assassin agent silhouette with razor daggers Valorant tactical shooter style artwork on dark minimalist charcoal background with sharp cyan-emerald accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC956oRJdDFbjtSsQ1YyvGtXXTFHJYa5lZBKlu3iCYgopft1BlrAfnOZJt8bBPzzH4HSFGSWrepUQF-iQc_JyW9rQov2CIq4hDjbQ3fQTypGYQmnFyXabeZuDL47klTUs6G-c2nb8OfwX6FqD0xX1SzjZbrj8K_zS9wX4ngdKi9PzLuUp01f5ujwL2UdMz6GbEhsL5ZV4JvCtrsz_2WLfcKLssz1FCov0TNkhWoaak"/>
+</div>
+<div>
+<h3 class="text-body-md font-body-md font-bold text-on-surface leading-snug line-clamp-1 group-hover:text-primary transition-colors">
+                Valorant Points
+              </h3>
+<p class="text-body-sm font-body-sm text-outline">Riot Games</p>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-outline-variant/60 flex items-center justify-between text-mono-data-sm font-mono-data-sm">
+<span class="text-primary font-bold">Mulai Rp 14.500</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</div>
+</a>
+<!-- Game 7: Call of Duty Mobile -->
+<a class="bg-surface-container border border-outline-variant rounded p-3 flex flex-col justify-between hover:border-primary transition-all group" href="#">
+<div class="space-y-2.5">
+<div class="aspect-[3/4] w-full rounded bg-surface-container-low overflow-hidden relative border border-outline-variant/50">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Tactical ghost mask soldier in night vision gear holding combat rifle for Call of Duty Mobile vertical poster on dark carbon composite texture background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqLzexISdSGiU7SqJswX6-YV-U5bwTDRCD0zNlK7cVzdLHSi7DlbggQHRy1Rb5kt3M7HkG93o5MmNocXFfQikd0XXe7hOpP_xhVnvyOjDU_fF2ShM5ocbNX7pLC-Ro-t5CN_6JijCr15BlVOIWY9g_3L4VeagAIA52iD7Oc_Q2yx9_qHfSd42SSWC6OHIQByl0WCJBse1bNShd3i4p6OoR-svWOwZ-gTiM5QUQJ6o"/>
+</div>
+<div>
+<h3 class="text-body-md font-body-md font-bold text-on-surface leading-snug line-clamp-1 group-hover:text-primary transition-colors">
+                Call of Duty: M
+              </h3>
+<p class="text-body-sm font-body-sm text-outline">Garena</p>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-outline-variant/60 flex items-center justify-between text-mono-data-sm font-mono-data-sm">
+<span class="text-primary font-bold">Mulai Rp 10.000</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</div>
+</a>
+<!-- Game 8: Roblox Robux -->
+<a class="bg-surface-container border border-outline-variant rounded p-3 flex flex-col justify-between hover:border-primary transition-all group" href="#">
+<div class="space-y-2.5">
+<div class="aspect-[3/4] w-full rounded bg-surface-container-low overflow-hidden relative border border-outline-variant/50">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Geometric voxel avatar character in futuristic cyberpunk street fashion for Roblox gift card artwork on clean dark slate background with crisp directional studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAjSBLpoh-tz5FwjuuvkI1XTyw9bWeDvIUp9_IkirqpueC26u8ePLgJcSMyez2YFKJ8W4q_5QwQ2NOxQC9tFNr7pkIeJcZgTcRoQSTx3U9EmoObt9uPh4svL6O_P2ohDVI_rujna0JKEvfHL33P-pyI_BPip8H6LTJCtdO7U8O6WMBUMk-yLX4G5AhgXDT2n70kLNy0Picef2N2Kxcft7iixQkPf3zXL3kI_gshFI"/>
+</div>
+<div>
+<h3 class="text-body-md font-body-md font-bold text-on-surface leading-snug line-clamp-1 group-hover:text-primary transition-colors">
+                Roblox Robux
+              </h3>
+<p class="text-body-sm font-body-sm text-outline">Roblox Corp</p>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-outline-variant/60 flex items-center justify-between text-mono-data-sm font-mono-data-sm">
+<span class="text-primary font-bold">Mulai Rp 20.000</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</div>
+</a>
+<!-- Game 9: Point Blank -->
+<a class="bg-surface-container border border-outline-variant rounded p-3 flex flex-col justify-between hover:border-primary transition-all group" href="#">
+<div class="space-y-2.5">
+<div class="aspect-[3/4] w-full rounded bg-surface-container-low overflow-hidden relative border border-outline-variant/50">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Classic tactical SWAT operative holding submachine gun Point Blank Beyond Limits vertical poster on dark industrial concrete background with sharp metallic highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD_FqM6jYGGWrt4TrxkxznX4Zt98QFRkwRYXnx_JZJ6YDg5BIUhoCDf80PqnXSNwkFDJOxwKPTr7_em_MmxOe-GfbAKfPgXLqNEFaTL4-afXVc-_HDhiEUgzoQ91XRt3w8FNl7Rm0WexOmMcLtE5mElcXd5OqqfLD4fKb_FvOjH4cIy06wYp1uRPUDUsGGotXxtbaq9BdOTL7FNOisLihoYqReb6gQ3bDjQ7s3xyI"/>
+</div>
+<div>
+<h3 class="text-body-md font-body-md font-bold text-on-surface leading-snug line-clamp-1 group-hover:text-primary transition-colors">
+                Point Blank
+              </h3>
+<p class="text-body-sm font-body-sm text-outline">Zepetto</p>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-outline-variant/60 flex items-center justify-between text-mono-data-sm font-mono-data-sm">
+<span class="text-primary font-bold">Mulai Rp 11.500</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</div>
+</a>
+<!-- Game 10: Clash of Clans -->
+<a class="bg-surface-container border border-outline-variant rounded p-3 flex flex-col justify-between hover:border-primary transition-all group" href="#">
+<div class="space-y-2.5">
+<div class="aspect-[3/4] w-full rounded bg-surface-container-low overflow-hidden relative border border-outline-variant/50">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Fierce yellow-mustached barbarian warrior screaming in battle Clash of Clans vertical card portrait on dark slate background with sharp edge illumination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCliJm4A2mm0biwQ77lu-wCuRLEV4ZuTNGJluvOwDDd9o_Y-6BytcukWhJ6O9IBzyasqTR8-guMUrMvESHIWUrlO2cfcWxrzUApeVkcoMST42fqx4gzM4iX36tE561QJB9e3HUJWbv_9Zuakay5q6ZR34i4AAMLIXtenBq72uBsdU0Uhvq7p7Sxdo-pJheMPDNmP9cowUyOZS2fUadP3pSdkKQ4-WXA0fA43_3Bfpo"/>
+</div>
+<div>
+<h3 class="text-body-md font-body-md font-bold text-on-surface leading-snug line-clamp-1 group-hover:text-primary transition-colors">
+                Clash of Clans
+              </h3>
+<p class="text-body-sm font-body-sm text-outline">Supercell</p>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-outline-variant/60 flex items-center justify-between text-mono-data-sm font-mono-data-sm">
+<span class="text-primary font-bold">Mulai Rp 15.000</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</div>
+</a>
+<!-- Game 11: Steam Wallet Code IDR -->
+<a class="bg-surface-container border border-outline-variant rounded p-3 flex flex-col justify-between hover:border-primary transition-all group" href="#">
+<div class="space-y-2.5">
+<div class="aspect-[3/4] w-full rounded bg-surface-container-low overflow-hidden relative border border-outline-variant/50">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Precision mechanical Steam hardware valve crank logo on dark brushed titanium steel surface, tactical voucher card artwork with high micro-texture clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNg6fkz9EjwCb9fNQc6DyjroSwDETe7Q8RiSP4kR_07dRmvsscvNGq1dJhIiZMKMTELN4svYAFaOZyoEdqoEG2SWSsVyLN95B9Z1XzEzzvUU3pMBsFurZvRGsnUYFUcReRZHapeMvSvgCEskPIIBBowPfP_pxRDGBtAhOowDc5s6Z-tFg4QwvYU9R7P39CDLr5arFUYJss7f-d6Jpa3Fif4NiVjcQdPBpTtTPscAA"/>
+</div>
+<div>
+<h3 class="text-body-md font-body-md font-bold text-on-surface leading-snug line-clamp-1 group-hover:text-primary transition-colors">
+                Steam Wallet IDR
+              </h3>
+<p class="text-body-sm font-body-sm text-outline">Valve</p>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-outline-variant/60 flex items-center justify-between text-mono-data-sm font-mono-data-sm">
+<span class="text-primary font-bold">Mulai Rp 12.000</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</div>
+</a>
+<!-- Game 12: Google Play Voucher ID -->
+<a class="bg-surface-container border border-outline-variant rounded p-3 flex flex-col justify-between hover:border-primary transition-all group" href="#">
+<div class="space-y-2.5">
+<div class="aspect-[3/4] w-full rounded bg-surface-container-low overflow-hidden relative border border-outline-variant/50">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Geometric prism play emblem with high contrast dark mode gradient on deep obsidian slate background for official Google Play Voucher gift card." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApc69cVWcEm0-nR9Sf1evNVoYri8QC6M9C946eOgHf0AYB-BtuecM75d7PhyLY94C7WvN6VDw-d5_DyRdrOoTlzSX30bvzLFDVunrynFTv-FovYM1yPKA-4GC37iTcEXQWHquV56zqKTk9E06BQ9GEKv9WJqcCKpqXE6D5eirzxuELPsyknU_GR8SnN_AyhXCamYh0NtiI7sskgJCPJqHWsygnt5nesQGUXaFnUXc"/>
+</div>
+<div>
+<h3 class="text-body-md font-body-md font-bold text-on-surface leading-snug line-clamp-1 group-hover:text-primary transition-colors">
+                Google Play ID
+              </h3>
+<p class="text-body-sm font-body-sm text-outline">Google</p>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-outline-variant/60 flex items-center justify-between text-mono-data-sm font-mono-data-sm">
+<span class="text-primary font-bold">Mulai Rp 10.000</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</div>
+</a>
+</div>
+</section>
+<!-- 5. VALUE PROPOSITION STATS (Tactical Benchmarks) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
+<div class="p-4 rounded bg-surface-container border border-outline-variant flex items-start gap-3.5">
+<div class="p-2.5 rounded bg-surface-container-high border border-outline-variant text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]" data-icon="lock" data-weight="fill">lock</span>
+</div>
+<div>
+<h4 class="text-title-sm font-title-sm font-bold text-on-surface">256-Bit SSL Encrypted</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">Enkripsi level perbankan untuk proteksi seluruh data pembayaran.</p>
+</div>
+</div>
+<div class="p-4 rounded bg-surface-container border border-outline-variant flex items-start gap-3.5">
+<div class="p-2.5 rounded bg-surface-container-high border border-outline-variant text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]" data-icon="speed" data-weight="fill">speed</span>
+</div>
+<div>
+<h4 class="text-title-sm font-title-sm font-bold text-on-surface">Direct API (1-3 Detik)</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">Automasi gateway H2H tanpa delay pemrosesan antrean manual.</p>
+</div>
+</div>
+<div class="p-4 rounded bg-surface-container border border-outline-variant flex items-start gap-3.5">
+<div class="p-2.5 rounded bg-surface-container-high border border-outline-variant text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]" data-icon="verified" data-weight="fill">verified</span>
+</div>
+<div>
+<h4 class="text-title-sm font-title-sm font-bold text-on-surface">100% Anti Banned</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">Sumber diamond dan voucher resmi distributor partner terdaftar.</p>
+</div>
+</div>
+<div class="p-4 rounded bg-surface-container border border-outline-variant flex items-start gap-3.5">
+<div class="p-2.5 rounded bg-surface-container-high border border-outline-variant text-secondary shrink-0">
+<span class="material-symbols-outlined text-[24px]" data-icon="currency_exchange" data-weight="fill">currency_exchange</span>
+</div>
+<div>
+<h4 class="text-title-sm font-title-sm font-bold text-on-surface">Garansi Saldo Kembali</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">Pengembalian dana 100% otomatis jika server distributor gangguan.</p>
+</div>
+</div>
+</section>
+<!-- 6. INDONESIAN PAYMENT MATRIX (Direct Gateway Ecosystem) -->
+<section class="p-6 rounded bg-surface-container border border-outline-variant space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<span class="text-label-caps font-label-caps text-primary uppercase">INTEGRASI GERBANG PEMBAYARAN RESMI</span>
+<h3 class="text-headline-md font-headline-md font-bold text-on-surface">Metode Pembayaran Instan Terlengkap</h3>
+</div>
+<div class="text-mono-data-sm font-mono-data-sm text-outline flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>SLA Latensi: ~800ms</span>
+</div>
+</div>
+<!-- Payment Channel Logos/Chips -->
+<div class="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-2.5 text-center">
+<div class="p-2.5 bg-surface-container-low border border-outline-variant rounded flex flex-col items-center justify-center">
+<span class="text-mono-metric-md font-mono-metric-md font-bold text-on-surface tracking-wider">QRIS</span>
+<span class="text-label-caps font-label-caps text-primary mt-0.5">Semua Bank</span>
+</div>
+<div class="p-2.5 bg-surface-container-low border border-outline-variant rounded flex flex-col items-center justify-center">
+<span class="text-mono-metric-md font-mono-metric-md font-bold text-on-surface">BCA</span>
+<span class="text-label-caps font-label-caps text-outline mt-0.5">Virtual Acc</span>
+</div>
+<div class="p-2.5 bg-surface-container-low border border-outline-variant rounded flex flex-col items-center justify-center">
+<span class="text-mono-metric-md font-mono-metric-md font-bold text-on-surface">MANDIRI</span>
+<span class="text-label-caps font-label-caps text-outline mt-0.5">Livin' VA</span>
+</div>
+<div class="p-2.5 bg-surface-container-low border border-outline-variant rounded flex flex-col items-center justify-center">
+<span class="text-mono-metric-md font-mono-metric-md font-bold text-on-surface">BRI</span>
+<span class="text-label-caps font-label-caps text-outline mt-0.5">BRIVA 24/7</span>
+</div>
+<div class="p-2.5 bg-surface-container-low border border-outline-variant rounded flex flex-col items-center justify-center">
+<span class="text-mono-metric-md font-mono-metric-md font-bold text-on-surface">BNI</span>
+<span class="text-label-caps font-label-caps text-outline mt-0.5">Virtual Acc</span>
+</div>
+<div class="p-2.5 bg-surface-container-low border border-outline-variant rounded flex flex-col items-center justify-center">
+<span class="text-mono-metric-md font-mono-metric-md font-bold text-on-surface">DANA</span>
+<span class="text-label-caps font-label-caps text-outline mt-0.5">Auto Direct</span>
+</div>
+<div class="p-2.5 bg-surface-container-low border border-outline-variant rounded flex flex-col items-center justify-center">
+<span class="text-mono-metric-md font-mono-metric-md font-bold text-on-surface">OVO</span>
+<span class="text-label-caps font-label-caps text-outline mt-0.5">Push Notif</span>
+</div>
+<div class="p-2.5 bg-surface-container-low border border-outline-variant rounded flex flex-col items-center justify-center">
+<span class="text-mono-metric-md font-mono-metric-md font-bold text-on-surface">GOPAY</span>
+<span class="text-label-caps font-label-caps text-outline mt-0.5">Instant Pay</span>
+</div>
+<div class="p-2.5 bg-surface-container-low border border-outline-variant rounded flex flex-col items-center justify-center">
+<span class="text-mono-metric-md font-mono-metric-md font-bold text-on-surface">SHOPEE</span>
+<span class="text-label-caps font-label-caps text-outline mt-0.5">ShopeePay</span>
+</div>
+</div>
+</section>
+</main>
+<!-- ========================================================================= -->
+<!-- 7. FOOTER (Shared Component: Footer)                                      -->
+<!-- ========================================================================= -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline-variant full-width bottom mt-12">
+<div class="w-full max-w-[1360px] mx-auto px-4 lg:px-8 py-10 space-y-8">
+<!-- Top Section: Bio & Contact -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="md:col-span-2 space-y-3">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded bg-surface-container-high border border-outline-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
+</div>
+<span class="text-title-sm font-title-sm font-bold text-on-surface dark:text-on-surface uppercase">
+              NAZILAH STORE
+            </span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant max-w-md">
+            Platform agregator voucher game, top-up diamond, dan token multimedia terpercaya di Indonesia. Terintegrasi langsung dengan API resmi game publisher untuk pengiriman instan berkecepatan 1-3 detik.
+          </p>
+<div class="flex items-center gap-3 pt-2">
+<a class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-surface-container border border-outline-variant text-primary text-mono-data-sm font-mono-data-sm hover:border-primary transition-colors" href="https://wa.me/">
+<span class="material-symbols-outlined text-[16px]" data-icon="chat">chat</span>
+<span>Bantuan WhatsApp 24/7</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="text-label-caps font-label-caps text-on-surface uppercase mb-3">Layanan Cepat</h5>
+<ul class="space-y-2 text-body-sm font-body-sm text-on-surface-variant">
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors" href="#">Katalog Top Up Game</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors" href="#">Lacak Status Pesanan</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors" href="#">Kalkulator Winrate MLBB</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors" href="#">Promo Flash Sale VIP</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-label-caps font-label-caps text-on-surface uppercase mb-3">Sistem &amp; Kemitraan</h5>
+<ul class="space-y-2 text-body-sm font-body-sm text-on-surface-variant">
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors" href="#">Status Server H2H</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors" href="#">Integrasi API Reseller</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors" href="#">Panduan Transaksi QRIS</a></li>
+<li><a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors" href="#">Bantuan WhatsApp 24/7</a></li>
+</ul>
+</div>
+</div>
+<!-- Divider -->
+<div class="border-t border-outline-variant/60 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-mono-data-sm font-mono-data-sm text-on-surface-variant">
+<!-- Copyright strictly rendered from JSON -->
+<div>
+          © 2025 Nazilah Store. Official High-Speed Gaming Gateway Indonesia. Hak Cipta Dilindungi.
+        </div>
+<!-- Compliance Links verbatim from JSON -->
+<div class="flex flex-wrap items-center gap-4">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors" href="#">
+            Syarat &amp; Ketentuan
+          </a>
+<span class="text-outline-variant">•</span>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors" href="#">
+            Kebijakan Privasi
+          </a>
+<span class="text-outline-variant">•</span>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors" href="#">
+            Status Server H2H
+          </a>
+<span class="text-outline-variant">•</span>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors" href="#">
+            Integrasi API Reseller
+          </a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

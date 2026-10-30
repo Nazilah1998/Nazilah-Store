@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daftar Harga Real-Time & Status Server - NAZILAH STORE</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed": "#6ffbbe",
+            "inverse-primary": "#006c49",
+            "on-tertiary-fixed": "#410005",
+            "secondary-fixed-dim": "#ffb95f",
+            "secondary-container": "#ee9800",
+            "on-surface": "#dfe2ef",
+            "on-tertiary-container": "#711419",
+            "outline-variant": "#3c4a42",
+            "surface-container-highest": "#31353f",
+            "on-primary-container": "#00422b",
+            "tertiary": "#ffb3af",
+            "surface-container": "#1c1f29",
+            "inverse-surface": "#dfe2ef",
+            "on-surface-variant": "#bbcabf",
+            "error-container": "#93000a",
+            "surface-bright": "#353943",
+            "error": "#ffb4ab",
+            "background": "#0f131c",
+            "on-background": "#dfe2ef",
+            "surface": "#0f131c",
+            "on-secondary-fixed-variant": "#653e00",
+            "outline": "#86948a",
+            "on-tertiary-fixed-variant": "#842225",
+            "on-error-container": "#ffdad6",
+            "tertiary-fixed-dim": "#ffb3af",
+            "on-secondary-fixed": "#2a1700",
+            "primary-container": "#10b981",
+            "secondary": "#ffb95f",
+            "on-error": "#690005",
+            "on-primary-fixed-variant": "#005236",
+            "surface-variant": "#31353f",
+            "primary": "#4edea3",
+            "on-tertiary": "#650911",
+            "primary-fixed-dim": "#4edea3",
+            "on-secondary": "#472a00",
+            "on-primary-fixed": "#002113",
+            "tertiary-container": "#fc7c78",
+            "on-secondary-container": "#5b3800",
+            "surface-container-high": "#262a34",
+            "tertiary-fixed": "#ffdad7",
+            "inverse-on-surface": "#2c303a",
+            "surface-dim": "#0f131c",
+            "on-primary": "#003824",
+            "surface-container-lowest": "#0a0e17",
+            "secondary-fixed": "#ffddb8",
+            "surface-container-low": "#181b25",
+            "surface-tint": "#4edea3"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin-desktop": "2rem",
+            "space-md": "0.75rem",
+            "gutter-desktop": "1.5rem",
+            "margin": "1rem",
+            "space-xl": "2rem",
+            "space-lg": "1.25rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Plus Jakarta Sans"],
+            "mono-data-sm": ["JetBrains Mono"],
+            "mono-metric-md": ["JetBrains Mono"],
+            "label-caps": ["JetBrains Mono"],
+            "title-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "mono-metric-lg": ["JetBrains Mono"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "mono-data-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "mono-metric-md": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }],
+            "title-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "mono-metric-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      font-size: 18px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #0a0e17;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 2px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+  </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col font-body-md">
+<!-- TOP NAVBAR (From Shared Components JSON) -->
+<header class="bg-surface-container-lowest dark:bg-surface-container-lowest docked full-width top sticky z-50 border-b border-outline-variant dark:border-outline-variant flat no shadows">
+<div class="w-full max-w-[1360px] mx-auto px-4 lg:px-8 flex items-center justify-between h-16 gap-4">
+<!-- Brand & Status Pill -->
+<div class="flex items-center gap-4">
+<a class="text-headline-md font-headline-md font-extrabold tracking-tight text-primary dark:text-primary uppercase flex items-center gap-2" href="#">
+<span>NAZILAH STORE</span>
+</a>
+<div class="hidden sm:flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-low border border-outline-variant text-primary font-mono-data-sm text-mono-data-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container inline-block animate-pulse"></span>
+<span>Server H2H Online (1-3s)</span>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden lg:flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface font-title-sm text-title-sm transition-colors hover:border-outline hover:text-primary" href="#">Katalog Game</a>
+<a class="text-primary dark:text-primary border-b-2 border-primary pb-1 font-title-sm text-title-sm" href="#">Daftar Harga</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface font-title-sm text-title-sm transition-colors hover:border-outline hover:text-primary" href="#">Lacak Pesanan</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface font-title-sm text-title-sm transition-colors hover:border-outline hover:text-primary" href="#">Kalkulator WR</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface font-title-sm text-title-sm transition-colors hover:border-outline hover:text-primary" href="#">Promo VIP</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface font-title-sm text-title-sm transition-colors hover:border-outline hover:text-primary" href="#">Hubungi CS</a>
+</nav>
+<!-- Trailing Action Cluster -->
+<div class="flex items-center gap-3">
+<button aria-label="Notifikasi Layanan" class="p-2 rounded bg-surface-container border border-outline-variant text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button aria-label="Customer Support" class="p-2 rounded bg-surface-container border border-outline-variant text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined" data-icon="headset_mic">headset_mic</span>
+</button>
+<button class="bg-primary-container text-on-primary-container font-headline-md text-body-md px-4 py-2 rounded font-semibold active:scale-[0.99] transition-transform duration-100 ease-out hover:opacity-90" type="button">
+          Masuk / Daftar
+        </button>
+</div>
+</div>
+</header>
+<!-- MAIN VIEWPORT CANVAS -->
+<main class="flex-1 w-full max-w-[1360px] mx-auto px-4 lg:px-8 py-6 space-y-6">
+<!-- TELEMETRY & BANNER STRIP -->
+<section class="bg-surface-container-low border border-outline-variant rounded p-4 lg:p-6 space-y-4">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded bg-surface-container border border-outline-variant text-primary font-label-caps text-label-caps uppercase">
+              CONSOLE TELEMETRY HUD
+            </span>
+<span class="text-on-surface-variant font-mono-data-sm text-mono-data-sm">• LIVE PIPELINE</span>
+</div>
+<h1 class="text-headline-lg font-headline-lg text-on-surface tracking-tight">
+            Daftar Harga Real-Time & Status Layanan Server
+          </h1>
+<p class="text-on-surface-variant font-body-md text-body-md mt-1">
+            Transparansi harga grosir H2H, tier diskon akun, dan telemetri kestabilan jalur pengisian produk otomatis.
+          </p>
+</div>
+<!-- System Latency Quick Bar -->
+<div class="flex flex-wrap items-center gap-2 lg:gap-3 bg-surface-container-lowest p-2.5 rounded border border-outline-variant">
+<div class="flex items-center gap-2 px-2 py-1 rounded bg-surface-container text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-mono-data-sm text-mono-data-sm">Digiflazz Direct API v2.4 (18ms)</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-outline" data-icon="sync">sync</span>
+<span class="font-mono-data-sm text-mono-data-sm">Sinkron: 12 dtk lalu</span>
+<button aria-label="Segarkan data telemetry" class="ml-1 text-primary hover:text-primary-fixed transition-colors" type="button">
+<span class="material-symbols-outlined" data-icon="refresh">refresh</span>
+</button>
+</div>
+<div class="px-2.5 py-1 rounded bg-surface-container border border-outline-variant font-mono-data-sm text-mono-data-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+<span>99.8% Uptime (Normal)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- TIER PRICING LEGEND / BENEFIT SPEC -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<!-- Tier 1 -->
+<div class="bg-surface-container-low border border-outline-variant p-3.5 rounded flex items-start gap-3">
+<div class="p-2 rounded bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="person_outline">person_outline</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Tamu / Publik</span>
+<span class="font-label-caps text-label-caps px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface-variant uppercase">TIER 1</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Tanpa login, instant checkout via QRIS & Virtual Account 24 jam non-stop.
+          </p>
+</div>
+</div>
+<!-- Tier 2 -->
+<div class="bg-surface-container-low border border-outline-variant p-3.5 rounded flex items-start gap-3">
+<div class="p-2 rounded bg-surface-container-high text-primary">
+<span class="material-symbols-outlined" data-icon="stars">stars</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Member Terdaftar</span>
+<span class="font-label-caps text-label-caps px-1.5 py-0.2 rounded bg-surface-container-highest text-primary uppercase">TIER 2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Diskon ~2-3% otomatis terpotong saat login, loyalty poin & cashback NazilahPay.
+          </p>
+</div>
+</div>
+<!-- Tier 3 (VIP) -->
+<div class="bg-surface-container-low border border-secondary-container p-3.5 rounded flex items-start gap-3 relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-16 h-16 bg-secondary-container/10 rounded-full blur-lg pointer-events-none"></div>
+<div class="p-2 rounded bg-surface-container-high text-secondary">
+<span class="material-symbols-outlined" data-icon="military_tech">military_tech</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-title-sm text-secondary font-semibold">Reseller VIP & H2H</span>
+<span class="font-label-caps text-label-caps px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-container uppercase">TIER 3</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Harga modal distributor H2H, antrean prioritas 0-1 dtk, webhook API & CS dedicated.
+          </p>
+</div>
+</div>
+</section>
+<!-- CONTROL TOOLBAR (Filters, Selector & Search) -->
+<section class="bg-surface-container-low border border-outline-variant rounded p-4 space-y-4">
+<!-- Primary Game Switcher Row -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3 pb-3 border-b border-outline-variant">
+<div class="flex items-center gap-2 overflow-x-auto custom-scroll pb-1 lg:pb-0">
+<!-- Game Main Dropdown -->
+<div class="relative inline-block text-left shrink-0">
+<button class="flex items-center gap-2 px-3 py-2 rounded bg-surface-container-high border border-primary text-on-surface font-title-sm text-title-sm font-semibold" type="button">
+<span class="material-symbols-outlined text-primary" data-icon="sports_esports">sports_esports</span>
+<span>Mobile Legends: Bang Bang (38 Produk)</span>
+<span class="material-symbols-outlined text-outline" data-icon="arrow_drop_down">arrow_drop_down</span>
+</button>
+</div>
+<!-- Quick Game Pills -->
+<button class="shrink-0 px-3 py-2 rounded bg-surface-container border border-outline-variant text-on-surface-variant hover:text-on-surface hover:border-outline font-title-sm text-title-sm transition-colors" type="button">
+            Free Fire
+          </button>
+<button class="shrink-0 px-3 py-2 rounded bg-surface-container border border-outline-variant text-on-surface-variant hover:text-on-surface hover:border-outline font-title-sm text-title-sm transition-colors" type="button">
+            PUBG Mobile
+          </button>
+<button class="shrink-0 px-3 py-2 rounded bg-surface-container border border-outline-variant text-on-surface-variant hover:text-on-surface hover:border-outline font-title-sm text-title-sm transition-colors" type="button">
+            Genshin Impact
+          </button>
+<button class="shrink-0 px-3 py-2 rounded bg-surface-container border border-outline-variant text-on-surface-variant hover:text-on-surface hover:border-outline font-title-sm text-title-sm transition-colors" type="button">
+            Valorant
+          </button>
+</div>
+<!-- Export & Action Tooling -->
+<div class="flex items-center gap-2 shrink-0">
+<button class="flex items-center gap-1.5 px-3 py-2 rounded bg-surface-container border border-outline-variant text-on-surface-variant hover:text-primary transition-colors font-mono-data-sm text-mono-data-sm" type="button">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+<span>Download CSV/Excel</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-2 rounded bg-surface-container border border-outline-variant text-on-surface-variant hover:text-primary transition-colors font-mono-data-sm text-mono-data-sm" type="button">
+<span class="material-symbols-outlined" data-icon="code">code</span>
+<span>Salin Format API Reseller</span>
+</button>
+</div>
+</div>
+<!-- Search & Filtering Micro-HUD -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
+<!-- Monospace SKU Search -->
+<div class="relative flex-1 max-w-xl">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</span>
+<input class="w-full pl-9 pr-16 py-2 rounded bg-surface-container-lowest border border-outline-variant text-on-surface placeholder:text-outline focus:border-primary focus:ring-0 font-mono-data-sm text-mono-data-sm" placeholder="Cari kode SKU atau nama item (contoh: ML-WDP, Twilight)..." type="text"/>
+<span class="absolute inset-y-0 right-0 pr-2.5 flex items-center pointer-events-none">
+<kbd class="px-1.5 py-0.5 text-[10px] font-mono-data-sm bg-surface-container text-outline border border-outline-variant rounded">⌘K</kbd>
+</span>
+</div>
+<!-- Status Filter Pills & View Switcher -->
+<div class="flex items-center justify-between md:justify-end gap-3 flex-wrap">
+<!-- Server Status Filter -->
+<div class="flex items-center bg-surface-container-lowest p-1 rounded border border-outline-variant font-mono-data-sm text-mono-data-sm">
+<button class="px-2.5 py-1 rounded bg-surface-container text-primary font-semibold" type="button">
+              Semua Produk (38)
+            </button>
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-primary flex items-center gap-1" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>Normal / Aktif (36)</span>
+</button>
+<button class="px-2.5 py-1 text-on-surface-variant hover:text-tertiary flex items-center gap-1" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>Gangguan (2)</span>
+</button>
+</div>
+<!-- View Mode Switcher -->
+<div class="hidden sm:flex items-center bg-surface-container-lowest p-1 rounded border border-outline-variant text-on-surface-variant">
+<button aria-label="Tampilan Tabel" class="p-1.5 rounded bg-surface-container text-primary" title="Tabel Detail (High-Density)" type="button">
+<span class="material-symbols-outlined" data-icon="table_rows">table_rows</span>
+</button>
+<button aria-label="Tampilan Grid Kartu" class="p-1.5 rounded hover:text-on-surface" title="Grid Kartu" type="button">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- HIGH-DENSITY PRICE COMPARISON TABLE (TACTICAL HUD) -->
+<section class="bg-surface-container-low border border-outline-variant rounded overflow-hidden">
+<div class="overflow-x-auto custom-scroll">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container border-b border-outline-variant text-on-surface-variant font-label-caps text-label-caps uppercase">
+<th class="py-3 px-4 w-32" scope="col">KODE SKU</th>
+<th class="py-3 px-4 min-w-[260px]" scope="col">NAMA PRODUK & DENOMINASI</th>
+<th class="py-3 px-4 text-right" scope="col">HARGA PUBLIK</th>
+<th class="py-3 px-4 text-right" scope="col">HARGA MEMBER</th>
+<th class="py-3 px-4 text-right bg-surface-container-high/60 border-x border-outline-variant text-secondary" scope="col">
+                HARGA RESELLER VIP
+              </th>
+<th class="py-3 px-4 text-center min-w-[170px]" scope="col">LATENSI & STATUS SERVER</th>
+<th class="py-3 px-4 text-right w-28" scope="col">AKSI</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant text-body-sm">
+<!-- ROW 1: ML-WDP -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-4 font-mono-data-sm text-mono-data-sm text-on-surface flex items-center gap-1.5">
+<span class="text-primary font-semibold">ML-WDP</span>
+<button class="text-outline hover:text-primary transition-colors" title="Salin SKU" type="button">
+<span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
+</button>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-sm text-title-sm text-on-surface font-semibold">Weekly Diamond Pass</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm flex items-center gap-1">
+<span>Klaim 210 dm + 70 Starlight Point</span>
+<span class="text-secondary font-mono-data-sm text-[10px] bg-surface-container px-1 py-0.2 rounded border border-outline-variant">BESTSELLER</span>
+</div>
+</td>
+<td class="py-3 px-4 text-right font-mono-metric-md text-mono-metric-md text-on-surface-variant">
+                Rp 27.500
+              </td>
+<td class="py-3 px-4 text-right font-mono-metric-md text-mono-metric-md text-on-surface">
+                Rp 26.800
+              </td>
+<td class="py-3 px-4 text-right bg-surface-container-high/40 border-x border-outline-variant">
+<div class="font-mono-metric-md text-mono-metric-md text-primary font-bold">
+                  Rp 25.900
+                </div>
+<div class="font-mono-data-sm text-[11px] text-secondary">
+                  Hemat Rp 1.600
+                </div>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container border border-primary-container text-primary font-mono-data-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  AKTIF (1.8 Detik)
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="w-full py-1.5 px-3 rounded bg-primary-container text-on-primary-container font-headline-md text-body-sm font-semibold active:scale-[0.99] hover:opacity-90 transition-all" type="button">
+                  Beli Instan
+                </button>
+</td>
+</tr>
+<!-- ROW 2: ML-86 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-4 font-mono-data-sm text-mono-data-sm text-on-surface flex items-center gap-1.5">
+<span class="text-primary font-semibold">ML-86</span>
+<button class="text-outline hover:text-primary transition-colors" title="Salin SKU" type="button">
+<span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
+</button>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-sm text-title-sm text-on-surface font-semibold">86 Diamonds</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm">
+                  78 + 8 Bonus Diamond
+                </div>
+</td>
+<td class="py-3 px-4 text-right font-mono-metric-md text-mono-metric-md text-on-surface-variant">
+                Rp 21.500
+              </td>
+<td class="py-3 px-4 text-right font-mono-metric-md text-mono-metric-md text-on-surface">
+                Rp 20.900
+              </td>
+<td class="py-3 px-4 text-right bg-surface-container-high/40 border-x border-outline-variant">
+<div class="font-mono-metric-md text-mono-metric-md text-primary font-bold">
+                  Rp 19.800
+                </div>
+<div class="font-mono-data-sm text-[11px] text-secondary">
+                  Hemat Rp 1.700
+                </div>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container border border-primary-container text-primary font-mono-data-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  AKTIF (1.4 Detik)
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="w-full py-1.5 px-3 rounded bg-primary-container text-on-primary-container font-headline-md text-body-sm font-semibold active:scale-[0.99] hover:opacity-90 transition-all" type="button">
+                  Beli Instan
+                </button>
+</td>
+</tr>
+<!-- ROW 3: ML-172 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-4 font-mono-data-sm text-mono-data-sm text-on-surface flex items-center gap-1.5">
+<span class="text-primary font-semibold">ML-172</span>
+<button class="text-outline hover:text-primary transition-colors" title="Salin SKU" type="button">
+<span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
+</button>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-sm text-title-sm text-on-surface font-semibold">172 Diamonds</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm">
+                  156 + 16 Bonus Diamond
+                </div>
+</td>
+<td class="py-3 px-4 text-right font-mono-metric-md text-mono-metric-md text-on-surface-variant">
+                Rp 43.000
+              </td>
+<td class="py-3 px-4 text-right font-mono-metric-md text-mono-metric-md text-on-surface">
+                Rp 41.800
+              </td>
+<td class="py-3 px-4 text-right bg-surface-container-high/40 border-x border-outline-variant">
+<div class="font-mono-metric-md text-mono-metric-md text-primary font-bold">
+                  Rp 39.600
+                </div>
+<div class="font-mono-data-sm text-[11px] text-secondary">
+                  Hemat Rp 3.400
+                </div>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container border border-primary-container text-primary font-mono-data-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  AKTIF (2.1 Detik)
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="w-full py-1.5 px-3 rounded bg-primary-container text-on-primary-container font-headline-md text-body-sm font-semibold active:scale-[0.99] hover:opacity-90 transition-all" type="button">
+                  Beli Instan
+                </button>
+</td>
+</tr>
+<!-- ROW 4: ML-257 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-4 font-mono-data-sm text-mono-data-sm text-on-surface flex items-center gap-1.5">
+<span class="text-primary font-semibold">ML-257</span>
+<button class="text-outline hover:text-primary transition-colors" title="Salin SKU" type="button">
+<span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
+</button>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-sm text-title-sm text-on-surface font-semibold">257 Diamonds</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm">
+                  234 + 23 Bonus Diamond
+                </div>
+</td>
+<td class="py-3 px-4 text-right font-mono-metric-md text-mono-metric-md text-on-surface-variant">
+                Rp 64.500
+              </td>
+<td class="py-3 px-4 text-right font-mono-metric-md text-mono-metric-md text-on-surface">
+                Rp 62.700
+              </td>
+<td class="py-3 px-4 text-right bg-surface-container-high/40 border-x border-outline-variant">
+<div class="font-mono-metric-md text-mono-metric-md text-primary font-bold">
+                  Rp 59.400
+                </div>
+<div class="font-mono-data-sm text-[11px] text-secondary">
+                  Hemat Rp 5.100
+                </div>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container border border-primary-container text-primary font-mono-data-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  AKTIF (1.9 Detik)
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="w-full py-1.5 px-3 rounded bg-primary-container text-on-primary-container font-headline-md text-body-sm font-semibold active:scale-[0.99] hover:opacity-90 transition-all" type="button">
+                  Beli Instan
+                </button>
+</td>
+</tr>
+<!-- ROW 5: ML-344 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-4 font-mono-data-sm text-mono-data-sm text-on-surface flex items-center gap-1.5">
+<span class="text-primary font-semibold">ML-344</span>
+<button class="text-outline hover:text-primary transition-colors" title="Salin SKU" type="button">
+<span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
+</button>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-sm text-title-sm text-on-surface font-semibold">344 Diamonds</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm">
+                  312 + 32 Bonus Diamond
+                </div>
+</td>
+<td class="py-3 px-4 text-right font-mono-metric-md text-mono-metric-md text-on-surface-variant">
+                Rp 86.000
+              </td>
+<td class="py-3 px-4 text-right font-mono-metric-md text-mono-metric-md text-on-surface">
+                Rp 83.500
+              </td>
+<td class="py-3 px-4 text-right bg-surface-container-high/40 border-x border-outline-variant">
+<div class="font-mono-metric-md text-mono-metric-md text-primary font-bold">
+                  Rp 79.200
+                </div>
+<div class="font-mono-data-sm text-[11px] text-secondary">
+                  Hemat Rp 6.800
+                </div>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container border border-primary-container text-primary font-mono-data-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  AKTIF (2.0 Detik)
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="w-full py-1.5 px-3 rounded bg-primary-container text-on-primary-container font-headline-md text-body-sm font-semibold active:scale-[0.99] hover:opacity-90 transition-all" type="button">
+                  Beli Instan
+                </button>
+</td>
+</tr>
+<!-- ROW 6: ML-706 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-4 font-mono-data-sm text-mono-data-sm text-on-surface flex items-center gap-1.5">
+<span class="text-primary font-semibold">ML-706</span>
+<button class="text-outline hover:text-primary transition-colors" title="Salin SKU" type="button">
+<span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
+</button>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-sm text-title-sm text-on-surface font-semibold">706 Diamonds</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm">
+                  625 + 81 Bonus Diamond
+                </div>
+</td>
+<td class="py-3 px-4 text-right font-mono-metric-md text-mono-metric-md text-on-surface-variant">
+                Rp 172.000
+              </td>
+<td class="py-3 px-4 text-right font-mono-metric-md text-mono-metric-md text-on-surface">
+                Rp 168.000
+              </td>
+<td class="py-3 px-4 text-right bg-surface-container-high/40 border-x border-outline-variant">
+<div class="font-mono-metric-md text-mono-metric-md text-primary font-bold">
+                  Rp 159.000
+                </div>
+<div class="font-mono-data-sm text-[11px] text-secondary">
+                  Hemat Rp 13.000
+                </div>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container border border-primary-container text-primary font-mono-data-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  AKTIF (2.3 Detik)
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="w-full py-1.5 px-3 rounded bg-primary-container text-on-primary-container font-headline-md text-body-sm font-semibold active:scale-[0.99] hover:opacity-90 transition-all" type="button">
+                  Beli Instan
+                </button>
+</td>
+</tr>
+<!-- ROW 7: ML-TWILIGHT (MAINTENANCE) -->
+<tr class="hover:bg-surface-container/60 transition-colors bg-surface-container-lowest/40">
+<td class="py-3 px-4 font-mono-data-sm text-mono-data-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="text-tertiary font-semibold">ML-TWILIGHT</span>
+<button class="text-outline hover:text-primary transition-colors" title="Salin SKU" type="button">
+<span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
+</button>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-sm text-title-sm text-on-surface font-semibold">Twilight Pass</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm">
+                  Skin Miya Suzuki + Reward Eksklusif
+                </div>
+</td>
+<td class="py-3 px-4 text-right font-mono-metric-md text-mono-metric-md text-on-surface-variant">
+                Rp 145.000
+              </td>
+<td class="py-3 px-4 text-right font-mono-metric-md text-mono-metric-md text-on-surface-variant">
+                Rp 142.000
+              </td>
+<td class="py-3 px-4 text-right bg-surface-container-high/40 border-x border-outline-variant">
+<div class="font-mono-metric-md text-mono-metric-md text-on-surface-variant font-bold">
+                  Rp 138.500
+                </div>
+<div class="font-mono-data-sm text-[11px] text-tertiary">
+                  Hemat Rp 6.500
+                </div>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container border border-error text-error font-mono-data-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  GANGGUAN (Maintenance Moonton)
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="w-full py-1.5 px-3 rounded bg-surface-container-high text-outline cursor-not-allowed font-headline-md text-body-sm font-semibold opacity-60" disabled="" type="button">
+                  Stok Kosong
+                </button>
+</td>
+</tr>
+<!-- ROW 8: ML-2195 -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-3 px-4 font-mono-data-sm text-mono-data-sm text-on-surface flex items-center gap-1.5">
+<span class="text-primary font-semibold">ML-2195</span>
+<button class="text-outline hover:text-primary transition-colors" title="Salin SKU" type="button">
+<span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
+</button>
+</td>
+<td class="py-3 px-4">
+<div class="font-title-sm text-title-sm text-on-surface font-semibold">2195 Diamonds</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm">
+                  1860 + 335 Bonus Diamond
+                </div>
+</td>
+<td class="py-3 px-4 text-right font-mono-metric-md text-mono-metric-md text-on-surface-variant">
+                Rp 510.000
+              </td>
+<td class="py-3 px-4 text-right font-mono-metric-md text-mono-metric-md text-on-surface">
+                Rp 498.000
+              </td>
+<td class="py-3 px-4 text-right bg-surface-container-high/40 border-x border-outline-variant">
+<div class="font-mono-metric-md text-mono-metric-md text-primary font-bold">
+                  Rp 475.000
+                </div>
+<div class="font-mono-data-sm text-[11px] text-secondary">
+                  Hemat Rp 35.000
+                </div>
+</td>
+<td class="py-3 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container border border-primary-container text-primary font-mono-data-sm text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  AKTIF (1.7 Detik)
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="w-full py-1.5 px-3 rounded bg-primary-container text-on-primary-container font-headline-md text-body-sm font-semibold active:scale-[0.99] hover:opacity-90 transition-all" type="button">
+                  Beli Instan
+                </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination / Meta Footer inside Table -->
+<div class="p-3 bg-surface-container border-t border-outline-variant flex flex-col sm:flex-row items-center justify-between gap-3 text-body-sm text-on-surface-variant">
+<div class="font-mono-data-sm text-mono-data-sm">
+          Menampilkan <span class="text-on-surface font-bold">1 - 8</span> dari <span class="text-on-surface font-bold">38</span> SKU Produk Mobile Legends
+        </div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded bg-surface-container-high text-outline cursor-not-allowed font-mono-data-sm text-mono-data-sm" disabled="" type="button">Sebelumnya</button>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-mono-data-sm text-mono-data-sm font-semibold" type="button">1</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-mono-data-sm text-mono-data-sm" type="button">2</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-mono-data-sm text-mono-data-sm" type="button">3</button>
+<button class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-mono-data-sm text-mono-data-sm" type="button">Selanjutnya</button>
+</div>
+</div>
+</section>
+<!-- RESELLER API INTEGRATION / BANNER CALLOUT -->
+<section class="bg-surface-container-low border border-outline-variant rounded p-6 lg:p-8 relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-64 h-64 bg-primary/5 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 relative z-10">
+<div class="space-y-2 max-w-2xl">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container border border-secondary text-secondary font-label-caps text-label-caps uppercase">
+              RESELLER & H2H ENTERPRISE
+            </span>
+<span class="font-mono-data-sm text-mono-data-sm text-primary">Zero Deposit Fee</span>
+</div>
+<h2 class="text-headline-md font-headline-md text-on-surface font-bold">
+            Ingin Akses Harga Reseller VIP & API H2H?
+          </h2>
+<p class="text-body-md text-body-md text-on-surface-variant">
+            Hubungkan website atau aplikasi tokomu dengan API berkecepatan tinggi Nazilah Store. Mendukung webhook real-time, format JSON terstandarisasi, dan saldo terintegrasi otomatis.
+          </p>
+<div class="flex flex-wrap items-center gap-4 pt-1 font-mono-data-sm text-mono-data-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary" data-icon="bolt">bolt</span>
+              Eksekusi 1-3 Detik
+            </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+              Auto Refund Jika Gagal
+            </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary" data-icon="shield">shield</span>
+              IP Whitelist & Signature SHA256
+            </span>
+</div>
+</div>
+<!-- Action Cluster -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full lg:w-auto shrink-0">
+<button class="px-5 py-3 rounded bg-secondary-container text-on-secondary-container font-headline-md text-body-md font-bold flex items-center justify-center gap-2 hover:opacity-90 active:scale-[0.99] transition-all" type="button">
+<span class="material-symbols-outlined" data-icon="card_membership">card_membership</span>
+<span>Upgrade ke Akun VIP Reseller</span>
+</button>
+<button class="px-5 py-3 rounded bg-surface-container border border-outline-variant text-on-surface hover:border-outline hover:text-primary font-headline-md text-body-md font-semibold flex items-center justify-center gap-2 active:scale-[0.99] transition-all" type="button">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+<span>Dokumentasi API</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER (From Shared Components JSON) -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest full-width bottom border-t border-outline-variant dark:border-outline-variant flat no shadows mt-12">
+<div class="w-full max-w-[1360px] mx-auto px-4 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex flex-col items-center md:items-start gap-1">
+<span class="text-title-sm font-title-sm font-bold text-on-surface dark:text-on-surface">
+          NAZILAH STORE
+        </span>
+<p class="text-body-sm font-body-sm text-on-surface-variant dark:text-on-surface-variant text-center md:text-left">
+          © 2025 Nazilah Store. Official High-Speed Gaming Gateway Indonesia. Hak Cipta Dilindungi.
+        </p>
+</div>
+<div class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors text-body-sm font-body-sm" href="#">Syarat & Ketentuan</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors text-body-sm font-body-sm" href="#">Kebijakan Privasi</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors text-body-sm font-body-sm" href="#">Status Server H2H</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors text-body-sm font-body-sm" href="#">Integrasi API Reseller</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors text-body-sm font-body-sm" href="#">Panduan Transaksi QRIS</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors text-body-sm font-body-sm" href="#">Bantuan WhatsApp 24/7</a>
+</div>
+</div>
+</footer>
+</body></html>

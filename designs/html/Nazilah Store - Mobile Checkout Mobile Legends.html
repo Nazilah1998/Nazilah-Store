@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Nazilah Store - Checkout Mobile Legends</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&amp;family=Plus Jakarta Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary": "#4edea3",
+            "surface-container-high": "#262a34",
+            "tertiary": "#ffb3af",
+            "surface-variant": "#31353f",
+            "surface-container-low": "#181b25",
+            "on-secondary": "#472a00",
+            "on-primary-container": "#00422b",
+            "on-background": "#dfe2ef",
+            "surface-container-highest": "#31353f",
+            "surface-tint": "#4edea3",
+            "inverse-on-surface": "#2c303a",
+            "on-primary": "#003824",
+            "inverse-surface": "#dfe2ef",
+            "on-surface": "#dfe2ef",
+            "outline": "#86948a",
+            "on-tertiary": "#650911",
+            "surface": "#0f131c",
+            "surface-bright": "#353943",
+            "tertiary-fixed-dim": "#ffb3af",
+            "surface-container-lowest": "#0a0e17",
+            "outline-variant": "#3c4a42",
+            "surface-container": "#1c1f29",
+            "secondary-fixed-dim": "#ffb95f",
+            "secondary-container": "#ee9800",
+            "tertiary-container": "#fc7c78",
+            "on-secondary-container": "#5b3800",
+            "on-tertiary-container": "#711419",
+            "on-primary-fixed-variant": "#005236",
+            "primary-fixed-dim": "#4edea3",
+            "on-tertiary-fixed-variant": "#842225",
+            "background": "#0f131c",
+            "on-secondary-fixed-variant": "#653e00",
+            "primary-fixed": "#6ffbbe",
+            "on-error-container": "#ffdad6",
+            "tertiary-fixed": "#ffdad7",
+            "on-error": "#690005",
+            "on-tertiary-fixed": "#410005",
+            "primary-container": "#10b981",
+            "surface-dim": "#0f131c",
+            "secondary-fixed": "#ffddb8",
+            "error-container": "#93000a",
+            "on-primary-fixed": "#002113",
+            "on-secondary-fixed": "#2a1700",
+            "error": "#ffb4ab",
+            "inverse-primary": "#006c49",
+            "secondary": "#ffb95f",
+            "on-surface-variant": "#bbcabf"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.25rem",
+            "space-sm": "0.5rem",
+            "gutter-desktop": "1.5rem",
+            "margin": "1rem",
+            "margin-desktop": "2rem",
+            "space-md": "0.75rem",
+            "gutter": "1rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Plus Jakarta Sans"],
+            "mono-metric-md": ["JetBrains Mono"],
+            "mono-data-sm": ["JetBrains Mono"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-caps": ["JetBrains Mono"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "mono-metric-lg": ["JetBrains Mono"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "title-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "mono-metric-md": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "mono-data-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "mono-metric-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "title-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    body {
+      background-color: #0a0e17;
+      color: #dfe2ef;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-container-lowest text-on-surface antialiased flex justify-center selection:bg-primary-container selection:text-surface-container-lowest">
+<!-- Mobile Viewport Container (~390px tactical frame) -->
+<div class="w-full max-w-[390px] min-h-screen bg-surface-container-lowest border-x border-outline-variant flex flex-col relative pb-32">
+<!-- Top Bar Component -->
+<header class="sticky top-0 z-40 bg-surface-container-lowest/95 backdrop-blur-md px-3.5 py-2.5 flex items-center justify-between border-b border-outline-variant">
+<div class="flex items-center gap-2">
+<a class="font-headline-md text-headline-md font-extrabold tracking-tight text-primary uppercase flex items-center gap-1.5" href="#">
+<span class="w-2.5 h-2.5 rounded-full bg-primary inline-block animate-pulse"></span>
+          NAZILAH STORE
+        </a>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded border border-outline-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-label-caps text-label-caps text-on-surface-variant font-medium">1-3s</span>
+</div>
+<button aria-label="Support" class="p-1 rounded text-on-surface-variant hover:text-primary transition-colors flex items-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="headset_mic">headset_mic</span>
+</button>
+</div>
+</header>
+<!-- Main Content Flow -->
+<main class="flex-1 px-3.5 py-3 space-y-4">
+<!-- Game Hero / Header Card -->
+<section class="rounded-xl overflow-hidden bg-surface-container border border-outline-variant relative">
+<div class="relative h-28 w-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover object-center brightness-90" data-alt="Official high octane tactical banner artwork for Mobile Legends Bang Bang esports game featuring an armored warrior hero in dynamic combat pose with glowing cyan aura and futuristic dark slate background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy3W7CY8eQSbdeegyyljqP3HUcrK0-LGtLe13CeIXGg9qvpy_zNGAS_v597E6uE-4kZ2JM-CUTNzNHFD54nUyaTfmazEWtJuHKSfnWuZR39wHOU9PvZYatQPg-Q70mjfN3QWtAEk-qvkMFZR5y7NFYlPOn98WhW189qa8geJGlwkXaIVLnWbpiXcCu3G9vb1RKXIE8lqPfsyN4Pg7i6c9AvnHqU1_Gn5BRZrRh1ec"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/60 to-transparent"></div>
+<div class="absolute top-2.5 right-2.5 bg-surface-container-lowest/90 border border-outline-variant px-2 py-0.5 rounded-full flex items-center gap-1 backdrop-blur-sm">
+<span class="material-symbols-outlined text-primary text-[14px]" data-icon="bolt">bolt</span>
+<span class="font-label-caps text-label-caps text-primary">INSTANT 1-3s</span>
+</div>
+<div class="absolute bottom-2.5 left-3 right-3">
+<div class="flex items-center gap-1.5">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Moonton Games</span>
+<span class="text-outline text-xs">•</span>
+<span class="font-label-caps text-label-caps text-secondary font-semibold">24 Jam Nonstop</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface tracking-tight leading-tight">
+              Mobile Legends: Bang Bang
+            </h1>
+</div>
+</div>
+<!-- Collapsible Tactical Instructions -->
+<div class="p-2.5 bg-surface-container-low border-t border-outline-variant/60 flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5 flex-shrink-0" data-icon="info">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+<strong class="text-on-surface font-semibold">Cara Top Up:</strong> 1. Masukkan ID &amp; Zone • 2. Pilih Nominal • 3. Pilih Pembayaran • 4. Beli Sekarang.
+          </p>
+</div>
+</section>
+<!-- STEP 1: Account Input Section -->
+<section class="rounded-xl bg-surface-container p-3 border border-outline-variant space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="flex items-center justify-center w-5 h-5 rounded bg-primary text-surface-container-lowest font-mono-data-sm text-mono-data-sm font-bold">1</span>
+<h2 class="font-title-sm text-title-sm font-bold text-on-surface">Masukkan Data Akun</h2>
+</div>
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
+            Server Ready
+          </span>
+</div>
+<!-- Dual Inputs (User ID & Zone ID) -->
+<div class="grid grid-cols-3 gap-2">
+<div class="col-span-2 space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase block">User ID</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-2.5 py-2 font-mono-metric-md text-mono-metric-md text-on-surface focus:outline-none focus:border-primary transition-colors" placeholder="Contoh: 12345678" type="number" value="849201928"/>
+<span class="material-symbols-outlined text-[16px] text-outline absolute right-2.5 top-2.5" data-icon="tag">tag</span>
+</div>
+</div>
+<div class="col-span-1 space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase block">Zone ID</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-2 py-2 font-mono-metric-md text-mono-metric-md text-center text-on-surface focus:outline-none focus:border-primary transition-colors" placeholder="(1234)" type="number" value="2194"/>
+</div>
+</div>
+<!-- Auto Verification Pill Badge -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low border border-primary/40 text-on-surface">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-primary text-[18px] flex-shrink-0" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<div class="truncate">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase block leading-none mb-0.5">Player Terverifikasi</span>
+<span class="font-mono-data-sm text-mono-data-sm font-bold text-primary truncate block">NAZILAH•PRO (Server ID 2194)</span>
+</div>
+</div>
+<span class="font-label-caps text-label-caps bg-primary/10 text-primary border border-primary/20 px-1.5 py-0.5 rounded uppercase font-semibold">VALID</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline flex items-center gap-1 text-[11px] leading-tight pt-0.5">
+<span class="material-symbols-outlined text-[13px] text-outline flex-shrink-0" data-icon="help_outline">help_outline</span>
+          Klik profil game Anda di pojok kiri atas untuk melihat ID.
+        </p>
+</section>
+<!-- STEP 2: SKU / Denomination Selection -->
+<section class="rounded-xl bg-surface-container p-3 border border-outline-variant space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="flex items-center justify-center w-5 h-5 rounded bg-primary text-surface-container-lowest font-mono-data-sm text-mono-data-sm font-bold">2</span>
+<h2 class="font-title-sm text-title-sm font-bold text-on-surface">Pilih Nominal Top Up</h2>
+</div>
+<span class="font-label-caps text-label-caps text-secondary uppercase font-bold">Auto Flash</span>
+</div>
+<!-- Filter Chips -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs">
+<button class="bg-surface-container-lowest text-on-surface-variant border border-outline-variant px-2.5 py-1 rounded-full font-label-caps text-label-caps font-semibold whitespace-nowrap hover:text-on-surface transition-colors">Semua</button>
+<button class="bg-primary-container text-surface-container-lowest border border-primary px-2.5 py-1 rounded-full font-label-caps text-label-caps font-bold whitespace-nowrap">Pass &amp; Spesial</button>
+<button class="bg-surface-container-lowest text-on-surface-variant border border-outline-variant px-2.5 py-1 rounded-full font-label-caps text-label-caps font-semibold whitespace-nowrap hover:text-on-surface transition-colors">Top Up Instan</button>
+</div>
+<!-- Subsection A: Spesial Pass -->
+<div class="space-y-1.5 pt-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[16px]" data-icon="electric_bolt">electric_bolt</span>
+<span class="font-label-caps text-label-caps text-secondary font-bold uppercase tracking-wider">Spesial Pass</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<!-- Card 1: SELECTED STATE -->
+<div class="relative bg-surface-container-low border-2 border-primary rounded-xl p-2.5 flex flex-col justify-between cursor-pointer active:scale-[0.99] transition-all">
+<div class="absolute -top-2 right-2 bg-secondary text-surface-container-lowest font-label-caps text-[10px] font-extrabold px-1.5 py-0.2 rounded uppercase tracking-tight shadow-sm">
+                Best Seller
+              </div>
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="w-4 h-4 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-surface-container-lowest text-[12px] font-bold" data-icon="check">check</span>
+</span>
+</div>
+<h3 class="font-title-sm text-[13px] font-bold text-on-surface leading-tight pt-0.5">Weekly Diamond Pass</h3>
+<p class="font-body-sm text-[10px] text-on-surface-variant leading-snug">Klaim 210 dm + 70 Starlight Point</p>
+</div>
+<div class="mt-2 pt-1 border-t border-outline-variant/60 flex items-baseline justify-between">
+<span class="font-mono-metric-md text-[13px] font-bold text-primary">Rp 27.500</span>
+<span class="font-label-caps text-[9px] text-primary/80 uppercase">Hemat 60%</span>
+</div>
+</div>
+<!-- Card 2: Twilight Pass -->
+<div class="relative bg-surface-container-lowest border border-outline-variant rounded-xl p-2.5 flex flex-col justify-between cursor-pointer hover:border-outline transition-all active:scale-[0.99]">
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-outline text-[20px]" data-icon="military_tech">military_tech</span>
+<div class="w-3.5 h-3.5 rounded-full border border-outline"></div>
+</div>
+<h3 class="font-title-sm text-[13px] font-bold text-on-surface leading-tight pt-0.5">Twilight Pass</h3>
+<p class="font-body-sm text-[10px] text-on-surface-variant leading-snug">Skin Miya Suzuki + Rewards</p>
+</div>
+<div class="mt-2 pt-1 border-t border-outline-variant/60 flex items-baseline justify-between">
+<span class="font-mono-metric-md text-[13px] font-bold text-on-surface">Rp 145.000</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Subsection B: Top Up Instan -->
+<div class="space-y-1.5 pt-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]" data-icon="diamond" style="font-variation-settings: 'FILL' 1;">diamond</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant font-bold uppercase tracking-wider">Top Up Instan</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<!-- Card A: 86 Dm -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-2.5 flex flex-col justify-between cursor-pointer hover:border-outline transition-all active:scale-[0.99]">
+<div class="flex items-start justify-between">
+<div>
+<h4 class="font-title-sm text-[13px] font-bold text-on-surface">86 Diamonds</h4>
+<p class="font-mono-data-sm text-[10px] text-outline">78 + 8 Bonus</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[16px]" data-icon="bolt">bolt</span>
+</div>
+<div class="mt-2 pt-1 border-t border-outline-variant/60">
+<span class="font-mono-metric-md text-[13px] font-bold text-on-surface">Rp 21.500</span>
+</div>
+</div>
+<!-- Card B: 172 Dm -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-2.5 flex flex-col justify-between cursor-pointer hover:border-outline transition-all active:scale-[0.99]">
+<div class="flex items-start justify-between">
+<div>
+<h4 class="font-title-sm text-[13px] font-bold text-on-surface">172 Diamonds</h4>
+<p class="font-mono-data-sm text-[10px] text-outline">156 + 16 Bonus</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[16px]" data-icon="bolt">bolt</span>
+</div>
+<div class="mt-2 pt-1 border-t border-outline-variant/60">
+<span class="font-mono-metric-md text-[13px] font-bold text-on-surface">Rp 43.000</span>
+</div>
+</div>
+<!-- Card C: 257 Dm -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-2.5 flex flex-col justify-between cursor-pointer hover:border-outline transition-all active:scale-[0.99]">
+<div class="flex items-start justify-between">
+<div>
+<h4 class="font-title-sm text-[13px] font-bold text-on-surface">257 Diamonds</h4>
+<p class="font-mono-data-sm text-[10px] text-outline">234 + 23 Bonus</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[16px]" data-icon="bolt">bolt</span>
+</div>
+<div class="mt-2 pt-1 border-t border-outline-variant/60">
+<span class="font-mono-metric-md text-[13px] font-bold text-on-surface">Rp 64.500</span>
+</div>
+</div>
+<!-- Card D: 344 Dm -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-2.5 flex flex-col justify-between cursor-pointer hover:border-outline transition-all active:scale-[0.99]">
+<div class="flex items-start justify-between">
+<div>
+<h4 class="font-title-sm text-[13px] font-bold text-on-surface">344 Diamonds</h4>
+<p class="font-mono-data-sm text-[10px] text-outline">312 + 32 Bonus</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[16px]" data-icon="bolt">bolt</span>
+</div>
+<div class="mt-2 pt-1 border-t border-outline-variant/60">
+<span class="font-mono-metric-md text-[13px] font-bold text-on-surface">Rp 86.000</span>
+</div>
+</div>
+<!-- Card E: 706 Dm -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-2.5 flex flex-col justify-between cursor-pointer hover:border-outline transition-all active:scale-[0.99]">
+<div class="flex items-start justify-between">
+<div>
+<h4 class="font-title-sm text-[13px] font-bold text-on-surface">706 Diamonds</h4>
+<p class="font-mono-data-sm text-[10px] text-outline">625 + 81 Bonus</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[16px]" data-icon="bolt">bolt</span>
+</div>
+<div class="mt-2 pt-1 border-t border-outline-variant/60">
+<span class="font-mono-metric-md text-[13px] font-bold text-on-surface">Rp 172.000</span>
+</div>
+</div>
+<!-- Card F: 2.195 Dm -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-2.5 flex flex-col justify-between cursor-pointer hover:border-outline transition-all active:scale-[0.99]">
+<div class="flex items-start justify-between">
+<div>
+<h4 class="font-title-sm text-[13px] font-bold text-on-surface">2.195 Diamonds</h4>
+<p class="font-mono-data-sm text-[10px] text-outline">1860 + 335 Bonus</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[16px]" data-icon="bolt">bolt</span>
+</div>
+<div class="mt-2 pt-1 border-t border-outline-variant/60">
+<span class="font-mono-metric-md text-[13px] font-bold text-on-surface">Rp 510.000</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- STEP 3: Payment Method Accordion -->
+<section class="rounded-xl bg-surface-container p-3 border border-outline-variant space-y-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="flex items-center justify-center w-5 h-5 rounded bg-primary text-surface-container-lowest font-mono-data-sm text-mono-data-sm font-bold">3</span>
+<h2 class="font-title-sm text-title-sm font-bold text-on-surface">Pilih Metode Pembayaran</h2>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase font-medium">Auto Gateway</span>
+</div>
+<div class="space-y-2">
+<!-- QRIS Section (EXPANDED & SELECTED) -->
+<div class="rounded-xl border border-primary bg-surface-container-low overflow-hidden">
+<div class="p-2.5 bg-surface-container flex items-center justify-between border-b border-outline-variant/70 cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]" data-icon="qr_code_scanner">qr_code_scanner</span>
+<span class="font-title-sm text-[13px] font-bold text-on-surface">QRIS Instant (Rekomendasi)</span>
+</div>
+<span class="material-symbols-outlined text-on-surface text-[18px]" data-icon="expand_less">expand_less</span>
+</div>
+<div class="p-2.5 space-y-2">
+<!-- Selected QRIS Tile -->
+<div class="bg-surface-container-lowest border-2 border-primary rounded-lg p-2.5 flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-4 h-4 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></div>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-[12px] font-bold text-on-surface">QRIS (BCA, DANA, GoPay, OVO, ShopeePay)</span>
+<span class="font-label-caps text-[9px] bg-primary/20 text-primary px-1 rounded uppercase font-bold">INSTANT</span>
+</div>
+<p class="font-mono-data-sm text-[11px] text-outline">Biaya: Rp 200 (Otomatis)</p>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-mono-metric-md text-[13px] font-bold text-primary block">Rp 27.700</span>
+</div>
+</div>
+</div>
+</div>
+<!-- VA Bank Category (COLLAPSED) -->
+<div class="rounded-xl border border-outline-variant bg-surface-container-lowest p-2.5 flex items-center justify-between cursor-pointer hover:border-outline transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]" data-icon="account_balance">account_balance</span>
+<div>
+<span class="font-title-sm text-[13px] font-medium text-on-surface block">Virtual Account (BCA, Mandiri, BRI, BNI)</span>
+<span class="font-mono-data-sm text-[11px] text-outline">Biaya penanganan: Rp 2.500</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="expand_more">expand_more</span>
+</div>
+<!-- E-Wallet Category (COLLAPSED) -->
+<div class="rounded-xl border border-outline-variant bg-surface-container-lowest p-2.5 flex items-center justify-between cursor-pointer hover:border-outline transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]" data-icon="account_balance_wallet">account_balance_wallet</span>
+<div>
+<span class="font-title-sm text-[13px] font-medium text-on-surface block">E-Wallet Direct (DANA, GoPay, OVO)</span>
+<span class="font-mono-data-sm text-[11px] text-outline">Biaya penanganan: Rp 1.000</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="expand_more">expand_more</span>
+</div>
+<!-- NazilahPay Saldo (COLLAPSED) -->
+<div class="rounded-xl border border-outline-variant bg-surface-container-lowest p-2.5 flex items-center justify-between cursor-pointer hover:border-outline transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]" data-icon="toll">toll</span>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-[13px] font-bold text-on-surface">NazilahPay Saldo</span>
+<span class="font-label-caps text-[9px] bg-secondary/20 text-secondary px-1 rounded uppercase font-bold">BEBAS BIAYA</span>
+</div>
+<span class="font-mono-data-sm text-[11px] text-outline">Proses Instan 0 Detik</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</section>
+<!-- STEP 4: Kontak & Promo -->
+<section class="rounded-xl bg-surface-container p-3 border border-outline-variant space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="flex items-center justify-center w-5 h-5 rounded bg-primary text-surface-container-lowest font-mono-data-sm text-mono-data-sm font-bold">4</span>
+<h2 class="font-title-sm text-title-sm font-bold text-on-surface">Detail Kontak &amp; Promo</h2>
+</div>
+<span class="font-label-caps text-label-caps text-outline uppercase font-medium">Garansi 100%</span>
+</div>
+<div class="space-y-2">
+<!-- WhatsApp Input -->
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase block">Nomor WhatsApp Aktif</label>
+<div class="relative">
+<span class="material-symbols-outlined text-outline text-[18px] absolute left-2.5 top-2.5" data-icon="chat">chat</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg pl-8 pr-3 py-2 font-mono-metric-md text-mono-metric-md text-on-surface focus:outline-none focus:border-primary transition-colors" placeholder="08xxxxxxxxxx" type="tel" value="0812-3456-7890"/>
+</div>
+<p class="font-body-sm text-[11px] text-outline leading-tight">
+              Bukti transaksi, kode receipt, dan status top up otomatis dikirim via WhatsApp.
+            </p>
+</div>
+<!-- Promo Code Input -->
+<div class="space-y-1 pt-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase block">Kode Voucher / Promo</label>
+<div class="flex gap-2">
+<div class="relative flex-1">
+<span class="material-symbols-outlined text-outline text-[18px] absolute left-2.5 top-2.5" data-icon="sell">sell</span>
+<input class="w-full uppercase bg-surface-container-lowest border border-outline-variant rounded-lg pl-8 pr-2 py-2 font-mono-metric-md text-mono-metric-md text-primary font-bold focus:outline-none focus:border-primary transition-colors" placeholder="Masukkan Kode" type="text" value="NAZILAHHEMAT"/>
+</div>
+<button class="bg-surface-variant border border-outline-variant text-on-surface hover:text-primary hover:border-primary px-3 rounded-lg font-label-caps text-label-caps font-bold transition-all active:scale-95">
+                Terapkan
+              </button>
+</div>
+<div class="flex items-center gap-1 text-[11px] text-primary pt-0.5">
+<span class="material-symbols-outlined text-[13px]" data-icon="check_circle">check_circle</span>
+<span class="font-mono-data-sm text-[11px]">Voucher aktif: Diskon Tambahan Rp 0</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Badges & Safety Telemetry -->
+<section class="p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/60 flex items-center justify-between text-center">
+<div class="flex-1">
+<span class="material-symbols-outlined text-primary text-[18px] block mx-auto mb-0.5" data-icon="shield">shield</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant block uppercase font-medium">100% Legal &amp; Anti-Ban</span>
+</div>
+<div class="w-px h-6 bg-outline-variant"></div>
+<div class="flex-1">
+<span class="material-symbols-outlined text-primary text-[18px] block mx-auto mb-0.5" data-icon="sync">sync</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant block uppercase font-medium">H2H Auto Direct</span>
+</div>
+<div class="w-px h-6 bg-outline-variant"></div>
+<div class="flex-1">
+<span class="material-symbols-outlined text-secondary text-[18px] block mx-auto mb-0.5" data-icon="support_agent">support_agent</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant block uppercase font-medium">CS Siaga 24 Jam</span>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="mt-4 px-3.5 py-4 border-t border-outline-variant text-center bg-surface-container-lowest space-y-2">
+<div class="flex justify-center flex-wrap gap-x-3 gap-y-1 text-outline font-label-caps text-[10px]">
+<a class="hover:text-primary transition-colors" href="#">Syarat &amp; Ketentuan</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#">Kebijakan Privasi</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#">Status Server H2H</a>
+</div>
+<p class="font-body-sm text-[10px] text-outline leading-tight">
+        © 2025 Nazilah Store. Official High-Speed Gaming Gateway Indonesia. Hak Cipta Dilindungi.
+      </p>
+</footer>
+<!-- STICKY BOTTOM ACTION BAR (Docked for one-thumb mobile checkout) -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[390px] bg-surface-container-lowest/95 backdrop-blur-md border-t border-outline-variant p-3 z-50 shadow-2xl flex items-center gap-3">
+<div class="flex-1 min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface-variant truncate block">
+          Weekly Diamond Pass (1 Item)
+        </span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-mono-metric-lg text-mono-metric-lg font-bold text-primary tracking-tight">
+            Rp 27.700
+          </span>
+</div>
+<span class="font-body-sm text-[10px] text-outline block leading-none">
+          Termasuk Biaya Admin
+        </span>
+</div>
+<!-- High-Contrast Emerald Green CTA Button -->
+<button class="bg-primary text-surface-container-lowest font-headline-md text-[14px] font-extrabold px-4 h-12 rounded-xl flex items-center justify-center gap-1.5 shadow-lg active:scale-95 transition-transform flex-shrink-0 hover:bg-[#3ec48e]">
+<span>Beli Sekarang</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</body></html>

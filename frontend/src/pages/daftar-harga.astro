@@ -1,0 +1,133 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const priceList = [
+  { game: 'Mobile Legends', sku: 'ML-PASS-WEEKLY', name: 'Weekly Diamond Pass', price: 26500, member: 24500, status: 'NORMAL (1-3 Dtk)' },
+  { game: 'Mobile Legends', sku: 'ML-DM-86', name: '86 Diamonds (78 + 8 Bonus)', price: 21500, member: 19500, status: 'NORMAL (1-3 Dtk)' },
+  { game: 'Mobile Legends', sku: 'ML-DM-172', name: '172 Diamonds (156 + 16)', price: 43000, member: 39000, status: 'NORMAL (1-3 Dtk)' },
+  { game: 'Mobile Legends', sku: 'ML-DM-257', name: '257 Diamonds (234 + 23)', price: 65000, member: 59000, status: 'NORMAL (1-3 Dtk)' },
+  { game: 'Mobile Legends', sku: 'ML-DM-706', name: '706 Diamonds (625 + 81)', price: 175000, member: 159000, status: 'NORMAL (1-3 Dtk)' },
+  { game: 'Free Fire', sku: 'FF-PASS-WEEKLY', name: 'Membership Mingguan', price: 28000, member: 26000, status: 'NORMAL (1-2 Dtk)' },
+  { game: 'Free Fire', sku: 'FF-DM-100', name: '100 Diamonds', price: 14500, member: 13000, status: 'NORMAL (1-2 Dtk)' },
+  { game: 'Free Fire', sku: 'FF-DM-355', name: '355 Diamonds', price: 50000, member: 46000, status: 'NORMAL (1-2 Dtk)' },
+  { game: 'PUBG Mobile', sku: 'PUBG-UC-60', name: '60 Unknown Cash (UC)', price: 14500, member: 13200, status: 'NORMAL (2-4 Dtk)' },
+  { game: 'PUBG Mobile', sku: 'PUBG-UC-325', name: '325 Unknown Cash (UC)', price: 72000, member: 65000, status: 'NORMAL (2-4 Dtk)' },
+  { game: 'Valorant', sku: 'VAL-VP-475', name: '475 Valorant Points', price: 52000, member: 48000, status: 'NORMAL (3-5 Dtk)' },
+  { game: 'Valorant', sku: 'VAL-VP-1000', name: '1000 Valorant Points', price: 108000, member: 99000, status: 'NORMAL (3-5 Dtk)' },
+];
+---
+
+<Layout title="Daftar Harga Real-Time & Status Server H2H — NAZILAH STORE">
+  <div class="max-w-7xl mx-auto px-4 py-8 space-y-8">
+    <div class="flex items-center gap-2 text-xs text-[#94a3b8]">
+      <a href="/" class="hover:text-white transition">Katalog</a>
+      <span>/</span>
+      <span class="text-[#4edea3]">Daftar Harga & Status Server</span>
+    </div>
+
+    <!-- Status Server Header Cards -->
+    <div>
+      <h1 class="text-xl sm:text-2xl font-extrabold text-white mb-2">
+        Status Server & Waktu Respon H2H
+      </h1>
+      <p class="text-xs text-[#94a3b8] mb-6">
+        Informasi kondisi server gateway top up otomatis yang diperbarui setiap 60 detik.
+      </p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="p-4 rounded-xl bg-[#181b25] border border-[#262a34]">
+          <div class="flex items-center justify-between text-xs mb-1">
+            <span class="font-bold text-white">Mobile Legends</span>
+            <span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
+          </div>
+          <div class="text-xs text-[#4edea3] font-mono font-bold">NORMAL (1.8s)</div>
+          <div class="text-[10px] text-[#94a3b8] mt-1">Uptime 99.98%</div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#181b25] border border-[#262a34]">
+          <div class="flex items-center justify-between text-xs mb-1">
+            <span class="font-bold text-white">Free Fire Max</span>
+            <span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
+          </div>
+          <div class="text-xs text-[#4edea3] font-mono font-bold">NORMAL (1.2s)</div>
+          <div class="text-[10px] text-[#94a3b8] mt-1">Uptime 100.0%</div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#181b25] border border-[#262a34]">
+          <div class="flex items-center justify-between text-xs mb-1">
+            <span class="font-bold text-white">PUBG Mobile</span>
+            <span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
+          </div>
+          <div class="text-xs text-[#4edea3] font-mono font-bold">NORMAL (2.1s)</div>
+          <div class="text-[10px] text-[#94a3b8] mt-1">Uptime 99.95%</div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#181b25] border border-[#262a34]">
+          <div class="flex items-center justify-between text-xs mb-1">
+            <span class="font-bold text-white">Valorant Riot</span>
+            <span class="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
+          </div>
+          <div class="text-xs text-[#4edea3] font-mono font-bold">NORMAL (3.0s)</div>
+          <div class="text-[10px] text-[#94a3b8] mt-1">Uptime 99.90%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table of Prices -->
+    <div class="bg-[#181b25] border border-[#262a34] rounded-2xl overflow-hidden shadow-xl">
+      <div class="p-5 border-b border-[#262a34] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <h2 class="text-sm font-bold text-white uppercase tracking-wider">
+          Katalog Harga Publik & Reseller
+        </h2>
+        <span class="text-xs text-[#94a3b8]">
+          Gunakan kode <strong class="text-[#4edea3]">NAZILAHPRO</strong> saat checkout untuk harga member.
+        </span>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs text-[#dfe2ef]">
+          <thead class="bg-[#0f131c] text-[#94a3b8] font-mono text-[11px] uppercase border-b border-[#262a34]">
+            <tr>
+              <th class="px-5 py-3.5">Game</th>
+              <th class="px-5 py-3.5">SKU Code</th>
+              <th class="px-5 py-3.5">Nama Produk</th>
+              <th class="px-5 py-3.5 text-right">Harga Normal</th>
+              <th class="px-5 py-3.5 text-right">Harga Member</th>
+              <th class="px-5 py-3.5 text-center">Status Jalur</th>
+              <th class="px-5 py-3.5 text-right">Aksi</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[#262a34]">
+            {priceList.map((item) => (
+              <tr class="hover:bg-[#1c1f29] transition">
+                <td class="px-5 py-3.5 font-bold text-white">{item.game}</td>
+                <td class="px-5 py-3.5 font-mono text-[11px] text-[#94a3b8]">{item.sku}</td>
+                <td class="px-5 py-3.5 font-medium">{item.name}</td>
+                <td class="px-5 py-3.5 text-right font-mono font-bold text-white">
+                  Rp{item.price.toLocaleString('id-ID')}
+                </td>
+                <td class="px-5 py-3.5 text-right font-mono font-bold text-[#4edea3]">
+                  Rp{item.member.toLocaleString('id-ID')}
+                </td>
+                <td class="px-5 py-3.5 text-center">
+                  <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-[#10b981]/15 text-[#4edea3] border border-[#10b981]/30">
+                    {item.status}
+                  </span>
+                </td>
+                <td class="px-5 py-3.5 text-right">
+                  <a
+                    href={`/order/${item.game.toLowerCase().replace(/\s+/g, '-')}?sku=${item.sku}`}
+                    class="px-3 py-1 rounded-lg bg-[#262a34] hover:bg-[#10b981] hover:text-white text-xs font-semibold text-[#4edea3] transition"
+                  >
+                    Beli &rarr;
+                  </a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</Layout>
+

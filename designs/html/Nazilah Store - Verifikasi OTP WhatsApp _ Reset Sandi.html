@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Verifikasi Keamanan OTP WhatsApp - NAZILAH STORE</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary": "#ffb95f",
+            "surface-tint": "#4edea3",
+            "background": "#0f131c",
+            "surface-container": "#1c1f29",
+            "on-background": "#dfe2ef",
+            "primary": "#4edea3",
+            "surface-container-high": "#262a34",
+            "on-primary-container": "#00422b",
+            "on-primary-fixed-variant": "#005236",
+            "surface-variant": "#31353f",
+            "on-primary": "#003824",
+            "on-surface-variant": "#bbcabf",
+            "on-tertiary-fixed": "#410005",
+            "secondary-container": "#ee9800",
+            "tertiary-fixed": "#ffdad7",
+            "on-secondary-container": "#5b3800",
+            "on-surface": "#dfe2ef",
+            "on-secondary": "#472a00",
+            "tertiary-fixed-dim": "#ffb3af",
+            "surface-container-lowest": "#0a0e17",
+            "error-container": "#93000a",
+            "on-tertiary": "#650911",
+            "on-error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#653e00",
+            "surface": "#0f131c",
+            "secondary-fixed": "#ffddb8",
+            "on-secondary-fixed": "#2a1700",
+            "inverse-on-surface": "#2c303a",
+            "error": "#ffb4ab",
+            "surface-container-low": "#181b25",
+            "surface-bright": "#353943",
+            "on-tertiary-container": "#711419",
+            "surface-container-highest": "#31353f",
+            "inverse-surface": "#dfe2ef",
+            "primary-container": "#10b981",
+            "on-primary-fixed": "#002113",
+            "outline": "#86948a",
+            "tertiary": "#ffb3af",
+            "on-tertiary-fixed-variant": "#842225",
+            "outline-variant": "#3c4a42",
+            "on-error": "#690005",
+            "surface-dim": "#0f131c",
+            "inverse-primary": "#006c49",
+            "secondary-fixed-dim": "#ffb95f",
+            "primary-fixed": "#6ffbbe",
+            "tertiary-container": "#fc7c78",
+            "primary-fixed-dim": "#4edea3"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "margin": "1rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-lg": "1.25rem",
+            "margin-desktop": "2rem",
+            "gutter-desktop": "1.5rem",
+            "space-md": "0.75rem"
+          },
+          "fontFamily": {
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "title-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "mono-metric-md": ["JetBrains Mono"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "mono-metric-lg": ["JetBrains Mono"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-caps": ["JetBrains Mono"],
+            "mono-data-sm": ["JetBrains Mono"],
+            "headline-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-lg-mobile": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+            "headline-xl-mobile": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+            "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+            "title-sm": ["16px", {"lineHeight": "22px", "fontWeight": "600"}],
+            "headline-md": ["20px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "mono-metric-md": ["15px", {"lineHeight": "20px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+            "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+            "mono-metric-lg": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+            "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "label-caps": ["11px", {"lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600"}],
+            "mono-data-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+            "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700"}]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    @keyframes tacticalPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.15; }
+    }
+    .caret-blink {
+      animation: tacticalPulse 1s ease-in-out infinite;
+    }
+    .hud-grid-pattern {
+      background-size: 24px 24px;
+      background-image: linear-gradient(to right, rgba(60, 74, 66, 0.08) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(60, 74, 66, 0.08) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface min-h-screen flex flex-col justify-between selection:bg-primary-container selection:text-surface-container-lowest hud-grid-pattern">
+<!-- TOP MINIMAL BAR (Linear security context header with back flow) -->
+<header class="w-full bg-surface-container-lowest/80 backdrop-blur-md sticky top-0 z-50">
+<div class="w-full max-w-[1360px] mx-auto px-4 lg:px-8 h-16 flex items-center justify-between">
+<!-- Back action -->
+<a class="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors duration-150 group" href="#">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-150 group-hover:-translate-x-1" data-icon="arrow_back">arrow_back</span>
+<span class="font-title-sm text-title-sm">Kembali ke Halaman Login</span>
+</a>
+<!-- Security Protocol Badge -->
+<div class="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-surface-container-low rounded border border-outline-variant/60">
+<span class="inline-block w-2 h-2 rounded-full bg-primary-container shadow-[0_0_0_1px_rgba(78,222,163,0.3)]"></span>
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="lock">lock</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Keamanan Akun Terenkripsi Argon2id</span>
+</div>
+</div>
+</header>
+<!-- MAIN VIEWPORT: Centered Focused Tactical Modal / Screen -->
+<main class="flex-1 flex items-center justify-center px-4 py-8 relative">
+<!-- Ambient micro-tactical element -->
+<div class="w-full max-w-[460px] bg-surface-container-low rounded-xl border border-outline-variant p-6 sm:p-8 relative shadow-2xl">
+<!-- Top Tactical Hardware Status Row -->
+<div class="flex items-center justify-between mb-6 pb-3 border-b border-outline-variant/40">
+<div class="flex items-center gap-2">
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">GATEWAY::ID</span>
+<span class="font-mono-data-sm text-mono-data-sm text-primary">#AUTH-9921X</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="font-label-caps text-label-caps uppercase text-primary">SESSION ACTIVE</span>
+</div>
+</div>
+<!-- Tactical Shield Center Icon -->
+<div class="flex justify-center mb-5">
+<div class="relative w-14 h-14 rounded-full bg-surface-container flex items-center justify-center border border-primary-container/40 shadow-[0_0_0_1px_rgba(16,185,129,0.2)]">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="verified_user">verified_user</span>
+<div class="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-surface-container-lowest text-[12px] font-bold" data-icon="check">check</span>
+</div>
+</div>
+</div>
+<!-- Header Title & Subtitle -->
+<div class="text-center mb-6">
+<h1 class="font-headline-md text-headline-md text-on-surface mb-2 tracking-tight">Verifikasi Keamanan WhatsApp</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Masukkan 6 digit kode OTP yang kami kirimkan ke nomor WhatsApp terdaftar Anda:
+        </p>
+</div>
+<!-- Recipient Monospace Box -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-3 mb-6 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]" data-icon="chat">chat</span>
+</div>
+<span class="font-mono-metric-md text-mono-metric-md text-on-surface tracking-wider">+62 812-****-7890</span>
+</div>
+<button class="font-body-sm text-body-sm text-primary hover:underline hover:text-primary-fixed transition-colors" type="button">
+          Ubah Nomor
+        </button>
+</div>
+<!-- 6 Monospace Digit Boxes -->
+<div class="mb-6">
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-2.5 text-center">KODE OTENTIKASI OTP (6 DIGIT)</label>
+<div class="grid grid-cols-6 gap-2 sm:gap-2.5">
+<!-- Box 1: "8" -->
+<div class="h-14 rounded bg-surface-container-lowest border border-outline-variant flex items-center justify-center">
+<span class="font-mono-metric-lg text-mono-metric-lg text-on-surface">8</span>
+</div>
+<!-- Box 2: "4" -->
+<div class="h-14 rounded bg-surface-container-lowest border border-outline-variant flex items-center justify-center">
+<span class="font-mono-metric-lg text-mono-metric-lg text-on-surface">4</span>
+</div>
+<!-- Box 3: "2" -->
+<div class="h-14 rounded bg-surface-container-lowest border border-outline-variant flex items-center justify-center">
+<span class="font-mono-metric-lg text-mono-metric-lg text-on-surface">2</span>
+</div>
+<!-- Box 4: "9" -->
+<div class="h-14 rounded bg-surface-container-lowest border border-outline-variant flex items-center justify-center">
+<span class="font-mono-metric-lg text-mono-metric-lg text-on-surface">9</span>
+</div>
+<!-- Box 5: Active cursor emerald border -->
+<div class="h-14 rounded bg-surface-container-lowest border-2 border-primary-container flex items-center justify-center relative shadow-[0_0_0_1px_rgba(16,185,129,0.3)]">
+<span class="inline-block w-0.5 h-6 bg-primary-container caret-blink"></span>
+</div>
+<!-- Box 6: Empty -->
+<div class="h-14 rounded bg-surface-container-lowest border border-outline-variant flex items-center justify-center">
+<span class="font-mono-metric-lg text-mono-metric-lg text-outline-variant opacity-30">•</span>
+</div>
+</div>
+</div>
+<!-- Countdown Timer Row -->
+<div class="text-center mb-6 py-2 px-3 bg-surface-container rounded border border-outline-variant/40">
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center justify-center gap-1.5 flex-wrap">
+<span>Tidak menerima kode?</span>
+<span class="text-on-surface">Kirim ulang kode dalam</span>
+<span class="font-mono-data-sm text-mono-data-sm text-secondary font-semibold bg-surface-container-lowest px-1.5 py-0.5 rounded border border-outline-variant/50">00:45</span>
+</p>
+</div>
+<!-- Primary Action CTA -->
+<button class="w-full h-12 bg-primary-container hover:bg-surface-tint text-surface-container-lowest font-title-sm text-title-sm font-bold rounded flex items-center justify-center gap-2 active:scale-[0.99] transition-all duration-150 mb-5 shadow-[0_0_0_1px_rgba(16,185,129,0.4)]" type="button">
+<span>Verifikasi & Lanjutkan</span>
+<span class="material-symbols-outlined text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<!-- Alternate Verification Options -->
+<div class="pt-4 border-t border-outline-variant/50 mb-5">
+<span class="block font-label-caps text-label-caps uppercase text-on-surface-variant text-center mb-3">METODE ALTERNATIF</span>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
+<button class="w-full sm:w-auto px-3 py-2 bg-surface-container hover:border-outline text-on-surface-variant hover:text-primary transition-colors border border-outline-variant rounded flex items-center justify-center gap-1.5 text-body-sm font-body-sm" type="button">
+<span class="material-symbols-outlined text-[16px]" data-icon="mail">mail</span>
+<span>Kirim kode via Email</span>
+</button>
+<button class="w-full sm:w-auto px-3 py-2 bg-surface-container hover:border-outline text-on-surface-variant hover:text-primary transition-colors border border-outline-variant rounded flex items-center justify-center gap-1.5 text-body-sm font-body-sm" type="button">
+<span class="material-symbols-outlined text-[16px]" data-icon="account_circle">account_circle</span>
+<span>Masuk via Google</span>
+</button>
+</div>
+</div>
+<!-- Security Guarantee Notice -->
+<div class="p-3 bg-surface-container-lowest/80 rounded border border-outline-variant/60 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5" data-icon="info">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Kode OTP kedaluwarsa dalam 5 menit. Jangan pernah memberikan kode ini kepada siapa pun termasuk staf Nazilah Store.
+        </p>
+</div>
+</div>
+</main>
+<!-- COMPONENT: FOOTER (From Shared Components JSON) -->
+<footer class="w-full bg-surface-container-lowest">
+<div class="w-full max-w-[1360px] mx-auto px-4 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex flex-col md:flex-row items-center gap-3 text-center md:text-left">
+<span class="text-title-sm font-title-sm font-bold text-on-surface">NAZILAH STORE</span>
+<span class="hidden md:inline text-outline-variant">|</span>
+<p class="text-body-sm font-body-sm text-on-surface-variant">© 2025 Nazilah Store. Official High-Speed Gaming Gateway Indonesia. Hak Cipta Dilindungi.</p>
+</div>
+<nav class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm font-body-sm" href="#">Syarat & Ketentuan</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm font-body-sm" href="#">Kebijakan Privasi</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm font-body-sm" href="#">Status Server H2H</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm font-body-sm" href="#">Integrasi API Reseller</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm font-body-sm" href="#">Panduan Transaksi QRIS</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-sm font-body-sm" href="#">Bantuan WhatsApp 24/7</a>
+</nav>
+</div>
+</footer>
+</body></html>

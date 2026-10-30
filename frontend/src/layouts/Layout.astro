@@ -1,0 +1,187 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "NAZILAH STORE — Platform Top Up Game Instan 1-3 Detik 24 Jam",
+  description = "Platform top up voucher dan diamond game otomatis berkinerja tinggi. Mobile Legends, Free Fire, PUBG Mobile, Valorant, Genshin Impact. Murah, Aman, dan Legal.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="id" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#0f131c] text-[#dfe2ef] min-h-screen flex flex-col font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-[#10b981]/20 selection:text-[#4edea3]">
+    <!-- Top Announcement Ticker -->
+    <div class="bg-[#0a0e17] border-b border-[#1c1f29] py-1.5 px-4 text-xs">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-[#10b981]/10 text-[#4edea3] border border-[#10b981]/30">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#10b981] animate-pulse"></span>
+            H2H GATEWAY ACTIVE
+          </span>
+          <span class="text-[#94a3b8] hidden sm:inline">Pengiriman diamond instan rata-rata 1.8 detik</span>
+        </div>
+        <div class="flex items-center gap-4 text-[#94a3b8]">
+          <span class="hover:text-[#4edea3] transition cursor-pointer">Layanan 24 Jam Nonstop</span>
+          <span class="text-[#3c4a42]">|</span>
+          <a href="/cek-transaksi" class="hover:text-[#4edea3] transition">Cek Status Pesanan</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-[#0f131c]/95 backdrop-blur-md border-b border-[#1c1f29]">
+      <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-2.5 group">
+          <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#10b981] to-[#047857] flex items-center justify-center font-bold text-white shadow-lg shadow-[#10b981]/20 group-hover:scale-105 transition-transform">
+            ⚡
+          </div>
+          <div>
+            <div class="font-extrabold text-lg tracking-tight text-white flex items-center gap-1.5">
+              NAZILAH<span class="text-[#4edea3]">STORE</span>
+            </div>
+            <div class="text-[9px] font-mono tracking-widest text-[#94a3b8] uppercase font-bold -mt-1">
+              PRO GAMING TOP-UP
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-1 text-sm font-medium">
+          <a href="/" class="px-3 py-1.5 rounded-md hover:bg-[#1c1f29] hover:text-[#4edea3] transition text-[#dfe2ef]">
+            Katalog Game
+          </a>
+          <a href="/daftar-harga" class="px-3 py-1.5 rounded-md hover:bg-[#1c1f29] hover:text-[#4edea3] transition text-[#dfe2ef]">
+            Daftar Harga & Status
+          </a>
+          <a href="/kalkulator" class="px-3 py-1.5 rounded-md hover:bg-[#1c1f29] hover:text-[#4edea3] transition text-[#dfe2ef]">
+            Kalkulator MLBB
+          </a>
+          <a href="/cek-transaksi" class="px-3 py-1.5 rounded-md hover:bg-[#1c1f29] hover:text-[#4edea3] transition text-[#dfe2ef]">
+            Lacak Transaksi
+          </a>
+          <a href="/daftar" class="px-3 py-1.5 rounded-md hover:bg-[#1c1f29] text-amber-400 hover:text-amber-300 transition flex items-center gap-1 text-xs font-semibold">
+            <span>⭐</span>
+            <span>Kemitraan Reseller</span>
+          </a>
+        </nav>
+
+        <!-- Right Quick Actions (Auth & Support) -->
+        <div class="flex items-center gap-2.5">
+          <a
+            href="/cek-transaksi"
+            class="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#181b25] hover:bg-[#262a34] border border-[#262a34] text-xs font-semibold text-[#94a3b8] hover:text-white transition"
+          >
+            <svg class="w-3.5 h-3.5 text-[#4edea3]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+            <span>Cek Pesanan</span>
+          </a>
+
+          <!-- Tombol Masuk & Daftar (Persis Desain Stitch) -->
+          <a
+            href="/masuk"
+            class="px-3.5 py-1.5 rounded-lg bg-[#1c1f29] hover:bg-[#262a34] border border-[#3c4a42] text-xs font-bold text-white transition flex items-center gap-1.5 shadow-sm"
+          >
+            <svg class="w-3.5 h-3.5 text-[#94a3b8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
+            </svg>
+            <span>Masuk</span>
+          </a>
+
+          <a
+            href="/daftar"
+            class="px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-[#10b981] to-[#059669] hover:from-[#059669] hover:to-[#047857] text-white text-xs font-extrabold transition shadow-md shadow-[#10b981]/25 flex items-center gap-1.5"
+          >
+            <span>Daftar Akun</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Slot -->
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0a0e17] border-t border-[#1c1f29] pt-12 pb-8 mt-16 text-xs text-[#94a3b8]">
+      <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-7 h-7 rounded bg-[#10b981] flex items-center justify-center font-bold text-white text-xs">
+              ⚡
+            </div>
+            <span class="font-extrabold text-base text-white">NAZILAH STORE</span>
+          </div>
+          <p class="leading-relaxed max-w-md text-[#94a3b8] mb-4">
+            Platform distributor voucher game dan top up game instan terpercaya di Indonesia. Melayani pembelian Mobile Legends, Free Fire, PUBG Mobile, Valorant, dan Genshin Impact dengan sistem otomatisasi 24 jam nonstop.
+          </p>
+          <div class="flex items-center gap-2 text-[11px] text-[#4edea3]">
+            <span>✓ Berlisensi H2H Resmi</span>
+            <span>•</span>
+            <span>✓ Sistem Terenkripsi 256-bit</span>
+            <span>•</span>
+            <span>✓ Pembayaran QRIS Nasional</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider mb-3 text-[11px]">Navigasi Cepat</h4>
+          <ul class="space-y-2">
+            <li><a href="/" class="hover:text-[#4edea3] transition">Katalog Top-Up</a></li>
+            <li><a href="/daftar-harga" class="hover:text-[#4edea3] transition">Daftar Harga Real-Time</a></li>
+            <li><a href="/kalkulator" class="hover:text-[#4edea3] transition">Kalkulator Winrate MLBB</a></li>
+            <li><a href="/cek-transaksi" class="hover:text-[#4edea3] transition">Pelacak Status Invoice</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider mb-3 text-[11px]">Metode Pembayaran</h4>
+          <p class="text-[11px] text-[#94a3b8] mb-3">
+            Mendukung QRIS semua e-wallet (GoPay, OVO, Dana, ShopeePay), BCA VA, BRI VA, Mandiri VA, dan Gerai Retail Alfamart / Indomaret.
+          </p>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2 py-1 rounded bg-[#181b25] border border-[#262a34] font-mono text-[10px] text-white">QRIS</span>
+            <span class="px-2 py-1 rounded bg-[#181b25] border border-[#262a34] font-mono text-[10px] text-white">BCA</span>
+            <span class="px-2 py-1 rounded bg-[#181b25] border border-[#262a34] font-mono text-[10px] text-white">BRI</span>
+            <span class="px-2 py-1 rounded bg-[#181b25] border border-[#262a34] font-mono text-[10px] text-white">MANDIRI</span>
+            <span class="px-2 py-1 rounded bg-[#181b25] border border-[#262a34] font-mono text-[10px] text-white">DANA</span>
+            <span class="px-2 py-1 rounded bg-[#181b25] border border-[#262a34] font-mono text-[10px] text-white">GOPAY</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 pt-6 border-t border-[#1c1f29] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+        <div>
+          &copy; 2026 NAZILAH STORE. Seluruh hak cipta dilindungi undang-undang.
+        </div>
+        <div class="flex items-center gap-4 text-[#94a3b8]">
+          <span class="hover:text-white cursor-pointer">Syarat & Ketentuan</span>
+          <span class="hover:text-white cursor-pointer">Kebijakan Privasi</span>
+          <span class="hover:text-white cursor-pointer">Kontak Support</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+

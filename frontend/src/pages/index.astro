@@ -1,0 +1,248 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FlashSaleSection from '../components/react/FlashSaleSection';
+import GameCatalog from '../components/react/GameCatalog';
+
+let games = [];
+let flashSales = [];
+
+try {
+  const gamesRes = await fetch('http://127.0.0.1:8080/api/v1/games');
+  const gamesJson = await gamesRes.json();
+  if (gamesJson.success && gamesJson.data) {
+    games = gamesJson.data;
+  }
+
+  const flashRes = await fetch('http://127.0.0.1:8080/api/v1/flash-sale');
+  const flashJson = await flashRes.json();
+  if (flashJson.success && flashJson.data) {
+    flashSales = flashJson.data;
+  }
+} catch (e) {
+  // Static fallback if backend is offline during build
+  games = [
+    {
+      slug: 'mobile-legends',
+      name: 'Mobile Legends: Bang Bang',
+      publisher: 'Moonton',
+      category: 'populer',
+      cover_url: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80',
+      banner_url: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1400&q=80',
+      currency_name: 'Diamonds',
+      currency_icon: '💎',
+      requires_zone: true,
+      zone_label: 'Zone ID',
+      id_hint: 'User ID + Zone ID',
+      is_active: true,
+    },
+    {
+      slug: 'free-fire',
+      name: 'Free Fire Max',
+      publisher: 'Garena',
+      category: 'populer',
+      cover_url: 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=600&q=80',
+      banner_url: 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=1400&q=80',
+      currency_name: 'Diamonds',
+      currency_icon: '🔥',
+      requires_zone: false,
+      id_hint: 'Player ID',
+      is_active: true,
+    },
+    {
+      slug: 'pubg-mobile',
+      name: 'PUBG Mobile',
+      publisher: 'Tencent Games',
+      category: 'populer',
+      cover_url: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=600&q=80',
+      banner_url: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1400&q=80',
+      currency_name: 'Unknown Cash',
+      currency_icon: '🪙',
+      requires_zone: false,
+      id_hint: 'Character ID',
+      is_active: true,
+    },
+    {
+      slug: 'valorant',
+      name: 'Valorant',
+      publisher: 'Riot Games',
+      category: 'pc',
+      cover_url: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=600&q=80',
+      banner_url: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=1400&q=80',
+      currency_name: 'Points',
+      currency_icon: '⚡',
+      requires_zone: false,
+      id_hint: 'Riot ID (Nama#Tag)',
+      is_active: true,
+    },
+    {
+      slug: 'genshin-impact',
+      name: 'Genshin Impact',
+      publisher: 'HoYoverse',
+      category: 'mobile',
+      cover_url: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80',
+      banner_url: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1400&q=80',
+      currency_name: 'Genesis Crystal',
+      currency_icon: '✨',
+      requires_zone: true,
+      zone_label: 'Server Region',
+      id_hint: 'UID + Server',
+      is_active: true,
+    },
+    {
+      slug: 'honor-of-kings',
+      name: 'Honor of Kings',
+      publisher: 'Level Infinite',
+      category: 'mobile',
+      cover_url: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80',
+      banner_url: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1400&q=80',
+      currency_name: 'Tokens',
+      currency_icon: '🏆',
+      requires_zone: false,
+      id_hint: 'UID Player',
+      is_active: true,
+    },
+  ];
+
+  flashSales = [
+    {
+      sku_code: 'ML-PASS-WEEKLY',
+      game_slug: 'mobile-legends',
+      game_name: 'Mobile Legends',
+      item_name: 'Weekly Diamond Pass',
+      original_price: 26500,
+      discount_price: 24500,
+      stock_left: 12,
+      total_stock: 50,
+      ends_at: '2026-10-31T00:00:00Z',
+    },
+    {
+      sku_code: 'ML-DM-86',
+      game_slug: 'mobile-legends',
+      game_name: 'Mobile Legends',
+      item_name: '86 Diamonds (78 + 8 Bonus)',
+      original_price: 21500,
+      discount_price: 19500,
+      stock_left: 28,
+      total_stock: 100,
+      ends_at: '2026-10-31T00:00:00Z',
+    },
+    {
+      sku_code: 'FF-PASS-WEEKLY',
+      game_slug: 'free-fire',
+      game_name: 'Free Fire',
+      item_name: 'Membership Mingguan',
+      original_price: 28000,
+      discount_price: 26000,
+      stock_left: 4,
+      total_stock: 30,
+      ends_at: '2026-10-31T00:00:00Z',
+    },
+    {
+      sku_code: 'PUBG-UC-60',
+      game_slug: 'pubg-mobile',
+      game_name: 'PUBG Mobile',
+      item_name: '60 Unknown Cash (UC)',
+      original_price: 14500,
+      discount_price: 13200,
+      stock_left: 29,
+      total_stock: 100,
+      ends_at: '2026-10-31T00:00:00Z',
+    },
+  ];
+}
+---
+
+<Layout title="NAZILAH STORE — Distributor Top Up Game Termurah & Instan 24 Jam">
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <!-- Hero Promo Banner (Inspired by Stitch Canvas) -->
+    <div class="relative w-full rounded-2xl overflow-hidden bg-gradient-to-r from-[#0f131c] via-[#181b25] to-[#10b981]/15 border border-[#262a34] p-6 sm:p-10 mb-10 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="max-w-xl z-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#10b981]/15 border border-[#10b981]/30 text-[#4edea3] text-xs font-bold mb-4">
+          <span>⚡</span>
+          <span>SISTEM H2H AUTO-DISPATCH (1-3 DETIK)</span>
+        </div>
+        <h1 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight mb-3">
+          Top Up Game Favorit <br class="hidden sm:inline" />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#4edea3] to-emerald-400">
+            Tanpa Antre, Instan & Murah
+          </span>
+        </h1>
+        <p class="text-xs sm:text-sm text-[#94a3b8] mb-6 leading-relaxed">
+          Nikmati layanan top-up otomatis 24 jam dengan QRIS semua e-wallet & virtual account. Tanpa registrasi paksa, pesanan langsung masuk dalam hitungan detik.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <a
+            href="/order/mobile-legends"
+            class="px-5 py-2.5 rounded-xl bg-[#10b981] hover:bg-[#059669] text-white text-xs font-bold transition shadow-lg shadow-[#10b981]/25 flex items-center gap-2"
+          >
+            <span>Top Up Mobile Legends</span>
+            <span>&rarr;</span>
+          </a>
+          <a
+            href="/kalkulator"
+            class="px-4 py-2.5 rounded-xl bg-[#1c1f29] hover:bg-[#262a34] border border-[#3c4a42] text-xs font-semibold text-[#dfe2ef] transition"
+          >
+            Kalkulator WR MLBB
+          </a>
+        </div>
+      </div>
+
+      <div class="hidden md:flex items-center gap-3 z-10">
+        <div class="p-4 rounded-xl bg-[#0f131c]/90 border border-[#262a34] backdrop-blur-md text-center">
+          <div class="text-2xl font-extrabold text-[#4edea3] font-mono-numbers">1.8s</div>
+          <div class="text-[10px] text-[#94a3b8] mt-0.5">Rata-Rata Waktu Proses</div>
+        </div>
+        <div class="p-4 rounded-xl bg-[#0f131c]/90 border border-[#262a34] backdrop-blur-md text-center">
+          <div class="text-2xl font-extrabold text-amber-400 font-mono-numbers">99.9%</div>
+          <div class="text-[10px] text-[#94a3b8] mt-0.5">Tingkat Keberhasilan</div>
+        </div>
+      </div>
+
+      <!-- Background glow circles -->
+      <div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-[#10b981]/10 blur-3xl pointer-events-none"></div>
+    </div>
+
+    <!-- Flash Sale Section (React Island) -->
+    <FlashSaleSection client:load items={flashSales} />
+
+    <!-- Game Catalog Section (React Island) -->
+    <GameCatalog client:load games={games} />
+
+    <!-- Feature Value Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-16 pt-12 border-t border-[#1c1f29]">
+      <div class="p-5 rounded-2xl bg-[#181b25] border border-[#262a34]">
+        <div class="w-10 h-10 rounded-xl bg-[#10b981]/10 text-[#4edea3] flex items-center justify-center text-lg mb-3">
+          ⚡
+        </div>
+        <h4 class="text-sm font-bold text-white mb-1">Pengiriman Otomatis</h4>
+        <p class="text-xs text-[#94a3b8]">Didukung server H2H langsung ke publisher, pesanan masuk 1-3 detik.</p>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-[#181b25] border border-[#262a34]">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg mb-3">
+          💳
+        </div>
+        <h4 class="text-sm font-bold text-white mb-1">20+ Metode Bayar</h4>
+        <p class="text-xs text-[#94a3b8]">QRIS Nasional, Virtual Account BCA, BRI, Mandiri, dan E-Wallet.</p>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-[#181b25] border border-[#262a34]">
+        <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-lg mb-3">
+          🛡️
+        </div>
+        <h4 class="text-sm font-bold text-white mb-1">100% Legal & Aman</h4>
+        <p class="text-xs text-[#94a3b8]">Diamond dan item resmi dari jalur distribusi resmi tanpa risiko banned.</p>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-[#181b25] border border-[#262a34]">
+        <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-lg mb-3">
+          💬
+        </div>
+        <h4 class="text-sm font-bold text-white mb-1">Customer Care 24/7</h4>
+        <p class="text-xs text-[#94a3b8]">Tim bantuan kami selalu aktif di WhatsApp setiap saat Anda butuhkan.</p>
+      </div>
+    </div>
+  </div>
+</Layout>
+

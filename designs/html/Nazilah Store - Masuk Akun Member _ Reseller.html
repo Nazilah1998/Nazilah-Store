@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Masuk Akun Member &amp; Reseller | NAZILAH STORE</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary": "#ffb95f",
+            "surface-tint": "#4edea3",
+            "background": "#0f131c",
+            "surface-container": "#1c1f29",
+            "on-background": "#dfe2ef",
+            "primary": "#4edea3",
+            "surface-container-high": "#262a34",
+            "on-primary-container": "#00422b",
+            "on-primary-fixed-variant": "#005236",
+            "surface-variant": "#31353f",
+            "on-primary": "#003824",
+            "on-surface-variant": "#bbcabf",
+            "on-tertiary-fixed": "#410005",
+            "secondary-container": "#ee9800",
+            "tertiary-fixed": "#ffdad7",
+            "on-secondary-container": "#5b3800",
+            "on-surface": "#dfe2ef",
+            "on-secondary": "#472a00",
+            "tertiary-fixed-dim": "#ffb3af",
+            "surface-container-lowest": "#0a0e17",
+            "error-container": "#93000a",
+            "on-tertiary": "#650911",
+            "on-error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#653e00",
+            "surface": "#0f131c",
+            "secondary-fixed": "#ffddb8",
+            "on-secondary-fixed": "#2a1700",
+            "inverse-on-surface": "#2c303a",
+            "error": "#ffb4ab",
+            "surface-container-low": "#181b25",
+            "surface-bright": "#353943",
+            "on-tertiary-container": "#711419",
+            "surface-container-highest": "#31353f",
+            "inverse-surface": "#dfe2ef",
+            "primary-container": "#10b981",
+            "on-primary-fixed": "#002113",
+            "outline": "#86948a",
+            "tertiary": "#ffb3af",
+            "on-tertiary-fixed-variant": "#842225",
+            "outline-variant": "#3c4a42",
+            "on-error": "#690005",
+            "surface-dim": "#0f131c",
+            "inverse-primary": "#006c49",
+            "secondary-fixed-dim": "#ffb95f",
+            "primary-fixed": "#6ffbbe",
+            "tertiary-container": "#fc7c78",
+            "primary-fixed-dim": "#4edea3"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "margin": "1rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-lg": "1.25rem",
+            "margin-desktop": "2rem",
+            "gutter-desktop": "1.5rem",
+            "space-md": "0.75rem"
+          },
+          "fontFamily": {
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "title-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "mono-metric-md": ["JetBrains Mono"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "mono-metric-lg": ["JetBrains Mono"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-caps": ["JetBrains Mono"],
+            "mono-data-sm": ["JetBrains Mono"],
+            "headline-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "title-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "mono-metric-md": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "mono-metric-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }],
+            "mono-data-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md min-h-screen flex flex-col justify-between antialiased selection:bg-primary-container selection:text-on-primary">
+<!-- TOP MINIMAL BAR -->
+<header class="w-full border-b border-outline-variant/40 bg-surface-container-lowest/80 backdrop-blur-md sticky top-0 z-50">
+<div class="max-w-[1360px] mx-auto px-4 lg:px-8 h-14 flex items-center justify-between">
+<a class="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary font-title-sm text-title-sm transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-primary text-[18px]">arrow_back</span>
+<span>Kembali ke Beranda Nazilah Store</span>
+</a>
+<div class="flex items-center gap-3">
+<div class="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container border border-outline-variant/60 font-mono-data-sm text-mono-data-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span>GATEWAY V3.2 LIVE</span>
+</div>
+<a class="inline-flex items-center gap-1.5 text-on-surface-variant hover:text-primary font-body-sm text-body-sm transition-colors duration-150" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary">support_agent</span>
+<span class="hidden md:inline">Butuh Bantuan Login?</span>
+<span class="font-title-sm text-on-surface">Hubungi CS WhatsApp</span>
+</a>
+</div>
+</div>
+</header>
+<!-- MAIN CANVAS: CENTERED 2-COLUMN SPLIT CONTAINER -->
+<main class="flex-grow flex items-center justify-center px-4 py-8 md:py-12">
+<div class="w-full max-w-[1040px] bg-surface-container-low border border-outline-variant/80 rounded-xl overflow-hidden shadow-2xl flex flex-col lg:flex-row">
+<!-- LEFT PANEL: Value Proposition & Live Member Price Preview (48% width) -->
+<div class="lg:w-[48%] bg-surface-container-lowest/90 p-6 md:p-8 lg:p-10 border-b lg:border-b-0 lg:border-r border-outline-variant/70 flex flex-col justify-between relative overflow-hidden">
+<!-- Subtle tactical grid ambient indicator -->
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-primary-container/5 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<!-- Brand Anchor Header -->
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded bg-surface-container border border-primary-container/40 flex items-center justify-center text-primary shadow-[0_0_10px_rgba(16,185,129,0.15)]">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">token</span>
+</div>
+<div>
+<div class="text-headline-md font-headline-md font-extrabold tracking-tight text-primary uppercase leading-tight">
+                NAZILAH STORE
+              </div>
+<p class="font-mono-data-sm text-mono-data-sm text-on-surface-variant tracking-wider uppercase">
+                Official High-Speed Gaming Gateway
+              </p>
+</div>
+</div>
+<!-- Value Headline -->
+<h1 class="text-headline-lg font-headline-lg text-on-surface mb-4">
+            Akses Harga Reseller &amp; Checkout Instan 1-Detik.
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+            Masuk untuk mengakses rute H2H prioritas, saldo deposit terintegrasi, dan potongan margin eksklusif kompetitif se-Indonesia.
+          </p>
+<!-- Bullet Benefits -->
+<div class="space-y-3.5 mb-8">
+<div class="flex items-start gap-3">
+<div class="mt-0.5 w-5 h-5 rounded-full bg-primary-container/20 border border-primary-container/50 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[15px]">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Bebas Biaya Admin QRIS dengan Saldo NazilahPay</span>
+</div>
+<div class="flex items-start gap-3">
+<div class="mt-0.5 w-5 h-5 rounded-full bg-primary-container/20 border border-primary-container/50 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[15px]">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Harga Khusus Member &amp; Reseller VIP Otomatis</span>
+</div>
+<div class="flex items-start gap-3">
+<div class="mt-0.5 w-5 h-5 rounded-full bg-primary-container/20 border border-primary-container/50 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[15px]">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface">Riwayat Transaksi, Mutasi Saldo &amp; Akses API H2H</span>
+</div>
+</div>
+<!-- Live Price Comparison Mini-Card (JetBrains Mono) -->
+<div class="bg-surface-container border border-outline-variant/90 rounded-lg p-4 font-mono-data-sm relative overflow-hidden">
+<div class="absolute top-2 right-2">
+<span class="px-2 py-0.5 text-[10px] font-label-caps uppercase bg-secondary-container/20 border border-secondary-container/40 text-secondary rounded">
+                LIVE TELEMETRY
+              </span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary font-semibold mb-3">
+<span class="material-symbols-outlined text-[16px]">local_fire_department</span>
+<span>Contoh Selisih Harga Hari Ini (MLBB Weekly Diamond Pass):</span>
+</div>
+<div class="space-y-2 border-t border-outline-variant/40 pt-2.5">
+<div class="flex items-center justify-between text-on-surface-variant font-mono-data-sm">
+<span>Harga Tamu (Tanpa Login):</span>
+<span class="line-through">Rp 27.500</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-primary-container/10 border border-primary-container/40 text-primary">
+<span class="font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  Harga Reseller VIP:
+                </span>
+<span class="font-mono-metric-md font-bold">
+                  Rp 25.900 <span class="text-xs text-primary font-normal">(Hemat Rp 1.600/item)</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Telemetry & Security Footnote -->
+<div class="mt-8 pt-4 border-t border-outline-variant/40 flex items-center gap-2 font-mono-data-sm text-mono-data-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-primary-container shrink-0"></span>
+<span class="text-[11px] leading-relaxed">
+            SSL 256-Bit Encrypted • Argon2id Hashing • 99.8% Server Uptime
+          </span>
+</div>
+</div>
+<!-- RIGHT PANEL: Interactive Login Form (52% width) -->
+<div class="lg:w-[52%] bg-surface-container-high/40 p-6 md:p-8 lg:p-10 flex flex-col justify-center">
+<div class="max-w-md w-full mx-auto">
+<div class="mb-6">
+<h2 class="text-headline-md font-headline-md text-on-surface mb-1.5">
+              Masuk ke Akun Anda
+            </h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+              Silakan masuk menggunakan nomor WhatsApp atau email terdaftar.
+            </p>
+</div>
+<!-- Login Method Segmented Switcher (2 Tabs) -->
+<div class="grid grid-cols-2 gap-1.5 p-1 rounded-lg bg-surface-container-lowest border border-outline-variant/80 mb-6">
+<button class="flex items-center justify-center gap-2 py-2 px-3 rounded text-primary bg-surface-container border border-primary-container font-title-sm text-title-sm transition-all duration-150 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">key</span>
+<span>Kata Sandi</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-2 px-3 rounded text-on-surface-variant hover:text-on-surface font-title-sm text-title-sm transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span class="truncate">OTP WhatsApp</span>
+</button>
+</div>
+<!-- Form Fields -->
+<form class="space-y-4" onsubmit="event.preventDefault();">
+<!-- Input 1: WhatsApp / Email -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="text-body-sm font-body-sm text-on-surface font-semibold" for="identifier">
+                  Nomor WhatsApp atau Email
+                </label>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">AUTH-ID</span>
+</div>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">person</span>
+</div>
+<input class="w-full pl-10 pr-4 py-2.5 bg-surface-container-lowest border border-outline-variant rounded focus:border-primary-container focus:ring-1 focus:ring-primary-container text-on-surface font-mono-metric-md text-mono-metric-md placeholder:text-on-surface-variant/50 transition-colors" id="identifier" placeholder="08xxxxxxxxxx atau user@domain.com" type="text" value="081234567890"/>
+</div>
+</div>
+<!-- Input 2: Password -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="text-body-sm font-body-sm text-on-surface font-semibold" for="password">
+                  Kata Sandi
+                </label>
+<a class="font-body-sm text-body-sm text-primary hover:underline" href="#">
+                  Lupa Kata Sandi?
+                </a>
+</div>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+<input class="w-full pl-10 pr-10 py-2.5 bg-surface-container-lowest border border-outline-variant rounded focus:border-primary-container focus:ring-1 focus:ring-primary-container text-on-surface font-mono-metric-md text-mono-metric-md transition-colors" id="password" type="password" value="SecretP@ssw0rd!"/>
+<button class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Checkbox Row -->
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2.5 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded bg-surface-container-lowest border-outline-variant text-primary-container focus:ring-primary-container focus:ring-offset-surface-container-low" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                  Ingat perangkat ini selama 30 hari
+                </span>
+</label>
+</div>
+<!-- Primary CTA Button -->
+<button class="w-full py-3 px-4 bg-primary-container text-on-primary-container hover:bg-[#059669] active:scale-[0.99] font-headline-md text-title-sm font-bold rounded flex items-center justify-center gap-2 transition-all duration-150 shadow-[0_0_12px_rgba(16,185,129,0.25)]" type="submit">
+<span>Masuk Sekarang</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</form>
+<!-- Divider -->
+<div class="relative my-6 text-center">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-outline-variant/60"></div>
+</div>
+<span class="relative px-3 bg-surface-container-low text-on-surface-variant font-mono-data-sm text-mono-data-sm">
+              atau masuk cepat dengan
+            </span>
+</div>
+<!-- Social / Quick Auth Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+<!-- Google Auth -->
+<button class="flex items-center justify-center gap-2.5 py-2.5 px-3 rounded bg-surface-container-lowest border border-outline-variant hover:border-outline text-on-surface hover:text-primary transition-all duration-150 active:scale-[0.99]" type="button">
+<!-- Official Google Icon (SVG) -->
+<svg aria-hidden="true" class="w-4 h-4 shrink-0" viewbox="0 0 24 24">
+<path d="M12 5c1.56 0 2.97.57 4.08 1.51l3.05-3.05C17.27 1.7 14.82 1 12 1 7.42 1 3.52 3.63 1.62 7.44l3.7 2.87C6.21 7.27 8.86 5 12 5z" fill="#EA4335"></path>
+<path d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58l3.71 2.88c2.16-2 3.71-4.94 3.71-8.7z" fill="#4285F4"></path>
+<path d="M5.32 14.69c-.23-.69-.36-1.42-.36-2.19s.13-1.5.36-2.19L1.62 7.44C.59 9.5 0 11.68 0 14s.59 4.5 1.62 6.56l3.7-2.87z" fill="#FBBC05"></path>
+<path d="M12 23c3.24 0 5.95-1.08 7.93-2.91l-3.71-2.88c-1.04.7-2.38 1.12-4.22 1.12-3.14 0-5.79-2.27-6.68-5.31L1.62 16.56C3.52 20.37 7.42 23 12 23z" fill="#34A853"></path>
+</svg>
+<span class="font-title-sm text-body-sm font-semibold truncate">Google Account</span>
+</button>
+<!-- WhatsApp OTP Auth -->
+<button class="flex items-center justify-center gap-2 py-2.5 px-3 rounded bg-surface-container-lowest border border-outline-variant hover:border-outline text-on-surface hover:text-primary transition-all duration-150 active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[19px] text-primary" style="font-variation-settings: 'FILL' 1;">sms</span>
+<span class="font-title-sm text-body-sm font-semibold truncate">OTP WhatsApp</span>
+</button>
+</div>
+<!-- Bottom Footer Link -->
+<div class="text-center pt-2 border-t border-outline-variant/40">
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Belum punya akun Nazilah Store? 
+              <a class="text-primary hover:underline font-semibold ml-1" href="#">
+                Daftar Member Gratis
+              </a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- SHARED FOOTER (From JSON blueprint) -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant">
+<div class="w-full max-w-[1360px] mx-auto px-4 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
+<span class="text-title-sm font-title-sm font-bold text-on-surface">NAZILAH STORE</span>
+<span class="hidden sm:inline text-outline-variant">|</span>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+          © 2025 Nazilah Store. Official High-Speed Gaming Gateway Indonesia. Hak Cipta Dilindungi.
+        </p>
+</div>
+<div class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-body-sm font-body-sm">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Syarat &amp; Ketentuan</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Kebijakan Privasi</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Status Server H2H</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Integrasi API Reseller</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Panduan Transaksi QRIS</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Bantuan WhatsApp 24/7</a>
+</div>
+</div>
+</footer>
+</body></html>

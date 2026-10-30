@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NAZILAH ADMIN - Katalog, Margin Harga H2H &amp; Flash Sale Manager</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary": "#4edea3",
+            "surface-container-high": "#262a34",
+            "tertiary": "#ffb3af",
+            "surface-variant": "#31353f",
+            "surface-container-low": "#181b25",
+            "on-secondary": "#472a00",
+            "on-primary-container": "#00422b",
+            "on-background": "#dfe2ef",
+            "surface-container-highest": "#31353f",
+            "surface-tint": "#4edea3",
+            "inverse-on-surface": "#2c303a",
+            "on-primary": "#003824",
+            "inverse-surface": "#dfe2ef",
+            "on-surface": "#dfe2ef",
+            "outline": "#86948a",
+            "on-tertiary": "#650911",
+            "surface": "#0f131c",
+            "surface-bright": "#353943",
+            "tertiary-fixed-dim": "#ffb3af",
+            "surface-container-lowest": "#0a0e17",
+            "outline-variant": "#3c4a42",
+            "surface-container": "#1c1f29",
+            "secondary-fixed-dim": "#ffb95f",
+            "secondary-container": "#ee9800",
+            "tertiary-container": "#fc7c78",
+            "on-secondary-container": "#5b3800",
+            "on-tertiary-container": "#711419",
+            "on-primary-fixed-variant": "#005236",
+            "primary-fixed-dim": "#4edea3",
+            "on-tertiary-fixed-variant": "#842225",
+            "background": "#0f131c",
+            "on-secondary-fixed-variant": "#653e00",
+            "primary-fixed": "#6ffbbe",
+            "on-error-container": "#ffdad6",
+            "tertiary-fixed": "#ffdad7",
+            "on-error": "#690005",
+            "on-tertiary-fixed": "#410005",
+            "primary-container": "#10b981",
+            "surface-dim": "#0f131c",
+            "secondary-fixed": "#ffddb8",
+            "error-container": "#93000a",
+            "on-primary-fixed": "#002113",
+            "on-secondary-fixed": "#2a1700",
+            "error": "#ffb4ab",
+            "inverse-primary": "#006c49",
+            "secondary": "#ffb95f",
+            "on-surface-variant": "#bbcabf"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.25rem",
+            "space-sm": "0.5rem",
+            "gutter-desktop": "1.5rem",
+            "margin": "1rem",
+            "margin-desktop": "2rem",
+            "space-md": "0.75rem",
+            "gutter": "1rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Plus Jakarta Sans"],
+            "mono-metric-md": ["JetBrains Mono"],
+            "mono-data-sm": ["JetBrains Mono"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-caps": ["JetBrains Mono"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "mono-metric-lg": ["JetBrains Mono"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "title-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "mono-metric-md": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "mono-data-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "mono-metric-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "title-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #0a0e17;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 2px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #334155;
+    }
+  </style>
+</head>
+<body class="bg-[#090D16] text-on-surface font-body-md min-h-screen flex selection:bg-primary selection:text-on-primary-container">
+<!-- LEFT SIDEBAR -->
+<aside class="w-64 flex-shrink-0 bg-[#0A0E17] border-r border-[#1E293B] flex flex-col justify-between h-screen sticky top-0 select-none z-40">
+<div class="flex flex-col">
+<!-- Sidebar Brand Header -->
+<div class="px-5 py-4 border-b border-[#1E293B]">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<span class="font-headline-md text-[17px] font-extrabold tracking-tight text-white">NAZILAH ADMIN</span>
+</div>
+<span class="bg-[#111827] text-primary border border-[#1E293B] text-[10px] font-mono-data-sm px-1.5 py-0.5 rounded font-bold">v2.4</span>
+</div>
+<!-- Ping Status -->
+<div class="mt-2.5 flex items-center gap-1.5 px-2 py-1 bg-[#111827] rounded border border-[#1E293B]">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-[11px] font-mono-data-sm text-[#94A3B8] tracking-tight truncate tabular-nums">Digiflazz: <strong class="text-primary font-semibold">24ms</strong> | VIP: <strong class="text-primary font-semibold">31ms</strong></span>
+</div>
+</div>
+<!-- Navigation Menu -->
+<nav class="p-3 space-y-1">
+<a class="flex items-center justify-between px-3 py-2.5 rounded text-[#94A3B8] hover:text-white hover:bg-[#111827] transition-colors border border-transparent font-title-sm text-[13px]" href="#">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[19px]">dashboard</span>
+<span>Ringkasan H2H</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-3 py-2.5 rounded text-[#94A3B8] hover:text-white hover:bg-[#111827] transition-colors border border-transparent font-title-sm text-[13px]" href="#">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[19px]">swap_horiz</span>
+<span>Transaksi Live</span>
+</div>
+<span class="bg-[#1E293B] text-white font-mono-data-sm text-[10px] px-2 py-0.5 rounded font-bold tabular-nums">342</span>
+</a>
+<!-- ACTIVE ITEM -->
+<a class="flex items-center justify-between px-3 py-2.5 rounded bg-[#111827] text-primary border border-[#10B981] shadow-[0_0_12px_rgba(16,185,129,0.08)] font-title-sm text-[13px] font-semibold" href="#">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[19px]" style="font-variation-settings: 'FILL' 1;">tune</span>
+<span>Katalog &amp; Margin Harga</span>
+</div>
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+</a>
+<a class="flex items-center justify-between px-3 py-2.5 rounded text-[#94A3B8] hover:text-white hover:bg-[#111827] transition-colors border border-transparent font-title-sm text-[13px]" href="#">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[19px]">hub</span>
+<span>Konfigurasi Provider</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-3 py-2.5 rounded text-[#94A3B8] hover:text-white hover:bg-[#111827] transition-colors border border-transparent font-title-sm text-[13px]" href="#">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[19px]">account_balance_wallet</span>
+<span>Laporan Keuangan</span>
+</div>
+</a>
+<a class="flex items-center justify-between px-3 py-2.5 rounded text-[#94A3B8] hover:text-white hover:bg-[#111827] transition-colors border border-transparent font-title-sm text-[13px]" href="#">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[19px]">webhook</span>
+<span>Pengaturan Webhook</span>
+</div>
+</a>
+</nav>
+</div>
+<!-- Admin Footer Session -->
+<div class="p-3 border-t border-[#1E293B] bg-[#090D16]">
+<div class="px-3 py-2.5 rounded bg-[#111827] border border-[#1E293B] flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-primary" style="font-variation-settings: 'FILL' 1;">shield_person</span>
+<span class="font-label-caps text-[10px] text-white tracking-wider font-bold">SUPERADMIN</span>
+</div>
+<span class="font-mono-data-sm text-[10px] text-[#64748B]">Nazilah Core</span>
+</div>
+<div class="flex items-center justify-between text-[11px] font-mono-data-sm text-[#94A3B8] pt-1 border-t border-[#1E293B]">
+<span>IP: <span class="text-white tabular-nums">103.149.88.12</span></span>
+<button class="text-tertiary-container hover:text-error transition-colors flex items-center gap-0.5 text-[10px] uppercase font-bold tracking-tight">
+<span>Keluar</span>
+<span class="material-symbols-outlined text-xs">logout</span>
+</button>
+</div>
+</div>
+</div>
+</aside>
+<!-- MAIN WRAPPER -->
+<div class="flex-1 flex flex-col min-w-0 overflow-y-auto custom-scrollbar">
+<!-- TOP OPERATIONAL BAR -->
+<header class="h-16 bg-[#0A0E17] border-b border-[#1E293B] px-6 flex items-center justify-between sticky top-0 z-30 flex-shrink-0">
+<!-- Breadcrumb & Mode Status -->
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 text-[13px] text-[#94A3B8] font-body-md">
+<span>Dashboard</span>
+<span class="text-[#475569]">/</span>
+<span class="text-white font-semibold">Katalog &amp; Konfigurasi Margin H2H</span>
+</div>
+<div class="h-4 w-px bg-[#1E293B] mx-1"></div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#111827] border border-[rgba(16,185,129,0.3)]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-label-caps text-[10px] text-primary font-bold tracking-wide uppercase">Otomatisasi H2H: AKTIF (Mode Otomatis)</span>
+</div>
+</div>
+<!-- Live Clock & Top Controls -->
+<div class="flex items-center gap-3">
+<div class="hidden xl:flex items-center gap-1.5 px-3 py-1.5 bg-[#111827] rounded border border-[#1E293B] text-[#94A3B8]">
+<span class="material-symbols-outlined text-[15px] text-[#64748B]">schedule</span>
+<span class="font-mono-data-sm text-[11px] tabular-nums font-medium text-white">30 Okt 2026 • 22:18:10 WIB</span>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-[#111827] hover:bg-[#162032] border border-[#1E293B] hover:border-primary text-white hover:text-primary rounded text-[12px] font-title-sm font-semibold transition-all duration-150 active:scale-[0.99]">
+<span class="material-symbols-outlined text-[16px] text-primary">sync</span>
+<span>Sync Harga Provider Sekarang</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 bg-primary hover:bg-[#059669] text-[#090D16] rounded text-[12px] font-title-sm font-bold transition-all duration-150 active:scale-[0.99]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">add_card</span>
+<span>Top Up Saldo H2H</span>
+</button>
+</div>
+</header>
+<!-- CONTENT CANVAS -->
+<main class="p-6 space-y-6 max-w-[1440px] w-full mx-auto">
+<!-- SECTION 1: GLOBAL AUTO-MARGIN RULE BAR -->
+<section class="bg-[#111827] rounded border border-[#1E293B] p-5 shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-[#1E293B]">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">auto_graph</span>
+<h2 class="font-headline-md text-[18px] text-white font-bold tracking-tight">Aturan Markup Harga Otomatis (Sinkronisasi H2H Digiflazz / VIP Reseller)</h2>
+</div>
+<p class="text-[13px] text-[#94A3B8] mt-0.5">Margin dihitung otomatis dari harga modal live API H2H secara real-time saat provider memperbarui kurs atau biaya produk.</p>
+</div>
+<div class="flex items-center gap-2 self-start lg:self-center">
+<button class="px-3 py-1.5 bg-[#162032] hover:bg-[#1E293B] border border-[#1E293B] text-[#94A3B8] hover:text-white rounded text-[12px] font-title-sm font-medium transition-colors">
+              Kembalikan Default
+            </button>
+<button class="flex items-center gap-1.5 px-4 py-1.5 bg-primary hover:bg-[#059669] text-[#090D16] rounded text-[12px] font-title-sm font-bold shadow-sm transition-all active:scale-[0.99]">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">save</span>
+<span>Simpan Aturan Margin</span>
+</button>
+</div>
+</div>
+<!-- 3 Interactive Rule Boxes -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+<!-- Box 1: Tamu (Publik) -->
+<div class="bg-[#0D131F] rounded border border-[#1E293B] p-4 relative group hover:border-[#334155] transition-colors">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[12px] font-title-sm font-bold text-white uppercase tracking-wider">Margin Tamu (Publik)</span>
+<span class="bg-[#111827] text-primary border border-[rgba(16,185,129,0.3)] font-label-caps text-[10px] px-2 py-0.5 rounded font-bold">Min. Profit Rp 1.500</span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-mono-metric-lg text-white tabular-nums text-[24px]">Modal + 8.0%</span>
+</div>
+<div class="mt-3 pt-2.5 border-t border-[#1E293B] flex items-center justify-between text-[11px] font-mono-data-sm">
+<span class="text-[#64748B]">Formula Eksekusi:</span>
+<span class="text-[#94A3B8] bg-[#111827] px-1.5 py-0.5 rounded border border-[#1E293B]">[Modal x 1.08]</span>
+</div>
+</div>
+<!-- Box 2: Member -->
+<div class="bg-[#0D131F] rounded border border-[#1E293B] p-4 relative group hover:border-[#334155] transition-colors">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[12px] font-title-sm font-bold text-white uppercase tracking-wider">Margin Member</span>
+<span class="bg-[#111827] text-[#38BDF8] border border-[rgba(56,189,248,0.3)] font-label-caps text-[10px] px-2 py-0.5 rounded font-bold">Diskon Otomatis 3%</span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-mono-metric-lg text-white tabular-nums text-[24px]">Modal + 5.0%</span>
+</div>
+<div class="mt-3 pt-2.5 border-t border-[#1E293B] flex items-center justify-between text-[11px] font-mono-data-sm">
+<span class="text-[#64748B]">Formula Eksekusi:</span>
+<span class="text-[#94A3B8] bg-[#111827] px-1.5 py-0.5 rounded border border-[#1E293B]">[Modal x 1.05]</span>
+</div>
+</div>
+<!-- Box 3: Reseller VIP -->
+<div class="bg-[#0D131F] rounded border border-[#1E293B] p-4 relative group hover:border-[#334155] transition-colors">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[12px] font-title-sm font-bold text-white uppercase tracking-wider">Margin Reseller VIP</span>
+<span class="bg-[#111827] text-secondary border border-[rgba(245,158,11,0.3)] font-label-caps text-[10px] px-2 py-0.5 rounded font-bold">Tier Grosir H2H</span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-mono-metric-lg text-white tabular-nums text-[24px]">Modal + 2.5%</span>
+</div>
+<div class="mt-3 pt-2.5 border-t border-[#1E293B] flex items-center justify-between text-[11px] font-mono-data-sm">
+<span class="text-[#64748B]">Formula Eksekusi:</span>
+<span class="text-[#94A3B8] bg-[#111827] px-1.5 py-0.5 rounded border border-[#1E293B]">[Modal x 1.025]</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: FLASH SALE & PROMO SCHEDULER WIDGET -->
+<section class="bg-[#111827] rounded border border-[#1E293B] p-5 relative overflow-hidden">
+<!-- Accent Top Bar for Flash Sale -->
+<div class="absolute top-0 left-0 right-0 h-[2px] bg-secondary"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-[#1E293B]">
+<div class="flex flex-wrap items-center gap-3">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-[#162032] border border-[rgba(245,158,11,0.4)] text-secondary">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-label-caps text-[11px] font-bold tracking-wider uppercase">FLASH SALE MANAGER (EVENT AKTIF)</span>
+</div>
+<span class="text-[13px] font-body-md text-white font-semibold">Event Saat Ini: Flash Sale Awal Bulan S32</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 bg-[#090D16] border border-[#1E293B] px-3 py-1.5 rounded">
+<span class="material-symbols-outlined text-secondary text-[16px]">alarm</span>
+<span class="text-[12px] font-mono-data-sm text-[#94A3B8]">Berakhir dalam:</span>
+<span class="font-mono-metric-md text-secondary tabular-nums font-bold">02:14:38</span>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-[#162032] hover:bg-[#1E293B] border border-secondary text-secondary rounded text-[12px] font-title-sm font-semibold transition-all">
+<span class="material-symbols-outlined text-[15px]">add</span>
+<span>+ Tambah Produk Flash Sale</span>
+</button>
+</div>
+</div>
+<!-- Flash Sale Cards Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
+<!-- Flash Item 1 -->
+<div class="bg-[#0D131F] rounded border border-[#1E293B] p-4 flex flex-col justify-between hover:border-[#334155] transition-colors">
+<div class="flex items-start justify-between gap-3">
+<div>
+<div class="flex items-center gap-2">
+<span class="bg-[#1E293B] text-white font-mono-data-sm text-[11px] px-2 py-0.5 rounded font-bold">ML-WDP</span>
+<h4 class="font-title-sm text-[14px] font-bold text-white">Weekly Diamond Pass (Mobile Legends)</h4>
+</div>
+<div class="mt-2 flex items-center gap-2 text-[12px]">
+<span class="text-[#64748B]">Modal: <span class="font-mono-data-sm text-[#94A3B8] tabular-nums">Rp 25.400</span></span>
+<span class="text-[#475569]">→</span>
+<span class="text-secondary font-mono-metric-md text-[14px] font-bold tabular-nums">Rp 26.900</span>
+<span class="line-through text-[#64748B] text-[11px] font-mono-data-sm tabular-nums">(Rp 27.500)</span>
+</div>
+</div>
+<span class="bg-[#111827] text-primary border border-[rgba(16,185,129,0.3)] font-label-caps text-[10px] px-2 py-0.5 rounded font-bold whitespace-nowrap">
+                AKTIF (Routing Digiflazz Line-1)
+              </span>
+</div>
+<!-- Progress & Quota -->
+<div class="mt-4 pt-3 border-t border-[#1E293B] space-y-2">
+<div class="flex justify-between text-[11px] font-mono-data-sm">
+<span class="text-[#94A3B8]">Kuota Flash: <strong class="text-white tabular-nums">12 / 50 Terjual</strong></span>
+<span class="text-primary font-bold tabular-nums">Margin Toko: +Rp 1.500 (5.9%)</span>
+</div>
+<div class="w-full bg-[#162032] rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-300" style="width: 24%"></div>
+</div>
+</div>
+</div>
+<!-- Flash Item 2 -->
+<div class="bg-[#0D131F] rounded border border-[#1E293B] p-4 flex flex-col justify-between hover:border-[#334155] transition-colors">
+<div class="flex items-start justify-between gap-3">
+<div>
+<div class="flex items-center gap-2">
+<span class="bg-[#1E293B] text-white font-mono-data-sm text-[11px] px-2 py-0.5 rounded font-bold">ML-86</span>
+<h4 class="font-title-sm text-[14px] font-bold text-white">86 Diamonds MLBB (78 + 8 Bonus)</h4>
+</div>
+<div class="mt-2 flex items-center gap-2 text-[12px]">
+<span class="text-[#64748B]">Modal: <span class="font-mono-data-sm text-[#94A3B8] tabular-nums">Rp 19.800</span></span>
+<span class="text-[#475569]">→</span>
+<span class="text-secondary font-mono-metric-md text-[14px] font-bold tabular-nums">Rp 20.400</span>
+<span class="line-through text-[#64748B] text-[11px] font-mono-data-sm tabular-nums">(Rp 21.500)</span>
+</div>
+</div>
+<span class="bg-[#111827] text-secondary border border-[rgba(245,158,11,0.4)] font-label-caps text-[10px] px-2 py-0.5 rounded font-bold whitespace-nowrap animate-pulse">
+                HAMPIR HABIS
+              </span>
+</div>
+<!-- Progress & Quota -->
+<div class="mt-4 pt-3 border-t border-[#1E293B] space-y-2">
+<div class="flex justify-between text-[11px] font-mono-data-sm">
+<span class="text-[#94A3B8]">Kuota Flash: <strong class="text-white tabular-nums">38 / 50 Terjual</strong></span>
+<span class="text-primary font-bold tabular-nums">Margin Toko: +Rp 600 (3.0%)</span>
+</div>
+<div class="w-full bg-[#162032] rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-300" style="width: 76%"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: SKU MAPPING, PRICING OVERRIDE & ROUTING TABLE -->
+<section class="bg-[#111827] rounded border border-[#1E293B] overflow-hidden">
+<!-- Filter & Search Toolbar -->
+<div class="p-4 border-b border-[#1E293B] flex flex-col lg:flex-row items-center justify-between gap-3 bg-[#0D131F]">
+<div class="flex flex-wrap items-center gap-2.5 w-full lg:w-auto">
+<!-- Search SKU / Name -->
+<div class="relative flex-1 sm:w-64">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[17px] text-[#64748B]">search</span>
+<input class="w-full bg-[#111827] border border-[#1E293B] rounded pl-8 pr-3 py-1.5 text-[12px] font-body-md text-white placeholder-[#64748B] focus:outline-none focus:border-primary" placeholder="Cari SKU atau nama produk..." type="text"/>
+</div>
+<!-- Provider Dropdown -->
+<div class="relative">
+<select class="bg-[#111827] border border-[#1E293B] rounded px-3 py-1.5 text-[12px] font-title-sm text-[#94A3B8] focus:outline-none focus:border-primary pr-8 appearance-none">
+<option>Semua Provider</option>
+<option>Digiflazz</option>
+<option>VIP Reseller</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-xs text-[#64748B] pointer-events-none">expand_more</span>
+</div>
+<!-- Status Filter Segmented Pills -->
+<div class="flex items-center bg-[#111827] rounded border border-[#1E293B] p-0.5 text-[11px] font-title-sm">
+<button class="px-2.5 py-1 rounded bg-[#1E293B] text-white font-semibold">Semua (38)</button>
+<button class="px-2.5 py-1 rounded text-[#94A3B8] hover:text-white">Auto-Margin (34)</button>
+<button class="px-2.5 py-1 rounded text-[#94A3B8] hover:text-white">Manual Override (4)</button>
+</div>
+</div>
+<!-- Actions: Export CSV -->
+<div class="flex items-center gap-2 self-end lg:self-center">
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-[#111827] hover:bg-[#162032] border border-[#1E293B] text-white rounded text-[12px] font-title-sm font-semibold transition-colors">
+<span class="material-symbols-outlined text-[15px]">file_download</span>
+<span>Export CSV</span>
+</button>
+</div>
+</div>
+<!-- High-Density Tactical Table -->
+<div class="overflow-x-auto custom-scrollbar">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-[#1E293B] bg-[#0A0E17] text-[#64748B] font-label-caps text-[10px] tracking-wider uppercase select-none">
+<th class="py-3 px-4 font-semibold">Kode SKU</th>
+<th class="py-3 px-4 font-semibold">Nama Game &amp; Denominasi</th>
+<th class="py-3 px-4 font-semibold">Provider Utama (Smart Routing)</th>
+<th class="py-3 px-4 font-semibold">Harga Modal H2H</th>
+<th class="py-3 px-4 font-semibold">Harga Jual Publik</th>
+<th class="py-3 px-4 font-semibold">Harga Member &amp; VIP</th>
+<th class="py-3 px-4 font-semibold">Profit Bersih &amp; Margin</th>
+<th class="py-3 px-4 font-semibold text-right">Status Routing</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#1E293B] text-[13px]">
+<!-- ROW 1 -->
+<tr class="hover:bg-[#162032]/50 transition-colors group">
+<td class="py-3.5 px-4">
+<span class="font-mono-data-sm text-[12px] text-white bg-[#0D131F] border border-[#1E293B] px-2 py-0.5 rounded font-bold">ML-WDP</span>
+</td>
+<td class="py-3.5 px-4 font-semibold text-white">
+                  Weekly Diamond Pass
+                  <div class="text-[11px] text-[#64748B] font-normal">Mobile Legends: Bang Bang</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="relative inline-block w-48">
+<select class="w-full bg-[#0D131F] border border-[#1E293B] hover:border-[#334155] rounded px-2.5 py-1 text-[11px] font-title-sm text-primary pr-6 focus:outline-none focus:border-primary appearance-none font-medium">
+<option>Digiflazz (Termurah)</option>
+<option>VIP Reseller (Backup)</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-1/2 -translate-y-1/2 text-xs text-[#64748B] pointer-events-none">unfold_more</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-mono-data-sm text-[#94A3B8] tabular-nums font-semibold">
+                  Rp 25.400
+                </td>
+<td class="py-3.5 px-4">
+<div class="inline-flex items-center gap-1.5 bg-[#0D131F] border border-[#1E293B] px-2 py-0.5 rounded">
+<span class="font-mono-metric-md text-[13px] text-white tabular-nums font-bold">Rp 27.500</span>
+<span class="bg-[#111827] text-primary text-[9px] font-label-caps px-1 rounded border border-[rgba(16,185,129,0.2)] font-bold">AUTO</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-mono-data-sm text-[#94A3B8] tabular-nums text-[12px]">
+<span class="text-white font-medium">Rp 26.800</span> <span class="text-[#475569]">/</span> <span class="text-secondary font-medium">Rp 25.900</span>
+</td>
+<td class="py-3.5 px-4 font-mono-data-sm text-primary tabular-nums font-bold">
+                  +Rp 2.100 (+8.2%)
+                </td>
+<td class="py-3.5 px-4 text-right">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-[#1E293B] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+</tr>
+<!-- ROW 2 -->
+<tr class="hover:bg-[#162032]/50 transition-colors group">
+<td class="py-3.5 px-4">
+<span class="font-mono-data-sm text-[12px] text-white bg-[#0D131F] border border-[#1E293B] px-2 py-0.5 rounded font-bold">ML-86</span>
+</td>
+<td class="py-3.5 px-4 font-semibold text-white">
+                  86 Diamonds (78+8)
+                  <div class="text-[11px] text-[#64748B] font-normal">Mobile Legends: Bang Bang</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="relative inline-block w-48">
+<select class="w-full bg-[#0D131F] border border-[#1E293B] hover:border-[#334155] rounded px-2.5 py-1 text-[11px] font-title-sm text-primary pr-6 focus:outline-none focus:border-primary appearance-none font-medium">
+<option>Digiflazz (Termurah)</option>
+<option>VIP Reseller (Backup)</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-1/2 -translate-y-1/2 text-xs text-[#64748B] pointer-events-none">unfold_more</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-mono-data-sm text-[#94A3B8] tabular-nums font-semibold">
+                  Rp 19.800
+                </td>
+<td class="py-3.5 px-4">
+<div class="inline-flex items-center gap-1.5 bg-[#0D131F] border border-[#1E293B] px-2 py-0.5 rounded">
+<span class="font-mono-metric-md text-[13px] text-white tabular-nums font-bold">Rp 21.500</span>
+<span class="bg-[#111827] text-primary text-[9px] font-label-caps px-1 rounded border border-[rgba(16,185,129,0.2)] font-bold">AUTO</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-mono-data-sm text-[#94A3B8] tabular-nums text-[12px]">
+<span class="text-white font-medium">Rp 20.900</span> <span class="text-[#475569]">/</span> <span class="text-secondary font-medium">Rp 19.800</span>
+</td>
+<td class="py-3.5 px-4 font-mono-data-sm text-primary tabular-nums font-bold">
+                  +Rp 1.700 (+8.6%)
+                </td>
+<td class="py-3.5 px-4 text-right">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-[#1E293B] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+</tr>
+<!-- ROW 3 -->
+<tr class="hover:bg-[#162032]/50 transition-colors group">
+<td class="py-3.5 px-4">
+<span class="font-mono-data-sm text-[12px] text-white bg-[#0D131F] border border-[#1E293B] px-2 py-0.5 rounded font-bold">ML-172</span>
+</td>
+<td class="py-3.5 px-4 font-semibold text-white">
+                  172 Diamonds (156+16)
+                  <div class="text-[11px] text-[#64748B] font-normal">Mobile Legends: Bang Bang</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="relative inline-block w-48">
+<select class="w-full bg-[#0D131F] border border-[#1E293B] hover:border-[#334155] rounded px-2.5 py-1 text-[11px] font-title-sm text-[#38BDF8] pr-6 focus:outline-none focus:border-primary appearance-none font-medium">
+<option>VIP Reseller Direct</option>
+<option>Digiflazz Secondary</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-1/2 -translate-y-1/2 text-xs text-[#64748B] pointer-events-none">unfold_more</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-mono-data-sm text-[#94A3B8] tabular-nums font-semibold">
+                  Rp 39.600
+                </td>
+<td class="py-3.5 px-4">
+<div class="inline-flex items-center gap-1.5 bg-[#0D131F] border border-[#1E293B] px-2 py-0.5 rounded">
+<span class="font-mono-metric-md text-[13px] text-white tabular-nums font-bold">Rp 43.000</span>
+<span class="bg-[#111827] text-primary text-[9px] font-label-caps px-1 rounded border border-[rgba(16,185,129,0.2)] font-bold">AUTO</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-mono-data-sm text-[#94A3B8] tabular-nums text-[12px]">
+<span class="text-white font-medium">Rp 41.800</span> <span class="text-[#475569]">/</span> <span class="text-secondary font-medium">Rp 39.600</span>
+</td>
+<td class="py-3.5 px-4 font-mono-data-sm text-primary tabular-nums font-bold">
+                  +Rp 3.400 (+8.5%)
+                </td>
+<td class="py-3.5 px-4 text-right">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-[#1E293B] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+</tr>
+<!-- ROW 4 -->
+<tr class="hover:bg-[#162032]/50 transition-colors group">
+<td class="py-3.5 px-4">
+<span class="font-mono-data-sm text-[12px] text-white bg-[#0D131F] border border-[#1E293B] px-2 py-0.5 rounded font-bold">ML-257</span>
+</td>
+<td class="py-3.5 px-4 font-semibold text-white">
+                  257 Diamonds (234+23)
+                  <div class="text-[11px] text-[#64748B] font-normal">Mobile Legends: Bang Bang</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="relative inline-block w-48">
+<select class="w-full bg-[#0D131F] border border-[#1E293B] hover:border-[#334155] rounded px-2.5 py-1 text-[11px] font-title-sm text-primary pr-6 focus:outline-none focus:border-primary appearance-none font-medium">
+<option>Digiflazz Line-1</option>
+<option>VIP Reseller Backup</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-1/2 -translate-y-1/2 text-xs text-[#64748B] pointer-events-none">unfold_more</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-mono-data-sm text-[#94A3B8] tabular-nums font-semibold">
+                  Rp 59.400
+                </td>
+<td class="py-3.5 px-4">
+<div class="inline-flex items-center gap-1.5 bg-[#0D131F] border border-[#1E293B] px-2 py-0.5 rounded">
+<span class="font-mono-metric-md text-[13px] text-white tabular-nums font-bold">Rp 64.500</span>
+<span class="bg-[#111827] text-primary text-[9px] font-label-caps px-1 rounded border border-[rgba(16,185,129,0.2)] font-bold">AUTO</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-mono-data-sm text-[#94A3B8] tabular-nums text-[12px]">
+<span class="text-white font-medium">Rp 62.700</span> <span class="text-[#475569]">/</span> <span class="text-secondary font-medium">Rp 59.400</span>
+</td>
+<td class="py-3.5 px-4 font-mono-data-sm text-primary tabular-nums font-bold">
+                  +Rp 5.100 (+8.6%)
+                </td>
+<td class="py-3.5 px-4 text-right">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-[#1E293B] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+</tr>
+<!-- ROW 5 (Provider Maintenance / Manual Override) -->
+<tr class="hover:bg-[#162032]/50 transition-colors group bg-[#161219]/20">
+<td class="py-3.5 px-4">
+<span class="font-mono-data-sm text-[12px] text-white bg-[#0D131F] border border-[#1E293B] px-2 py-0.5 rounded font-bold">ML-TWILIGHT</span>
+</td>
+<td class="py-3.5 px-4 font-semibold text-white">
+                  Twilight Pass Moonton
+                  <div class="text-[11px] text-tertiary font-normal">Pill Merah: Provider Maintenance</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="relative inline-block w-48">
+<select class="w-full bg-[#181116] border border-tertiary/40 rounded px-2.5 py-1 text-[11px] font-title-sm text-tertiary pr-6 focus:outline-none appearance-none font-medium">
+<option>Digiflazz [Gangguan API]</option>
+<option>VIP Reseller (Fallback)</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-1/2 -translate-y-1/2 text-xs text-tertiary pointer-events-none">warning</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-mono-data-sm text-[#94A3B8] tabular-nums font-semibold">
+                  Rp 138.500
+                </td>
+<td class="py-3.5 px-4">
+<div class="inline-flex items-center gap-1.5 bg-[#0D131F] border border-secondary/40 px-2 py-0.5 rounded">
+<span class="font-mono-metric-md text-[13px] text-white tabular-nums font-bold">Rp 145.000</span>
+<span class="bg-[#111827] text-secondary text-[9px] font-label-caps px-1 rounded border border-[rgba(245,158,11,0.3)] font-bold">MANUAL</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-mono-data-sm text-[#94A3B8] tabular-nums text-[12px]">
+<span class="text-white font-medium">Rp 142.000</span> <span class="text-[#475569]">/</span> <span class="text-secondary font-medium">Rp 138.500</span>
+</td>
+<td class="py-3.5 px-4 font-mono-data-sm text-primary tabular-nums font-bold">
+                  +Rp 6.500 (+4.7%)
+                </td>
+<td class="py-3.5 px-4 text-right">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-[#1E293B] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Footer -->
+<div class="p-3.5 border-t border-[#1E293B] bg-[#0A0E17] flex flex-col sm:flex-row items-center justify-between gap-3 text-[12px] font-mono-data-sm text-[#64748B]">
+<div class="flex items-center gap-2">
+<span>Menampilkan <span class="text-white font-semibold tabular-nums">1-5</span> dari <span class="text-white font-semibold tabular-nums">38</span> SKU Game</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-2.5 py-1 bg-[#111827] border border-[#1E293B] text-[#94A3B8] hover:text-white rounded disabled:opacity-50" disabled="">Sebelumnya</button>
+<button class="px-2.5 py-1 bg-primary text-[#090D16] font-bold rounded">1</button>
+<button class="px-2.5 py-1 bg-[#111827] border border-[#1E293B] text-[#94A3B8] hover:text-white rounded">2</button>
+<button class="px-2.5 py-1 bg-[#111827] border border-[#1E293B] text-[#94A3B8] hover:text-white rounded">3</button>
+<button class="px-2.5 py-1 bg-[#111827] border border-[#1E293B] text-[#94A3B8] hover:text-white rounded">Selanjutnya</button>
+</div>
+</div>
+</section>
+</main>
+</div>
+</body></html>

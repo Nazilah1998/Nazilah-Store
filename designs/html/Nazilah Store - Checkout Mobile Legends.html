@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NAZILAH STORE — Top Up Mobile Legends: Bang Bang Instan</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-high": "#262a34",
+            "outline": "#86948a",
+            "secondary": "#ffb95f",
+            "surface-container-lowest": "#0a0e17",
+            "on-background": "#dfe2ef",
+            "on-secondary-fixed-variant": "#653e00",
+            "tertiary": "#ffb3af",
+            "primary": "#4edea3",
+            "secondary-fixed": "#ffddb8",
+            "inverse-primary": "#006c49",
+            "secondary-container": "#ee9800",
+            "secondary-fixed-dim": "#ffb95f",
+            "on-error": "#690005",
+            "error-container": "#93000a",
+            "background": "#0f131c",
+            "surface-bright": "#353943",
+            "primary-fixed-dim": "#4edea3",
+            "outline-variant": "#3c4a42",
+            "primary-fixed": "#6ffbbe",
+            "on-secondary-fixed": "#2a1700",
+            "surface-tint": "#4edea3",
+            "error": "#ffb4ab",
+            "on-primary-container": "#00422b",
+            "surface": "#0f131c",
+            "on-surface": "#dfe2ef",
+            "on-surface-variant": "#bbcabf",
+            "on-primary-fixed": "#002113",
+            "tertiary-container": "#fc7c78",
+            "inverse-surface": "#dfe2ef",
+            "surface-container": "#1c1f29",
+            "on-tertiary-fixed-variant": "#842225",
+            "inverse-on-surface": "#2c303a",
+            "on-primary-fixed-variant": "#005236",
+            "on-secondary-container": "#5b3800",
+            "on-secondary": "#472a00",
+            "surface-container-highest": "#31353f",
+            "surface-dim": "#0f131c",
+            "primary-container": "#10b981",
+            "on-tertiary-fixed": "#410005",
+            "tertiary-fixed": "#ffdad7",
+            "tertiary-fixed-dim": "#ffb3af",
+            "on-tertiary-container": "#711419",
+            "surface-variant": "#31353f",
+            "surface-container-low": "#181b25",
+            "on-primary": "#003824",
+            "on-error-container": "#ffdad6",
+            "on-tertiary": "#650911"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xl": "2rem",
+            "margin-desktop": "2rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.25rem",
+            "margin": "1rem",
+            "gutter-desktop": "1.5rem",
+            "space-md": "0.75rem",
+            "gutter": "1rem"
+          },
+          "fontFamily": {
+            "label-caps": ["JetBrains Mono"],
+            "body-md": ["Plus Jakarta Sans"],
+            "mono-metric-md": ["JetBrains Mono"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "mono-data-sm": ["JetBrains Mono"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "mono-metric-lg": ["JetBrains Mono"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "title-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "mono-metric-md": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }],
+            "mono-data-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "mono-metric-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "title-sm": ["16px", { "lineHeight": "22px", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Tactical HUD micro-grid background pattern */
+    .hud-bg-grid {
+      background-image: radial-gradient(rgba(60, 74, 66, 0.25) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+  </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface antialiased font-body-md text-body-md min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container pb-28">
+<!-- ================= TOP APP BAR (From Shared Component JSON) ================= -->
+<header class="bg-surface-container-lowest dark:bg-surface-container-lowest docked full-width top sticky z-50 border-b border-outline-variant dark:border-outline-variant flat no shadows">
+<div class="w-full max-w-[1360px] mx-auto px-4 lg:px-8 flex items-center justify-between h-16 gap-4">
+<!-- Brand & Status -->
+<div class="flex items-center gap-3 shrink-0">
+<a class="flex items-center gap-2 group" href="#">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center border border-outline-variant group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="deployed_code" style="font-variation-settings: 'FILL' 1;">deployed_code</span>
+</div>
+<span class="text-headline-md font-headline-md font-extrabold tracking-tight text-primary dark:text-primary uppercase">NAZILAH STORE</span>
+</a>
+<div class="hidden sm:flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-low border border-outline-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="text-label-caps font-label-caps text-on-surface-variant">Server H2H Online (1-3 Detik)</span>
+</div>
+</div>
+<!-- Center Search (HUD Input) -->
+<div class="hidden md:flex flex-1 max-w-md mx-2">
+<div class="relative w-full">
+<span class="absolute inset-y-0 left-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-sm" data-icon="search">search</span>
+</span>
+<input class="w-full bg-surface-container-low text-on-surface placeholder:text-outline text-body-sm font-body-sm pl-9 pr-4 py-2 rounded border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-150" placeholder="Cari game, voucher, atau pulsa... (Ctrl+K)" type="text"/>
+</div>
+</div>
+<!-- Navigation & Action Buttons -->
+<div class="flex items-center gap-2 lg:gap-3 shrink-0">
+<a class="hidden xl:inline-flex text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface font-title-sm text-title-sm transition-colors px-2 py-1" href="#">Katalog Game</a>
+<a class="hidden lg:inline-flex items-center gap-1 text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface font-title-sm text-title-sm transition-colors px-2 py-1" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="receipt_long">receipt_long</span>
+<span>Lacak Pesanan</span>
+</a>
+<!-- Trailing Icon Actions -->
+<button class="w-9 h-9 rounded bg-surface-container-low border border-outline-variant hover:border-outline text-on-surface-variant hover:text-primary flex items-center justify-center transition-all duration-150 relative" title="Notifications">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-secondary rounded-full"></span>
+</button>
+<button class="w-9 h-9 rounded bg-surface-container-low border border-outline-variant hover:border-outline text-on-surface-variant hover:text-primary flex items-center justify-center transition-all duration-150" title="Customer Support">
+<span class="material-symbols-outlined" data-icon="headset_mic">headset_mic</span>
+</button>
+<!-- Primary Auth CTA -->
+<button class="px-3.5 py-1.5 rounded bg-primary-container text-on-primary-container font-title-sm text-title-sm font-bold hover:bg-inverse-primary hover:text-primary-fixed active:scale-[0.99] transition-transform duration-100 ease-out border border-primary-container">
+          Masuk / Daftar
+        </button>
+</div>
+</div>
+</header>
+<!-- ================= SUB-NAVIGATION BAR (Active state showcase) ================= -->
+<div class="bg-surface-container-low border-b border-outline-variant/60 hidden md:block">
+<div class="w-full max-w-[1360px] mx-auto px-4 lg:px-8 flex items-center gap-6 h-10 overflow-x-auto text-body-sm font-body-sm">
+<a class="text-primary dark:text-primary border-b-2 border-primary pb-1 font-title-sm text-title-sm" href="#">Katalog Game</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface font-title-sm text-title-sm transition-colors" href="#">Lacak Pesanan</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface font-title-sm text-title-sm transition-colors" href="#">Kalkulator WR</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface font-title-sm text-title-sm transition-colors" href="#">Promo VIP</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface font-title-sm text-title-sm transition-colors" href="#">Hubungi CS</a>
+</div>
+</div>
+<!-- ================= MAIN CONTENT CANVAS ================= -->
+<main class="w-full max-w-[1280px] mx-auto px-4 lg:px-6 py-6 lg:py-8 hud-bg-grid flex-1">
+<!-- Breadcrumb Telemetry Bar -->
+<div class="flex items-center gap-2 mb-6 text-mono-data-sm font-mono-data-sm text-outline">
+<a class="hover:text-primary transition-colors" href="#">BERANDA</a>
+<span>/</span>
+<a class="hover:text-primary transition-colors" href="#">MOBILE GAMES</a>
+<span>/</span>
+<span class="text-primary font-bold">MOBILE LEGENDS: BANG BANG (ID)</span>
+<span class="ml-auto text-label-caps font-label-caps text-primary px-2 py-0.5 rounded bg-surface-container border border-outline-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="bolt">bolt</span> INSTANT DIRECT H2H
+      </span>
+</div>
+<!-- 2-Column Asymmetric Workbench -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- ================= LEFT COLUMN: STICKY GAME CARD (~32%) ================= -->
+<aside class="lg:col-span-4 lg:sticky lg:top-24 space-y-4">
+<!-- Game Identity Card -->
+<div class="bg-surface-container border border-outline-variant rounded p-4 relative overflow-hidden shadow-none">
+<!-- Game Cover Banner -->
+<div class="relative w-full h-36 rounded overflow-hidden mb-4 border border-outline-variant/60">
+<img class="w-full h-full object-cover" data-alt="Cinematic high contrast esports visual artwork showcasing heroic fantasy champions from Mobile Legends in a tactical cyber arena setting. Intense emerald green and deep slate obsidian rim lighting accents their armor, evoking a fast-paced competitive MOBA battle with cinematic atmospheric mist and razor sharp details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKr55R087PdYkiDORxgZHVOG8dYLYISjLOf-EWAYDpdOIgm8hPiyOJfpANKCnYDY_hjmHYOZd-ohFCOobeH1POeznqHzYRdPoswMNTZssedWWcbBFUbxv3KhL0vcYVqUma06uEA_cG8fss_tygI5VkFUt1x0ugpLAdCO7Gb1dzAYSZBKE_FJ_Uxn0NOspa9EeQj_4oV3QEzP9TQdjyAnywIx7c_SkHdHqqwVKbggc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/40 to-transparent"></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest/90 border border-outline-variant text-label-caps font-label-caps text-primary uppercase">
+                Official Moonton Partner
+              </span>
+</div>
+</div>
+<!-- Game Header Details -->
+<div class="flex items-start gap-3 mb-4">
+<div class="w-14 h-14 rounded-lg bg-surface-container-highest border border-outline-variant overflow-hidden shrink-0 flex items-center justify-center p-0.5">
+<img class="w-full h-full object-cover rounded" data-alt="Square glossy tactical app launcher icon for Mobile Legends Bang Bang with a glowing golden emblem framed by dark titanium armor edges against an obsidian deep charcoal backdrop. Perfectly centered, sharp vector detailing with professional gaming aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG-mBXma_BoggBIzF8MEZI5mN9KLfR1u8NHkx_Qvq3-q1QGQZsWyiAd1aPs8MC5UMdfjG_ES7VpF86ZzQ1H9QXQY01MkY5DaBqU_qUlKT3s5y_yzISjwOBBC0ZtWiK8zsUlDIXZLxCIxh20pyYvjjbFFbqqTb8QwJPH5IUsc0yzKDK1cBToC9ZwoYSM2G809b1NTpldXMS4T3Rwv77ojd9K7I5pGAPtuY-uEqP750"/>
+</div>
+<div>
+<h1 class="text-headline-md font-headline-md text-on-surface leading-tight">Mobile Legends: Bang Bang</h1>
+<p class="text-body-sm font-body-sm text-outline">Moonton • Global & Indonesia Server</p>
+<div class="flex items-center gap-1 mt-1 text-mono-data-sm font-mono-data-sm text-secondary">
+<span class="material-symbols-outlined text-xs" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.99</span>
+<span class="text-outline">(184.2k+ Transaksi Sukses)</span>
+</div>
+</div>
+</div>
+<!-- Trust Badges -->
+<div class="grid grid-cols-2 gap-2 mb-4">
+<div class="p-2 rounded bg-surface-container-low border border-outline-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="bolt">bolt</span>
+<div>
+<p class="text-label-caps font-label-caps text-on-surface">Proses Otomatis</p>
+<p class="text-mono-data-sm font-mono-data-sm text-primary">1 - 3 Detik</p>
+</div>
+</div>
+<div class="p-2 rounded bg-surface-container-low border border-outline-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="verified_user">verified_user</span>
+<div>
+<p class="text-label-caps font-label-caps text-on-surface">Resmi & Legal</p>
+<p class="text-mono-data-sm font-mono-data-sm text-outline">Anti Banned 100%</p>
+</div>
+</div>
+</div>
+<!-- Step Guide HUD -->
+<div class="p-3 rounded bg-surface-container-lowest border border-outline-variant/80 space-y-2">
+<div class="flex items-center justify-between">
+<span class="text-label-caps font-label-caps text-outline uppercase">Panduan Kilat Top Up:</span>
+<span class="text-label-caps font-label-caps text-primary">HUD GUIDE</span>
+</div>
+<ol class="space-y-1.5 text-body-sm font-body-sm text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="text-mono-data-sm font-mono-data-sm font-bold text-primary">01.</span>
+<span>Masukkan User ID dan Zone ID akun Anda.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-mono-data-sm font-mono-data-sm font-bold text-primary">02.</span>
+<span>Pilih nominal Diamond atau Weekly Diamond Pass.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-mono-data-sm font-mono-data-sm font-bold text-primary">03.</span>
+<span>Pilih metode pembayaran (QRIS, E-Wallet, VA).</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-mono-data-sm font-mono-data-sm font-bold text-primary">04.</span>
+<span>Masukkan nomor WhatsApp dan klik Beli Sekarang.</span>
+</li>
+</ol>
+<div class="pt-2 border-t border-outline-variant/60 flex items-center justify-between">
+<a class="text-body-sm font-body-sm text-primary hover:underline flex items-center gap-1" href="#id-tutorial">
+<span class="material-symbols-outlined text-sm" data-icon="help_outline">help_outline</span>
+<span>Cara menemukan User ID MLBB</span>
+</a>
+</div>
+</div>
+<!-- CS Guarantee Ribbon -->
+<div class="mt-4 p-2.5 rounded bg-surface-container-low border border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="text-body-sm font-body-sm text-on-surface font-semibold">CS WhatsApp 24/7 Siaga</span>
+</div>
+<a class="text-label-caps font-label-caps text-primary hover:text-primary-fixed underline flex items-center gap-0.5" href="https://wa.me/" target="_blank">
+<span>HUBUNGI</span>
+<span class="material-symbols-outlined text-xs" data-icon="arrow_outward">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Telemetry Notice -->
+<div class="p-3 rounded bg-surface-container-low border border-outline-variant text-body-sm font-body-sm text-outline flex items-start gap-2">
+<span class="material-symbols-outlined text-base text-secondary shrink-0" data-icon="info">info</span>
+<p>Pastikan Zone ID diisi dengan benar tanpa tanda kurung. Top up langsung dikirimkan ke mailbox dan saldo diamond ingame Anda tanpa relog.</p>
+</div>
+</aside>
+<!-- ================= RIGHT COLUMN: 4-STEP CHECKOUT FLOW (~68%) ================= -->
+<section class="lg:col-span-8 space-y-6">
+<!-- ================= STEP 1: MASUKKAN DATA AKUN ================= -->
+<div class="bg-surface-container border border-outline-variant rounded p-5 relative">
+<div class="flex items-center justify-between pb-3 mb-4 border-b border-outline-variant/70">
+<div class="flex items-center gap-2.5">
+<span class="w-6 h-6 rounded bg-primary-container text-on-primary-container font-mono-data-sm font-mono-data-sm font-bold flex items-center justify-center">1</span>
+<h2 class="text-title-sm font-title-sm font-bold text-on-surface">Masukkan Data Akun</h2>
+</div>
+<span class="text-label-caps font-label-caps text-outline uppercase">LANGKAH 01 / 04</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-3 mb-3">
+<!-- User ID -->
+<div class="sm:col-span-7">
+<label class="block text-label-caps font-label-caps text-on-surface-variant mb-1.5 uppercase">User ID Game</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface font-mono-metric-md text-mono-metric-md px-3.5 py-2.5 rounded border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="Contoh: 12345678" type="text" value="849201928"/>
+<span class="absolute right-3 inset-y-0 flex items-center text-outline text-label-caps font-label-caps">MLBB-ID</span>
+</div>
+</div>
+<!-- Zone ID -->
+<div class="sm:col-span-5">
+<label class="block text-label-caps font-label-caps text-on-surface-variant mb-1.5 uppercase">Zone ID</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface font-mono-metric-md text-mono-metric-md px-3.5 py-2.5 rounded border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="Contoh: 2024" type="text" value="2194"/>
+<span class="absolute right-3 inset-y-0 flex items-center text-outline text-label-caps font-label-caps">ZONE</span>
+</div>
+</div>
+</div>
+<!-- Verified Account Prompt -->
+<div class="p-3 rounded bg-surface-container-low border border-primary flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="check">check</span>
+</span>
+<div>
+<p class="text-body-sm font-body-sm font-bold text-on-surface">
+                  Akun Ditemukan: <span class="text-primary font-mono-metric-md">NAZILAH•PRO</span>
+</p>
+<p class="text-mono-data-sm font-mono-data-sm text-outline">Server Terdaftar: Indonesia (ID) • Verified User</p>
+</div>
+</div>
+<button class="px-2.5 py-1 rounded bg-surface-container border border-outline-variant hover:border-outline text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors">
+              UBAH ID
+            </button>
+</div>
+</div>
+<!-- ================= STEP 2: PILIH NOMINAL TOP UP ================= -->
+<div class="bg-surface-container border border-outline-variant rounded p-5 relative">
+<div class="flex items-center justify-between pb-3 mb-4 border-b border-outline-variant/70">
+<div class="flex items-center gap-2.5">
+<span class="w-6 h-6 rounded bg-primary-container text-on-primary-container font-mono-data-sm font-mono-data-sm font-bold flex items-center justify-center">2</span>
+<h2 class="text-title-sm font-title-sm font-bold text-on-surface">Pilih Nominal Top Up</h2>
+</div>
+<span class="text-label-caps font-label-caps text-outline uppercase">LANGKAH 02 / 04</span>
+</div>
+<!-- Filter Category Pills -->
+<div class="flex items-center gap-2 mb-4 overflow-x-auto pb-1">
+<button class="px-3.5 py-1.5 rounded bg-primary-container text-on-primary-container text-label-caps font-label-caps font-bold transition-all">
+              Semua
+            </button>
+<button class="px-3.5 py-1.5 rounded bg-surface-container-low border border-outline-variant hover:border-outline text-on-surface-variant text-label-caps font-label-caps font-semibold hover:text-on-surface transition-all flex items-center gap-1.5">
+<span>Spesial / Pass (3)</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</button>
+<button class="px-3.5 py-1.5 rounded bg-surface-container-low border border-outline-variant hover:border-outline text-on-surface-variant text-label-caps font-label-caps font-semibold hover:text-on-surface transition-all">
+              Diamonds (24)
+            </button>
+</div>
+<!-- Denomination SKU Matrix (3-Column Dense Tactical Grid) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+<!-- SKU 1: Selected Weekly Pass -->
+<div class="relative bg-surface-container-low border-2 border-primary rounded p-3.5 cursor-pointer transition-all duration-150 group">
+<!-- Selected Checkmark -->
+<div class="absolute top-2 right-2 w-5 h-5 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="check">check</span>
+</div>
+<!-- Badge -->
+<span class="inline-block px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container text-label-caps font-label-caps font-bold mb-2">
+                TERLARIS
+              </span>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-secondary text-2xl" data-icon="card_membership">card_membership</span>
+<div>
+<h3 class="text-title-sm font-title-sm font-bold text-on-surface leading-tight">Weekly Diamond Pass</h3>
+<p class="text-body-sm font-body-sm text-outline">Klaim harian 210 dm</p>
+</div>
+</div>
+<div class="pt-2 border-t border-outline-variant/60 flex items-baseline justify-between">
+<div>
+<span class="text-mono-metric-md font-mono-metric-md text-primary font-bold">Rp 27.500</span>
+<span class="text-body-sm font-body-sm text-outline line-through ml-1">Rp 31.000</span>
+</div>
+</div>
+</div>
+<!-- SKU 2: 86 Diamonds -->
+<div class="relative bg-surface-container-low border border-outline-variant hover:border-outline rounded p-3.5 cursor-pointer transition-all duration-150 group">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="diamond">diamond</span>
+<div>
+<h3 class="text-title-sm font-title-sm font-bold text-on-surface leading-tight">86 Diamonds</h3>
+<p class="text-body-sm font-body-sm text-outline">78 + 8 Bonus</p>
+</div>
+</div>
+<div class="pt-2 border-t border-outline-variant/60 flex items-baseline justify-between mt-5">
+<span class="text-mono-metric-md font-mono-metric-md text-on-surface group-hover:text-primary font-bold">Rp 21.500</span>
+<span class="text-label-caps font-label-caps text-outline">INSTAN</span>
+</div>
+</div>
+<!-- SKU 3: 172 Diamonds -->
+<div class="relative bg-surface-container-low border border-outline-variant hover:border-outline rounded p-3.5 cursor-pointer transition-all duration-150 group">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="diamond">diamond</span>
+<div>
+<h3 class="text-title-sm font-title-sm font-bold text-on-surface leading-tight">172 Diamonds</h3>
+<p class="text-body-sm font-body-sm text-outline">156 + 16 Bonus</p>
+</div>
+</div>
+<div class="pt-2 border-t border-outline-variant/60 flex items-baseline justify-between mt-5">
+<span class="text-mono-metric-md font-mono-metric-md text-on-surface group-hover:text-primary font-bold">Rp 43.000</span>
+<span class="text-label-caps font-label-caps text-outline">INSTAN</span>
+</div>
+</div>
+<!-- SKU 4: 257 Diamonds -->
+<div class="relative bg-surface-container-low border border-outline-variant hover:border-outline rounded p-3.5 cursor-pointer transition-all duration-150 group">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="diamond">diamond</span>
+<div>
+<h3 class="text-title-sm font-title-sm font-bold text-on-surface leading-tight">257 Diamonds</h3>
+<p class="text-body-sm font-body-sm text-outline">234 + 23 Bonus</p>
+</div>
+</div>
+<div class="pt-2 border-t border-outline-variant/60 flex items-baseline justify-between mt-5">
+<span class="text-mono-metric-md font-mono-metric-md text-on-surface group-hover:text-primary font-bold">Rp 64.500</span>
+<span class="text-label-caps font-label-caps text-outline">INSTAN</span>
+</div>
+</div>
+<!-- SKU 5: 344 Diamonds -->
+<div class="relative bg-surface-container-low border border-outline-variant hover:border-outline rounded p-3.5 cursor-pointer transition-all duration-150 group">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="diamond">diamond</span>
+<div>
+<h3 class="text-title-sm font-title-sm font-bold text-on-surface leading-tight">344 Diamonds</h3>
+<p class="text-body-sm font-body-sm text-outline">312 + 32 Bonus</p>
+</div>
+</div>
+<div class="pt-2 border-t border-outline-variant/60 flex items-baseline justify-between mt-5">
+<span class="text-mono-metric-md font-mono-metric-md text-on-surface group-hover:text-primary font-bold">Rp 86.000</span>
+<span class="text-label-caps font-label-caps text-outline">INSTAN</span>
+</div>
+</div>
+<!-- SKU 6: 706 Diamonds (HEMAT) -->
+<div class="relative bg-surface-container-low border border-outline-variant hover:border-outline rounded p-3.5 cursor-pointer transition-all duration-150 group">
+<span class="inline-block px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container text-label-caps font-label-caps font-bold mb-2">
+                HEMAT -12%
+              </span>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="diamond">diamond</span>
+<div>
+<h3 class="text-title-sm font-title-sm font-bold text-on-surface leading-tight">706 Diamonds</h3>
+<p class="text-body-sm font-body-sm text-outline">625 + 81 Bonus</p>
+</div>
+</div>
+<div class="pt-2 border-t border-outline-variant/60 flex items-baseline justify-between">
+<span class="text-mono-metric-md font-mono-metric-md text-on-surface group-hover:text-primary font-bold">Rp 172.000</span>
+<span class="text-label-caps font-label-caps text-outline">POPULER</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= STEP 3: PILIH METODE PEMBAYARAN ================= -->
+<div class="bg-surface-container border border-outline-variant rounded p-5 relative">
+<div class="flex items-center justify-between pb-3 mb-4 border-b border-outline-variant/70">
+<div class="flex items-center gap-2.5">
+<span class="w-6 h-6 rounded bg-primary-container text-on-primary-container font-mono-data-sm font-mono-data-sm font-bold flex items-center justify-center">3</span>
+<h2 class="text-title-sm font-title-sm font-bold text-on-surface">Pilih Metode Pembayaran</h2>
+</div>
+<span class="text-label-caps font-label-caps text-outline uppercase">LANGKAH 03 / 04</span>
+</div>
+<div class="space-y-3">
+<!-- Payment Channel 1: SELECTED QRIS -->
+<div class="bg-surface-container-low border-2 border-primary rounded p-4 cursor-pointer">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-3">
+<div class="flex items-start sm:items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container-highest border border-outline-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary" data-icon="qr_code_2">qr_code_2</span>
+</div>
+<div>
+<div class="flex items-center gap-2 flex-wrap">
+<h3 class="text-title-sm font-title-sm font-bold text-on-surface">QRIS (Semua E-Wallet & Mobile Banking)</h3>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container text-label-caps font-label-caps font-bold">
+                        Rekomendasi • Instan
+                      </span>
+</div>
+<p class="text-body-sm font-body-sm text-outline">BCA, Mandiri, BRI, BNI, GoPay, OVO, Dana, ShopeePay, LinkAja</p>
+</div>
+</div>
+<div class="sm:text-right shrink-0">
+<div class="text-mono-metric-lg font-mono-metric-lg text-primary font-bold">Rp 27.700</div>
+<div class="text-mono-data-sm font-mono-data-sm text-outline">Termasuk biaya layanan Rp 200</div>
+</div>
+</div>
+<!-- Channel Mini Logos Bar -->
+<div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="px-2 py-1 rounded bg-surface-container border border-outline-variant text-label-caps font-label-caps text-on-surface">QRIS RESMI</span>
+<span class="px-2 py-1 rounded bg-surface-container border border-outline-variant text-label-caps font-label-caps text-on-surface">GOPAY</span>
+<span class="px-2 py-1 rounded bg-surface-container border border-outline-variant text-label-caps font-label-caps text-on-surface">DANA</span>
+<span class="px-2 py-1 rounded bg-surface-container border border-outline-variant text-label-caps font-label-caps text-on-surface">SHOPEEPAY</span>
+<span class="px-2 py-1 rounded bg-surface-container border border-outline-variant text-label-caps font-label-caps text-on-surface">BCA MOBILE</span>
+</div>
+<div class="flex items-center gap-1 text-label-caps font-label-caps text-primary">
+<span class="material-symbols-outlined text-xs" data-icon="sync">sync</span>
+<span>Verifikasi Otomatis 1 Detik</span>
+</div>
+</div>
+</div>
+<!-- Payment Channel 2: E-Wallet -->
+<div class="bg-surface-container-low border border-outline-variant hover:border-outline rounded p-4 cursor-pointer transition-colors">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container border border-outline-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-outline" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+<div>
+<h3 class="text-title-sm font-title-sm font-bold text-on-surface">E-Wallet Direct (DANA / OVO / GoPay / ShopeePay)</h3>
+<p class="text-body-sm font-body-sm text-outline">Redirect otomatis aplikasi atau input nomor telepon terdaftar</p>
+</div>
+</div>
+<div class="sm:text-right shrink-0">
+<div class="text-mono-metric-md font-mono-metric-md text-on-surface font-bold">Rp 28.050</div>
+<div class="text-mono-data-sm font-mono-data-sm text-outline">+Biaya admin 2%</div>
+</div>
+</div>
+</div>
+<!-- Payment Channel 3: Virtual Account Bank -->
+<div class="bg-surface-container-low border border-outline-variant hover:border-outline rounded p-4 cursor-pointer transition-colors">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container border border-outline-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-outline" data-icon="account_balance">account_balance</span>
+</div>
+<div>
+<h3 class="text-title-sm font-title-sm font-bold text-on-surface">Virtual Account Bank (BCA, Mandiri, BRI, BNI, Permata)</h3>
+<p class="text-body-sm font-body-sm text-outline">Bayar via ATM, m-Banking, atau Internet Banking 24 jam non-stop</p>
+</div>
+</div>
+<div class="sm:text-right shrink-0">
+<div class="text-mono-metric-md font-mono-metric-md text-on-surface font-bold">Rp 30.000</div>
+<div class="text-mono-data-sm font-mono-data-sm text-outline">+Biaya admin VA Rp 2.500</div>
+</div>
+</div>
+</div>
+<!-- Payment Channel 4: Gerai Retail -->
+<div class="bg-surface-container-low border border-outline-variant hover:border-outline rounded p-4 cursor-pointer transition-colors">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container border border-outline-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-outline" data-icon="storefront">storefront</span>
+</div>
+<div>
+<h3 class="text-title-sm font-title-sm font-bold text-on-surface">Gerai Retail (Alfamart / Indomaret)</h3>
+<p class="text-body-sm font-body-sm text-outline">Bayar di kasir minimarket seluruh Indonesia dengan kode bayar</p>
+</div>
+</div>
+<div class="sm:text-right shrink-0">
+<div class="text-mono-metric-md font-mono-metric-md text-on-surface font-bold">Rp 30.500</div>
+<div class="text-mono-data-sm font-mono-data-sm text-outline">+Biaya admin kasir</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= STEP 4: DETAIL KONTAK & KODE PROMO ================= -->
+<div class="bg-surface-container border border-outline-variant rounded p-5 relative">
+<div class="flex items-center justify-between pb-3 mb-4 border-b border-outline-variant/70">
+<div class="flex items-center gap-2.5">
+<span class="w-6 h-6 rounded bg-primary-container text-on-primary-container font-mono-data-sm font-mono-data-sm font-bold flex items-center justify-center">4</span>
+<h2 class="text-title-sm font-title-sm font-bold text-on-surface">Detail Kontak & Kode Promo</h2>
+</div>
+<span class="text-label-caps font-label-caps text-outline uppercase">LANGKAH 04 / 04</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- WhatsApp Input -->
+<div>
+<label class="block text-label-caps font-label-caps text-on-surface-variant mb-1.5 uppercase">
+                Nomor WhatsApp (Wajib untuk Bukti Struk & Notifikasi)
+              </label>
+<div class="relative">
+<span class="absolute inset-y-0 left-3 flex items-center text-outline">
+<span class="material-symbols-outlined text-sm" data-icon="call">call</span>
+</span>
+<input class="w-full bg-surface-container-lowest text-on-surface font-mono-metric-md text-mono-metric-md pl-9 pr-3.5 py-2.5 rounded border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="08xxxxxxxxxx" type="tel" value="0812-3456-7890"/>
+</div>
+<p class="mt-1 text-mono-data-sm font-mono-data-sm text-outline">Invoice digital & serial voucher dikirim instan via Bot WA Resmi.</p>
+</div>
+<!-- Promo Voucher Input -->
+<div>
+<label class="block text-label-caps font-label-caps text-on-surface-variant mb-1.5 uppercase">
+                Kode Promo / Voucher Diskon
+              </label>
+<div class="flex gap-2">
+<div class="relative flex-1">
+<span class="absolute inset-y-0 left-3 flex items-center text-outline">
+<span class="material-symbols-outlined text-sm" data-icon="sell">sell</span>
+</span>
+<input class="w-full bg-surface-container-lowest text-on-surface font-mono-metric-md text-mono-metric-md uppercase pl-9 pr-3.5 py-2.5 rounded border border-outline-variant focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="Masukkan kode promo" type="text" value="NAZILAHVIP"/>
+</div>
+<button class="px-4 py-2.5 rounded bg-surface-container-low border border-outline-variant hover:border-outline text-title-sm font-title-sm font-bold text-primary hover:bg-surface-container transition-colors shrink-0">
+                  Gunakan
+                </button>
+</div>
+<p class="mt-1 text-mono-data-sm font-mono-data-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="check_circle">check_circle</span>
+<span>Voucher aktif: Diskon potongan biaya admin diterapkan.</span>
+</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Security & Guarantee Badges -->
+<div class="mt-8 p-4 rounded bg-surface-container border border-outline-variant grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+<div class="space-y-1">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="encrypted">encrypted</span>
+<h4 class="text-title-sm font-title-sm font-bold text-on-surface">256-Bit SSL Encrypted</h4>
+<p class="text-body-sm font-body-sm text-outline">Transaksi terenkripsi aman</p>
+</div>
+<div class="space-y-1">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="speed">speed</span>
+<h4 class="text-title-sm font-title-sm font-bold text-on-surface">Direct API Gateway</h4>
+<p class="text-body-sm font-body-sm text-outline">Tanpa perantara pihak ketiga</p>
+</div>
+<div class="space-y-1">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="history_edu">history_edu</span>
+<h4 class="text-title-sm font-title-sm font-bold text-on-surface">Bukti Struk Pajak</h4>
+<p class="text-body-sm font-body-sm text-outline">Resmi terdaftar PSE Kominfo</p>
+</div>
+<div class="space-y-1">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="support_agent">support_agent</span>
+<h4 class="text-title-sm font-title-sm font-bold text-on-surface">Garansi Saldo 100%</h4>
+<p class="text-body-sm font-body-sm text-outline">Refund jika sistem gagal</p>
+</div>
+</div>
+</main>
+<!-- ================= STICKY BOTTOM SUMMARY BAR ================= -->
+<aside class="fixed bottom-0 inset-x-0 bg-surface-container border-t border-outline-variant z-40 backdrop-blur-md bg-opacity-95 shadow-2xl">
+<div class="w-full max-w-[1280px] mx-auto px-4 lg:px-8 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-3">
+<!-- Telemetry Info Item -->
+<div class="flex items-center gap-3 w-full sm:w-auto">
+<div class="w-10 h-10 rounded bg-surface-container-low border border-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_cart_checkout">shopping_cart_checkout</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-title-sm font-title-sm font-bold text-on-surface">Weekly Diamond Pass</span>
+<span class="text-label-caps font-label-caps px-1.5 py-0.5 rounded bg-surface-container-highest border border-outline-variant text-outline uppercase">QRIS INSTAN</span>
+</div>
+<p class="text-mono-data-sm font-mono-data-sm text-outline">
+            Tujuan: <span class="text-on-surface font-semibold">NAZILAH•PRO</span> (ID: 849201928 - Server: 2194)
+          </p>
+</div>
+</div>
+<!-- Price & Final CTA Button -->
+<div class="flex items-center justify-between sm:justify-end gap-5 w-full sm:w-auto">
+<div class="text-left sm:text-right">
+<span class="text-label-caps font-label-caps text-outline uppercase block">Total Tagihan</span>
+<span class="text-mono-metric-lg font-mono-metric-lg text-primary font-extrabold tracking-tight">Rp 27.700</span>
+</div>
+<button class="px-6 py-3 rounded bg-primary-container text-on-primary-container font-title-sm text-title-sm font-extrabold hover:bg-inverse-primary hover:text-primary-fixed active:scale-[0.99] transition-all duration-100 ease-out flex items-center gap-2 shadow-lg shrink-0">
+<span>Beli Sekarang</span>
+<span class="material-symbols-outlined text-lg font-bold" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- ================= FOOTER (From Shared Component JSON) ================= -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest full-width bottom border-t border-outline-variant dark:border-outline-variant flat no shadows mt-12">
+<div class="w-full max-w-[1360px] mx-auto px-4 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<!-- Brand & Copyright -->
+<div class="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
+<span class="text-title-sm font-title-sm font-bold text-on-surface dark:text-on-surface">NAZILAH STORE</span>
+<span class="hidden sm:inline text-outline">•</span>
+<p class="text-body-sm font-body-sm text-on-surface-variant dark:text-on-surface-variant">
+          © 2025 Nazilah Store. Official High-Speed Gaming Gateway Indonesia. Hak Cipta Dilindungi.
+        </p>
+</div>
+<!-- Footer Anchor Links -->
+<div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-label-caps font-label-caps">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-150" href="#">Syarat & Ketentuan</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-150" href="#">Kebijakan Privasi</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-150" href="#">Status Server H2H</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-150" href="#">Integrasi API Reseller</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-150" href="#">Panduan Transaksi QRIS</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-150" href="#">Bantuan WhatsApp 24/7</a>
+</div>
+</div>
+</footer>
+</body></html>

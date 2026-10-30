@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lacak Pesanan &amp; Bukti Transaksi Resmi — NAZILAH STORE</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-primary": "#006c49",
+            "on-tertiary": "#650911",
+            "on-secondary-fixed-variant": "#653e00",
+            "tertiary-fixed-dim": "#ffb3af",
+            "on-surface-variant": "#bbcabf",
+            "primary-container": "#10b981",
+            "on-primary-container": "#00422b",
+            "surface": "#0f131c",
+            "on-primary-fixed": "#002113",
+            "surface-container-low": "#181b25",
+            "primary": "#4edea3",
+            "on-tertiary-fixed-variant": "#842225",
+            "outline": "#86948a",
+            "on-secondary-fixed": "#2a1700",
+            "secondary-fixed": "#ffddb8",
+            "surface-bright": "#353943",
+            "on-background": "#dfe2ef",
+            "secondary-fixed-dim": "#ffb95f",
+            "secondary-container": "#ee9800",
+            "on-surface": "#dfe2ef",
+            "on-primary-fixed-variant": "#005236",
+            "tertiary": "#ffb3af",
+            "on-error-container": "#ffdad6",
+            "on-primary": "#003824",
+            "primary-fixed": "#6ffbbe",
+            "error-container": "#93000a",
+            "error": "#ffb4ab",
+            "surface-variant": "#31353f",
+            "secondary": "#ffb95f",
+            "surface-container-high": "#262a34",
+            "inverse-on-surface": "#2c303a",
+            "surface-tint": "#4edea3",
+            "on-secondary": "#472a00",
+            "surface-container-highest": "#31353f",
+            "background": "#0f131c",
+            "tertiary-fixed": "#ffdad7",
+            "on-error": "#690005",
+            "on-tertiary-container": "#711419",
+            "tertiary-container": "#fc7c78",
+            "surface-container-lowest": "#0a0e17",
+            "surface-container": "#1c1f29",
+            "inverse-surface": "#dfe2ef",
+            "on-tertiary-fixed": "#410005",
+            "surface-dim": "#0f131c",
+            "primary-fixed-dim": "#4edea3",
+            "outline-variant": "#3c4a42",
+            "on-secondary-container": "#5b3800"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "margin-desktop": "2rem",
+            "gutter-desktop": "1.5rem",
+            "space-lg": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2rem",
+            "margin": "1rem",
+            "gutter": "1rem",
+            "space-md": "0.75rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "mono-metric-md": ["JetBrains Mono"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "title-sm": ["Plus Jakarta Sans"],
+            "label-caps": ["JetBrains Mono"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "mono-data-sm": ["JetBrains Mono"],
+            "body-md": ["Plus Jakarta Sans"],
+            "mono-metric-lg": ["JetBrains Mono"]
+          },
+          "fontSize": {
+            "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+            "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+            "mono-metric-md": ["15px", {"lineHeight": "20px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+            "headline-md": ["20px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "headline-xl-mobile": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+            "headline-lg-mobile": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700"}],
+            "title-sm": ["16px", {"lineHeight": "22px", "fontWeight": "600"}],
+            "label-caps": ["11px", {"lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "600"}],
+            "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+            "mono-data-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+            "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "mono-metric-lg": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.03em", "fontWeight": "700"}]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col selection:bg-primary selection:text-on-primary">
+<!-- TOP NAVBAR -->
+<header class="bg-surface-container-lowest dark:bg-surface-container-lowest border-b border-outline-variant dark:border-outline-variant sticky top-0 z-50">
+<div class="w-full max-w-[1360px] mx-auto px-4 lg:px-8 flex items-center justify-between h-16 gap-4">
+<!-- Brand & Telemetry Badge -->
+<div class="flex items-center gap-3">
+<a class="flex items-center gap-2 group active:scale-[0.99] transition-transform duration-100 ease-out" href="#">
+<div class="w-9 h-9 rounded-lg bg-surface-container border border-outline-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="diamond" style="font-variation-settings: 'FILL' 1;">diamond</span>
+</div>
+<span class="text-headline-md font-headline-md font-extrabold tracking-tight text-primary dark:text-primary uppercase">NAZILAH STORE</span>
+</a>
+<div class="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container border border-outline-variant/60">
+<span class="inline-block w-2 h-2 rounded-full bg-primary-container animate-pulse shadow-[0_0_8px_#10b981]"></span>
+<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">Server H2H Online (1-3s)</span>
+</div>
+</div>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface font-title-sm text-title-sm transition-colors hover:border-outline hover:text-primary" href="#">Katalog Game</a>
+<a class="text-primary dark:text-primary border-b-2 border-primary pb-1 font-title-sm text-title-sm" href="#">Lacak Pesanan</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface font-title-sm text-title-sm transition-colors hover:border-outline hover:text-primary" href="#">Kalkulator WR</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface font-title-sm text-title-sm transition-colors hover:border-outline hover:text-primary" href="#">Promo VIP</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface font-title-sm text-title-sm transition-colors hover:border-outline hover:text-primary" href="#">Hubungi CS</a>
+</nav>
+<!-- Trailing Action Cluster -->
+<div class="flex items-center gap-3">
+<button aria-label="Notifikasi Sistem" class="w-9 h-9 rounded-lg bg-surface-container-low border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="notifications">notifications</span>
+</button>
+<button aria-label="Layanan Pelanggan WhatsApp" class="w-9 h-9 rounded-lg bg-surface-container-low border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="headset_mic">headset_mic</span>
+</button>
+<button class="px-4 py-2 rounded-lg border border-outline-variant hover:border-primary text-on-surface font-title-sm text-title-sm hover:text-primary transition-colors active:scale-[0.99]" type="button">
+          Masuk / Daftar
+        </button>
+</div>
+</div>
+</header>
+<!-- SUBHEADER TICKER -->
+<div class="w-full bg-surface-container-lowest/80 border-b border-outline-variant/40 px-4 py-1.5 hidden md:block">
+<div class="max-w-[1360px] mx-auto flex items-center justify-between text-mono-data-sm font-mono-data-sm text-on-surface-variant">
+<div class="flex items-center gap-4">
+<span class="text-primary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span> GATEWAY: DIGIFLAZZ DIRECT</span>
+<span>LATENCY: 42ms</span>
+<span>GATEWAY QRIS: 0% FEE AKTIF</span>
+</div>
+<div class="flex items-center gap-3">
+<span>STATUS: SISTEM VERIFIKASI RESMI TERBUKA</span>
+</div>
+</div>
+</div>
+<!-- MAIN CANVAS -->
+<main class="flex-grow w-full max-w-[1360px] mx-auto px-4 lg:px-8 py-8 space-y-8">
+<!-- HERO SEARCH CARD -->
+<section class="bg-surface-container rounded-xl border border-outline-variant p-6 lg:p-8 relative overflow-hidden shadow-2xl">
+<div class="absolute -right-16 -top-16 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-surface-container-lowest border border-outline-variant text-primary mb-3">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+<span class="font-label-caps text-label-caps tracking-wider uppercase">VERIFIKASI TRANSAKSI RESMI VIA API DIGIFLAZZ</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">Lacak Status Pesanan Real-Time</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+          Masukkan Nomor Invoice atau Nomor WhatsApp yang Anda gunakan saat bertransaksi untuk memverifikasi serial number (SN) dan status pengiriman H2H secara instan.
+        </p>
+<!-- Search Mode Tabs -->
+<div class="flex items-center gap-2 mb-3">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-highest text-primary font-mono-data-sm text-mono-data-sm border border-primary/40 flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]" data-icon="receipt_long">receipt_long</span>
+            Cari via No. Invoice
+          </button>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-mono-data-sm text-mono-data-sm border border-outline-variant transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]" data-icon="smartphone">smartphone</span>
+            Cari via No. WhatsApp (08xx)
+          </button>
+</div>
+<!-- Search Input Bar -->
+<form class="flex flex-col sm:flex-row gap-3 items-stretch">
+<div class="relative flex-grow">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</div>
+<input class="w-full pl-10 pr-4 py-3 bg-surface-container-lowest text-on-surface font-mono-metric-md text-mono-metric-md rounded-lg border border-outline-variant focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-all placeholder:text-on-surface-variant/40" placeholder="Contoh: INV-NZL-20261030-8821" type="text" value="INV-NZL-20261030-8821"/>
+</div>
+<button class="px-6 py-3 bg-primary-container hover:bg-emerald-500 text-on-primary-container font-headline-md text-title-sm rounded-lg flex items-center justify-center gap-2 transition-all duration-150 active:scale-[0.99] font-bold shadow-[0_0_15px_rgba(16,185,129,0.2)]" type="button">
+<span>Cari Pesanan</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+<p class="font-mono-data-sm text-mono-data-sm text-on-surface-variant/70 mt-3 flex items-center gap-1.5">
+<span class="text-secondary material-symbols-outlined text-[15px]" data-icon="lightbulb">lightbulb</span>
+<span>Contoh format: <strong class="text-on-surface">INV-NZL-20261030-8821</strong> atau nomor WA: <strong class="text-on-surface">081234567890</strong></span>
+</p>
+</div>
+</section>
+<!-- MAIN TWO-COLUMN WORKBENCH -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- LEFT COLUMN: TACTICAL DIGITAL RECEIPT CARD -->
+<section class="lg:col-span-8 space-y-4">
+<!-- The Printable Receipt Panel -->
+<div class="bg-surface-container rounded-xl border border-outline-variant overflow-hidden shadow-xl">
+<!-- Banner Sukses Emerald -->
+<div class="bg-emerald-950/80 border-b border-primary-container/60 p-4 lg:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl font-bold" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<span class="font-headline-md text-title-sm text-primary uppercase tracking-wide flex items-center gap-1.5">
+                  TRANSAKSI BERHASIL — DIAMOND TELAH MASUK
+                </span>
+<p class="font-mono-data-sm text-mono-data-sm text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>30 Okt 2026, 22:15:04 WIB</span>
+<span>•</span>
+<span class="text-primary font-semibold">Kecepatan Gateway: 1.8 Detik (Digiflazz Direct API)</span>
+</p>
+</div>
+</div>
+<div class="hidden sm:block">
+<span class="px-2.5 py-1 rounded bg-primary-container/20 border border-primary text-primary font-label-caps text-label-caps uppercase">
+                STATUS: LUNAS &amp; TERKIRIM
+              </span>
+</div>
+</div>
+<!-- Struk Official Body -->
+<div class="p-6 space-y-6">
+<!-- Struk Header Info -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-5 border-b border-dashed border-outline-variant gap-4">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider block">NOMOR INVOICE RESMI</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-mono-metric-lg text-mono-metric-lg text-on-surface tracking-wide">INV-NZL-20261030-8821</span>
+<button class="p-1.5 rounded hover:bg-surface-container-highest text-on-surface-variant hover:text-primary transition-colors border border-outline-variant/50" title="Salin Nomor Invoice" type="button">
+<span class="material-symbols-outlined text-[16px]" data-icon="content_copy">content_copy</span>
+</button>
+</div>
+</div>
+<div class="sm:text-right">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider block">WAKTU EKSEKUSI SERVER</span>
+<span class="font-mono-metric-md text-mono-metric-md text-on-surface">30 Okt 2026, 22:15:02 WIB</span>
+</div>
+</div>
+<!-- Product & Account Matrix -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-6 border-b border-dashed border-outline-variant">
+<!-- Item Column -->
+<div class="space-y-4">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider block">GAME / LAYANAN</span>
+<div class="flex items-center gap-2.5 mt-1.5">
+<div class="w-8 h-8 rounded bg-surface-container-highest border border-outline-variant flex items-center justify-center text-primary font-bold">
+                      ML
+                    </div>
+<div>
+<span class="font-title-sm text-title-sm text-on-surface block font-bold">Mobile Legends: Bang Bang</span>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">Moonton Services Global</span>
+</div>
+</div>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider block">ITEM / DENOMINASI SKU</span>
+<div class="mt-1 flex items-center gap-2">
+<span class="font-title-sm text-title-sm text-primary font-bold">Weekly Diamond Pass</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-caps text-label-caps border border-outline-variant">SKU: ML-WDP</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 block">Total 210 Diamond + 210 Starlight Point (7 Hari)</span>
+</div>
+</div>
+<!-- Account Target Column -->
+<div class="space-y-4 bg-surface-container-lowest p-4 rounded-lg border border-outline-variant/60">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider block">DATA AKUN TUJUAN</span>
+<div class="mt-1 font-mono-metric-md text-mono-metric-md text-on-surface">
+                    User ID: <span class="text-primary font-bold">849201928</span> <span class="text-outline">|</span> Zone ID: <span class="text-primary font-bold">(2194)</span>
+</div>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider block">NICKNAME TERVERIFIKASI MOONTON</span>
+<div class="mt-1.5 inline-flex items-center gap-1.5 px-3 py-1 rounded bg-emerald-950/80 border border-primary-container text-primary font-title-sm text-title-sm font-bold">
+<span class="material-symbols-outlined text-[16px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>NAZILAH•PRO</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Payment & Price Summary -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center pb-6 border-b border-dashed border-outline-variant">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider block">METODE PEMBAYARAN</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 bg-surface-container-lowest border border-outline-variant rounded font-mono-data-sm text-mono-data-sm text-on-surface font-bold">QRIS</span>
+<span class="font-title-sm text-title-sm text-on-surface">Standar Pembayaran Nasional</span>
+</div>
+<span class="font-mono-data-sm text-mono-data-sm text-primary flex items-center gap-1 mt-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Terverifikasi Otomatis (LUNAS)
+                </span>
+</div>
+<div class="sm:text-right bg-surface-container-lowest sm:bg-transparent p-4 sm:p-0 rounded-lg border sm:border-0 border-outline-variant">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider block">TOTAL PEMBAYARAN RESMI</span>
+<span class="font-mono-metric-lg text-mono-metric-lg text-primary font-extrabold text-2xl tracking-tight block mt-0.5">Rp 27.700</span>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant/70">Bebas Biaya Admin (0% MDR QRIS)</span>
+</div>
+</div>
+<!-- KOTAK SOROTAN KHUSUS SERIAL NUMBER (SN) H2H -->
+<div class="bg-surface-container-lowest rounded-lg border-2 border-dashed border-primary-container p-5 relative overflow-hidden">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="vpn_key">vpn_key</span>
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-wider">
+                    SERIAL NUMBER (SN) / KODE REFERENSI SERVER MOONTON:
+                  </span>
+</div>
+<span class="px-2 py-0.5 bg-primary-container/20 text-primary border border-primary/30 rounded font-label-caps text-label-caps">
+                  VALID &amp; CONSUMED
+                </span>
+</div>
+<!-- SN String Display & Copy -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-surface-container p-3.5 rounded border border-outline-variant my-3">
+<div class="font-mono-metric-md text-mono-metric-md text-on-surface tracking-wide select-all overflow-x-auto">
+<span class="text-primary font-bold">SN:</span> 99283746182930 <span class="text-outline">/</span> <span class="text-primary font-bold">REF:</span> DGF-MLWDP-8821
+                </div>
+<button class="px-3.5 py-1.5 bg-surface-container-lowest hover:bg-surface-container-highest border border-primary text-primary font-mono-data-sm text-mono-data-sm rounded flex items-center justify-center gap-1.5 transition-colors shrink-0 active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[16px]" data-icon="content_copy">content_copy</span>
+                  Salin SN
+                </button>
+</div>
+<div class="flex items-start gap-2 text-on-surface-variant font-mono-data-sm text-mono-data-sm">
+<span class="material-symbols-outlined text-primary text-[16px] mt-0.5" data-icon="info">info</span>
+<span>Serial number resmi yang diterbitkan langsung oleh server Moonton via Digiflazz H2H. Diamond dan bonus pass otomatis terisi ke akun tanpa relog game.</span>
+</div>
+</div>
+<!-- Receipt Security Watermark / Token -->
+<div class="pt-2 flex flex-col sm:flex-row items-center justify-between text-mono-data-sm font-mono-data-sm text-on-surface-variant/60 gap-2 border-t border-outline-variant/40">
+<span>DIGITAL SIGNATURE: SHA256-NZL-8821-OK</span>
+<span>VERIFIED AGENT: NAZILAH GATEWAY PRO ID #0912</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons Bar -->
+<div class="bg-surface-container rounded-lg border border-outline-variant p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex flex-wrap items-center gap-3 w-full sm:w-auto">
+<button class="px-4 py-2.5 bg-surface-container-lowest hover:bg-surface-container-highest border border-outline-variant hover:border-primary text-on-surface font-title-sm text-title-sm rounded flex items-center justify-center gap-2 transition-all active:scale-[0.99] flex-1 sm:flex-initial" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="download">download</span>
+<span>Unduh Struk Resmi (PNG/PDF)</span>
+</button>
+<button class="px-4 py-2.5 bg-primary-container hover:bg-emerald-500 text-on-primary-container font-title-sm text-title-sm font-bold rounded flex items-center justify-center gap-2 transition-all active:scale-[0.99] flex-1 sm:flex-initial" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="replay">replay</span>
+<span>Beli Lagi Item Ini</span>
+</button>
+</div>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1.5 underline underline-offset-4" href="#">
+<span class="material-symbols-outlined text-[16px]" data-icon="support_agent">support_agent</span>
+            Laporkan Kendala ke CS WhatsApp
+          </a>
+</div>
+</section>
+<!-- RIGHT COLUMN: RIWAYAT PESANAN NOMOR WA + BANTUAN -->
+<aside class="lg:col-span-4 space-y-6">
+<!-- Riwayat Transaksi Container -->
+<div class="bg-surface-container rounded-xl border border-outline-variant p-5 shadow-xl">
+<div class="flex items-center justify-between pb-4 border-b border-outline-variant">
+<div>
+<h2 class="font-headline-md text-title-sm text-on-surface font-bold">Riwayat Transaksi Akun</h2>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">3 Pesanan Terakhir Terdeteksi</span>
+</div>
+<div class="px-2.5 py-1 rounded bg-surface-container-lowest border border-outline-variant">
+<span class="font-mono-data-sm text-mono-data-sm text-primary font-bold">WA: 0812-3456-7890</span>
+</div>
+</div>
+<!-- Cards Stack -->
+<div class="mt-4 space-y-3">
+<!-- Card 1: Sedang Dilihat (Active) -->
+<div class="bg-surface-container-lowest rounded-lg border-2 border-primary-container p-4 relative transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 rounded bg-emerald-950 border border-primary-container text-primary font-label-caps text-label-caps uppercase font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span> SUCCESS
+                </span>
+<span class="font-mono-data-sm text-mono-data-sm text-primary font-bold flex items-center gap-1">
+                  ● Sedang Dibuka
+                </span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-bold">Weekly Diamond Pass (Mobile Legends)</h3>
+<p class="font-mono-data-sm text-mono-data-sm text-on-surface-variant mt-1">INV-NZL-20261030-8821 • 30 Okt 2026, 22:15 WIB</p>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/60 flex items-center justify-between">
+<span class="font-mono-metric-md text-mono-metric-md text-primary font-bold">Rp 27.700 <span class="text-on-surface-variant font-normal text-xs">(QRIS)</span></span>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant">SN Terbit ✓</span>
+</div>
+</div>
+<!-- Card 2: Free Fire -->
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant p-4 hover:border-outline transition-all group">
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 rounded bg-emerald-950/60 border border-primary-container/40 text-primary font-label-caps text-label-caps uppercase font-bold">
+                  SUCCESS
+                </span>
+<button class="font-mono-data-sm text-mono-data-sm text-on-surface-variant group-hover:text-primary transition-colors flex items-center gap-1" type="button">
+                  Lihat Invoice <span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-bold">140 Diamonds (Free Fire)</h3>
+<p class="font-mono-data-sm text-mono-data-sm text-on-surface-variant mt-1">INV-NZL-20261028-4410 • 28 Okt 2026, 19:42 WIB</p>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/60 flex items-center justify-between">
+<span class="font-mono-metric-md text-mono-metric-md text-on-surface font-bold">Rp 18.200 <span class="text-on-surface-variant font-normal text-xs">(DANA Direct)</span></span>
+<span class="font-mono-data-sm text-mono-data-sm text-on-surface-variant/80">User ID: 29841029</span>
+</div>
+</div>
+<!-- Card 3: Steam Wallet -->
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant p-4 hover:border-outline transition-all group">
+<div class="flex items-center justify-between mb-2">
+<span class="px-2 py-0.5 rounded bg-emerald-950/60 border border-primary-container/40 text-primary font-label-caps text-label-caps uppercase font-bold">
+                  SUCCESS
+                </span>
+<a class="font-mono-data-sm text-mono-data-sm text-secondary hover:text-amber-400 transition-colors flex items-center gap-1" href="#">
+                  Lihat Kode Voucher Steam 🔑
+                </a>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface font-bold">Steam Wallet Code IDR 60.000</h3>
+<p class="font-mono-data-sm text-mono-data-sm text-on-surface-variant mt-1">INV-NZL-20261025-1092 • 25 Okt 2026, 14:10 WIB</p>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/60 flex items-center justify-between">
+<span class="font-mono-metric-md text-mono-metric-md text-on-surface font-bold">Rp 63.000 <span class="text-on-surface-variant font-normal text-xs">(BCA VA)</span></span>
+<span class="font-mono-data-sm text-mono-data-sm text-primary">Voucher Aktif</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 text-center border-t border-outline-variant/60">
+<a class="font-mono-data-sm text-mono-data-sm text-on-surface-variant hover:text-primary transition-colors inline-flex items-center gap-1" href="#">
+              Muat Semua Riwayat Nomor 0812****7890 (8 Transaksi) 
+              <span class="material-symbols-outlined text-[15px]" data-icon="expand_more">expand_more</span>
+</a>
+</div>
+</div>
+<!-- Help Support Card -->
+<div class="bg-surface-container rounded-xl border border-outline-variant p-5 shadow-xl space-y-4">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest border border-outline-variant flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+</div>
+<div>
+<h3 class="font-headline-md text-title-sm text-on-surface font-bold">Butuh Bantuan Transaksi?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Mengalami kendala serial number (SN) atau pesanan belum masuk dalam 5 menit? Tim CS Nazilah Store siap membantu 24/7 via WhatsApp.
+              </p>
+</div>
+</div>
+<a class="w-full py-2.5 px-4 bg-emerald-600 hover:bg-emerald-500 text-white font-title-sm text-title-sm font-bold rounded flex items-center justify-center gap-2 transition-all active:scale-[0.99] shadow-lg shadow-emerald-950/50" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="chat">chat</span>
+<span>Hubungi WhatsApp Resmi 24/7</span>
+</a>
+<div class="bg-surface-container-lowest p-3 rounded border border-outline-variant text-mono-data-sm font-mono-data-sm text-on-surface-variant/80 flex justify-between items-center">
+<span>RATA-RATA RESPON CS:</span>
+<span class="text-primary font-bold">&lt; 45 DETIK</span>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- FOOTER COMPONENT -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline-variant mt-16">
+<div class="w-full max-w-[1360px] mx-auto px-4 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<!-- Brand & Copyright -->
+<div class="space-y-1 text-center md:text-left">
+<div class="text-title-sm font-title-sm font-bold text-on-surface dark:text-on-surface flex items-center justify-center md:justify-start gap-2">
+<span class="text-primary material-symbols-outlined text-lg" data-icon="diamond" style="font-variation-settings: 'FILL' 1;">diamond</span>
+<span>NAZILAH STORE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-surface-variant">
+          © 2025 Nazilah Store. Official High-Speed Gaming Gateway Indonesia. Hak Cipta Dilindungi.
+        </p>
+</div>
+<!-- Footer Navigation Links -->
+<div class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-on-surface-variant dark:text-on-surface-variant font-label-caps text-label-caps">
+<a class="hover:text-primary dark:hover:text-primary transition-colors" href="#">Syarat &amp; Ketentuan</a>
+<a class="hover:text-primary dark:hover:text-primary transition-colors" href="#">Kebijakan Privasi</a>
+<a class="hover:text-primary dark:hover:text-primary transition-colors" href="#">Status Server H2H</a>
+<a class="hover:text-primary dark:hover:text-primary transition-colors" href="#">Integrasi API Reseller</a>
+<a class="hover:text-primary dark:hover:text-primary transition-colors" href="#">Panduan Transaksi QRIS</a>
+<a class="hover:text-primary dark:hover:text-primary transition-colors" href="#">Bantuan WhatsApp 24/7</a>
+</div>
+</div>
+</footer>
+</body></html>

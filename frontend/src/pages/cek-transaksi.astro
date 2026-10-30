@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import OrderTracker from '../components/react/OrderTracker';
+---
+
+<Layout title="Lacak Pesanan & Cek Bukti Transaksi — NAZILAH STORE">
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <div class="flex items-center gap-2 text-xs text-[#94a3b8] mb-6">
+      <a href="/" class="hover:text-white transition">Katalog</a>
+      <span>/</span>
+      <span class="text-[#4edea3]">Cek Transaksi & Bukti Top Up</span>
+    </div>
+
+    <OrderTracker client:load />
+  </div>
+</Layout>
+
